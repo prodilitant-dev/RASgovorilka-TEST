@@ -1,0 +1,160 @@
+/* ============================================================
+   КАТЕГОРИИ
+   ============================================================ */
+
+.categories-wrap {
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+.categories-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.categories {
+  display: flex;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  flex-wrap: nowrap;
+}
+
+.category {
+  background: #e9ecef;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: background var(--transition), color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.category.active {
+  background: var(--primary);
+  color: #000;
+}
+
+.category:active {
+  transform: scale(0.96);
+}
+
+.category-add {
+  background: var(--primary-light);
+  border: 1px dashed var(--primary);
+  color: var(--text);
+}
+
+.category-hidden {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* === Кнопка-карандаш (только в режиме редактирования) === */
+
+.category .cat-name {
+  pointer-events: none;
+}
+
+.category .cat-actions {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.category.edit-mode .cat-actions {
+  display: inline-flex;
+}
+
+.category .cat-action-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.category .cat-action-btn:hover {
+  opacity: 1;
+}
+
+.category .cat-action-btn:active {
+  transform: scale(0.9);
+}
+
+/* === Drag & Drop (Pointer Events) === */
+
+/* В режиме редактирования запрещаем скролл страницы по категории */
+body.editing-mode .category:not(.category-add) {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
+
+/* Оригинал скрыт во время перетаскивания */
+.category.dragging {
+  opacity: 0;
+}
+
+/* Ghost — визуальная копия под пальцем */
+.dragging-ghost.category {
+  pointer-events: none;
+  background: #e9ecef;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0.95;
+  color: var(--text-secondary);
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* Placeholder — пунктирная плашка на месте, куда встанет */
+.sort-placeholder {
+  border: 2px dashed var(--primary);
+  border-radius: 20px;
+  background: var(--primary-light);
+  opacity: 0.4;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* === Красная категория (danger) === */
+
+.category-danger {
+  background: var(--danger);
+  color: #fff;
+}
+.category-danger:active {
+  background: #b71c1c;
+}
+.cat-action-btn__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.cat-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

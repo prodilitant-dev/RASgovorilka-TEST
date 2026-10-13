@@ -1,0 +1,9 @@
+/* src/styles/components/data-manager.css */
+
+.data-manager {
+  width: 100%;
+}
+
+.data-manager .tiles-grid {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}

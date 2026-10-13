@@ -1,0 +1,49 @@
+/* Основной контейнер для контента внутри main-area */
+.grid-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--grid-padding, var(--spacing-sm));
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  /* отступы сверху/по бокам, снизу 0 – растягивается до низа */
+  margin: var(--spacing-sm) var(--spacing-md) 0 var(--spacing-md);
+  min-height: 0;
+}
+
+/* Режим «Написать» – textarea растягивается на всю высоту */
+.grid-container.write-mode {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin: var(--spacing-sm) var(--spacing-md) 0 var(--spacing-md);
+  min-height: 0;
+}
+
+.grid-container.write-mode textarea {
+  flex: 1;
+  width: 100%;
+  padding: var(--spacing-lg);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 20px;
+  resize: none;
+  outline: none;
+  font-family: var(--font);
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+/* Режим «Сказать» – flex-контейнер:
+   сверху .categories-wrap (фиксированной высоты),
+   снизу .grid-container (занимает всё оставшееся место и скроллится) */
+.say-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,44 @@
+@import './variables.css';
+@import './reset.css';
+
+/* Компоненты */
+@import './components/header.css';
+@import './components/mode-bar.css';
+@import './components/categories.css';
+@import './components/grid.css';
+@import './components/card.css';
+@import './components/bottom-panel.css';
+@import './components/sentence-bar.css';
+@import './components/modal.css';
+@import './components/editor.css';
+@import './components/toggle.css';
+@import './components/toast.css';
+@import './components/editing.css';
+@import './components/buttons.css';
+@import './components/forms.css';
+@import './components/custom-select.css';
+@import './components/layout.css';
+@import './components/progress-bar.css';
+@import './components/vertical-editor.css';
+
+/* Режимы */
+@import './modes/profiles.css';
+@import './modes/settings.css';
+@import './modes/learning.css';            /* ✅ Добавить */
+@import './modes/games.css';               /* ✅ Добавить */
+
+@import './components/icon.css';
+@import './components/voice-settings.css';
+@import './components/about-modal.css';
+@import './components/data-manager.css';
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+

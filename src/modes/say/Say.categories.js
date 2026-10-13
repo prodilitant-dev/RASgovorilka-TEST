@@ -1,0 +1,116 @@
+// src/modes/say/Say.categories.js
+import { createElement, clear } from '@utils/dom';
+import { makeSortable } from '@utils/dragdrop';
+import { openCategoryCreateModal } from './Say.categoryCreate';
+import { getState } from '@state/store';
+import { logger } from '@utils/logger';
+import { iconUrl } from '@utils/icon';
+
+
+export function renderCategories(container, profile, activeId, onSelect, onEdit, onReorder, onCreated) {
+  logger.debug('🔄 Rendering Categories');
+
+  // Снимаем предыдущий cleanup категорий
+  if (typeof container._categoriesCleanup === 'function') {
+    container._categoriesCleanup();
+    container._categoriesCleanup = null;
+  }
+
+  clear(container);
+  const state = getState();
+  const editing = state.editingMode || false;
+
+  const categories = editing
+    ? profile.categories
+    : profile.categories.filter((c) => !c.hidden);
+
+  categories.forEach((cat) => {
+    const classes = ['category'];
+    if (cat.id === activeId) classes.push('active');
+    if (cat.hidden && editing) classes.push('category-hidden');
+    if (editing) classes.push('edit-mode');
+
+    const el = createElement('div', {
+      className: classes.join(' '),
+      'data-id': cat.id,
+      'data-category-id': cat.id,
+    });
+
+    const nameEl = createElement('span', { className: 'cat-name' }, cat.name);
+    el.appendChild(nameEl);
+
+    if (editing && onEdit) {
+      const actionsEl = createElement('span', { className: 'cat-actions' });
+      const editBtn = createElement('button', {
+        type: 'button',
+        className: 'cat-action-btn',
+        'aria-label': 'Редактировать категорию',
+        title: 'Редактировать',
+      });
+      const editImg = createElement('img', {
+        src: iconUrl('edit'),
+        alt: '',
+        className: 'cat-action-btn__icon',
+        draggable: 'false',
+      });
+      editImg.addEventListener('error', () => {
+        editImg.replaceWith(document.createTextNode('✏️'));
+      });
+      editBtn.appendChild(editImg);
+
+      editBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        logger.debug(`Category edit clicked: ${cat.id}`);
+        onEdit(cat);
+      });
+      actionsEl.appendChild(editBtn);
+      el.appendChild(actionsEl);
+    }
+
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      logger.debug(`Category clicked: ${cat.id}`);
+      onSelect(cat.id);
+    });
+
+    container.appendChild(el);
+  });
+
+      if (editing) {
+        const addBtn = createElement('div', { className: 'category category-add' });
+        const addImg = createElement('img', {
+          src: iconUrl('add'),
+          alt: '',
+          className: 'cat-action-btn__icon',
+          draggable: 'false',
+        });
+        addImg.addEventListener('error', () => {
+          addImg.replaceWith(document.createTextNode('+'));
+        });
+        addBtn.appendChild(addImg);
+        addBtn.addEventListener('click', () => {
+      openCategoryCreateModal(profile, (newCategoryId) => {
+        if (onCreated) {
+          onCreated(newCategoryId);
+        } else {
+          renderCategories(container, profile, newCategoryId, onSelect, onEdit, onReorder, onCreated);
+        }
+      });
+    });
+    container.appendChild(addBtn);
+  }
+
+  // === Drag&drop + cleanup ===
+  let dragCleanup = null;
+  if (editing && onReorder) {
+    dragCleanup = makeSortable(container, {
+      itemSelector: '.category:not(.category-add)',
+      longPressDelay: 200,
+      onReorder: (ids) => onReorder(ids),
+    });
+  }
+
+  container._categoriesCleanup = () => {
+    if (dragCleanup) dragCleanup();
+  };
+}
