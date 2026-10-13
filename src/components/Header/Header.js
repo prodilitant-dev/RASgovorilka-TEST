@@ -4,11 +4,7 @@ import { onLongPress } from '@utils/interaction';
 import { iconUrl, isIconName } from '@utils/icon';
 import { logger } from '@utils/logger';
 
-export function createHeader({
-  profileIcon = '👤',
-  onProfileClick,
-  onProfileLongPress,
-}) {
+export function createHeader({ profileIcon = '👤', onProfileClick, onProfileLongPress }) {
   const header = createElement('header', { className: 'app-header' });
 
   const backBtn = createElement('button', { className: 'back-btn hidden' }, '←');

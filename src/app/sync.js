@@ -18,9 +18,7 @@ export function setContainers(mbs, ma) {
 function updateProfileIcon(profileBtn, state) {
   profileBtn.innerHTML = '';
 
-  const iconValue = state.editingMode
-    ? 'close'
-    : (getActiveProfile()?.icon || '👤');
+  const iconValue = state.editingMode ? 'close' : getActiveProfile()?.icon || '👤';
 
   if (isIconName(iconValue)) {
     const img = createElement('img', {

@@ -53,10 +53,10 @@ export async function renderProfiles(container) {
             renderProfiles(container);
             done();
           },
-          onCancel: () => {}
+          onCancel: () => {},
         });
       } else {
-        const profile = profiles.find(p => p.id === id);
+        const profile = profiles.find((p) => p.id === id);
         if (profile) {
           logger.info(`Switching to profile: ${id} (${profile.name})`);
           data.activeProfileId = id;
@@ -73,7 +73,7 @@ export async function renderProfiles(container) {
       }
     },
     (id) => {
-      const profile = profiles.find(p => p.id === id);
+      const profile = profiles.find((p) => p.id === id);
       if (!profile) return;
       logger.info(`Editing profile: ${id}`);
       openProfileEditor(profile, {
@@ -100,7 +100,7 @@ export async function renderProfiles(container) {
           await deleteProfile(idToDelete);
           const updatedData = await loadAppData();
           if (updatedData.activeProfileId === idToDelete) {
-            const newActive = updatedData.profiles.find(p => p.id !== idToDelete);
+            const newActive = updatedData.profiles.find((p) => p.id !== idToDelete);
             if (newActive) {
               updatedData.activeProfileId = newActive.id;
               setState({
@@ -126,7 +126,7 @@ export async function renderProfiles(container) {
           renderProfiles(container);
           done();
         },
-        onCancel: () => {}
+        onCancel: () => {},
       });
     }
   );

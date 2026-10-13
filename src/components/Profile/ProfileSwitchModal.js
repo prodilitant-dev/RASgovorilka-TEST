@@ -16,7 +16,7 @@ export function openProfileSwitchModal(onProfileSwitched) {
       const listContainer = document.createElement('div');
       wrap.appendChild(listContainer);
 
-      loadAppData().then(appData => {
+      loadAppData().then((appData) => {
         data = appData;
         if (!data || !data.profiles) {
           listContainer.innerHTML = '<div class="text-muted p-4 text-center">Нет данных</div>';
@@ -24,7 +24,7 @@ export function openProfileSwitchModal(onProfileSwitched) {
         }
 
         const activeId = data.activeProfileId;
-        const items = data.profiles.map(prof => ({
+        const items = data.profiles.map((prof) => ({
           id: prof.id,
           text: prof.name,
           emoji: prof.icon || '🧑',
@@ -34,7 +34,7 @@ export function openProfileSwitchModal(onProfileSwitched) {
         const { cleanup: listCleanup } = renderUniversalList(listContainer, {
           items,
           onClick: (id) => {
-            const profile = data.profiles.find(p => p.id === id);
+            const profile = data.profiles.find((p) => p.id === id);
             if (!profile) return;
             data.activeProfileId = id;
             saveAppData(data).then(() => {
@@ -66,7 +66,7 @@ export function openProfileSwitchModal(onProfileSwitched) {
         cleanup();
         cleanup = null;
       }
-    }
+    },
   });
 
   modal.open();
