@@ -31,7 +31,7 @@ export function openProfileSwitchModal(onProfileSwitched) {
           active: prof.id === activeId,
         }));
 
-        const { element, cleanup: listCleanup } = renderUniversalList(listContainer, {
+        const { cleanup: listCleanup } = renderUniversalList(listContainer, {
           items,
           onClick: (id) => {
             const profile = data.profiles.find(p => p.id === id);
