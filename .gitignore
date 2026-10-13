@@ -30,3 +30,7 @@ Thumbs.db
 
 # PWA generated
 dev-dist/
+
+# lint reports
+lint-baseline.txt
+lint-after-fix.txt
