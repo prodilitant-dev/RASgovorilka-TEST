@@ -34,3 +34,4 @@ dev-dist/
 # lint reports
 lint-baseline.txt
 lint-after-fix.txt
+format-check.txt
