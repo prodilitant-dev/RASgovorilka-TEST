@@ -1,0 +1,46 @@
+
+> rasgovorilka-test@0.9.7 lint
+> eslint .
+
+
+F:\Devel_ap\RASgovorilka-TEST\src\app\handlers\profileHandlers.js
+  39:29  warning  'newProfileId' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\components\Profile\ProfileSwitchModal.js
+  34:17  warning  'element' is assigned a value but never used. Allowed unused vars must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\games\Games.controller.js
+  111:18  warning  'id' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\games\defaults.js
+  10:43  warning  'profile' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\learning\Learning.controller.js
+  155:18  warning  'id' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\learning\defaults.js
+  26:40  warning  'profile' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\say\Say.controller.js
+  22:5  warning  'containerRef' is assigned a value but never used. Allowed unused vars must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\say\Say.editor.js
+  90:27  warning  'closeModal' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\schedule\Schedule.controller.js
+  167:35  warning  'done' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\modes\write\Write.controller.js
+  40:9  warning  'state' is assigned a value but never used. Allowed unused vars must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\services\pwa\updateService.js
+  30:18  warning  'registration' is defined but never used. Allowed unused args must match /^_/u  unused-imports/no-unused-vars
+
+F:\Devel_ap\RASgovorilka-TEST\src\storage\db.js
+  64:7  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+F:\Devel_ap\RASgovorilka-TEST\src\utils\interaction.js
+  11:7  warning  'isLongPressTriggered' is assigned a value but never used. Allowed unused vars must match /^_/u  unused-imports/no-unused-vars
+
+✖ 13 problems (0 errors, 13 warnings)
+

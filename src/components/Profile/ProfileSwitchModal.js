@@ -1,10 +1,9 @@
 // src/components/Profile/ProfileSwitchModal.js
 import { Modal } from '@components/common/Modal/Modal';
 import { renderUniversalList } from '@components/common/Universal/UniversalList';
-import { getState, setState } from '@state/store';
+import { setState } from '@state/store';
 import { loadAppData, saveAppData } from '@storage/appStorage';
 import { toast } from '@utils/toast';
-import { logger } from '@utils/logger';
 
 export function openProfileSwitchModal(onProfileSwitched) {
   let data = null;
