@@ -1,10 +1,15 @@
 // src/components/Header/Header.js
 import { createElement } from '@utils/dom';
 import { onLongPress } from '@utils/interaction';
-import { iconUrl, isIconName } from '@utils/icon';
+import { renderProfileIcon } from '@utils/profileIcon';
 import { logger } from '@utils/logger';
 
-export function createHeader({ profileIcon = '👤', onProfileClick, onProfileLongPress }) {
+export function createHeader({
+  profile, // ← объект профиля или null
+  isEditing = false, // режим редактирования
+  onProfileClick,
+  onProfileLongPress,
+}) {
   const header = createElement('header', { className: 'app-header' });
 
   const backBtn = createElement('button', { className: 'back-btn hidden' }, '←');
@@ -18,22 +23,7 @@ export function createHeader({ profileIcon = '👤', onProfileClick, onProfileLo
     'data-log': 'profile-button',
   });
 
-  // Если profileIcon — имя иконки (например, 'profile-default'),
-  // рендерим WebP. Иначе — эмодзи.
-  if (isIconName(profileIcon)) {
-    const img = createElement('img', {
-      src: iconUrl(profileIcon),
-      alt: '',
-      className: 'profile-fab__icon',
-      draggable: 'false',
-    });
-    img.addEventListener('error', () => {
-      img.replaceWith(document.createTextNode('👤'));
-    });
-    profileBtn.appendChild(img);
-  } else {
-    profileBtn.textContent = profileIcon;
-  }
+  renderProfileIcon(profileBtn, profile, { isEditing });
 
   profileBtn.addEventListener('click', (e) => {
     e.stopPropagation();

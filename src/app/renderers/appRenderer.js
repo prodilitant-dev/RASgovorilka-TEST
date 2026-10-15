@@ -4,7 +4,7 @@ import { renderModeBar } from '@components/ModeBar/ModeBar';
 import { createMainArea } from '@components/MainArea/MainArea';
 import { getState, setState } from '@state/store';
 import { renderContent } from './contentRenderer';
-import { getProfileIcon, ensureActiveProfile } from '@app/helpers/profileHelpers';
+import { ensureActiveProfile } from '@app/helpers/profileHelpers';
 import {
   createProfileClickHandler,
   createProfileLongPressHandler,
@@ -32,16 +32,12 @@ export function renderApp() {
     return;
   }
 
-  // Получаем иконку для кнопки профиля
-  const profileIcon = getProfileIcon(state);
-
-  // Создаём обработчики кликов
   const handleProfileClick = createProfileClickHandler();
   const handleProfileLongPress = createProfileLongPressHandler();
 
-  // Создаём шапку
   const { header, modeBarSlot } = createHeader({
-    profileIcon,
+    profile: activeProfile,
+    isEditing: state.editingMode,
     onProfileClick: handleProfileClick,
     onProfileLongPress: handleProfileLongPress,
   });

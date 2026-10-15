@@ -34,12 +34,15 @@ export async function renderProfiles(container) {
     content,
     profiles,
     activeId,
+    // === Клик по профилю (или по «+») ===
     async (id) => {
       if (id === null) {
         logger.info('Creating new profile');
         openProfileEditor(null, {
-          onSave: async ({ name, icon }, done) => {
-            const newProfile = createDefaultProfile(name, icon);
+          onSave: async (updatedEntity, done) => {
+            const newProfile = createDefaultProfile(updatedEntity.name, updatedEntity.icon);
+            // Переносим все поля, которые мог задать пользователь
+            if (updatedEntity.imageId) newProfile.imageId = updatedEntity.imageId;
             data.profiles.push(newProfile);
             data.activeProfileId = newProfile.id;
             await saveAppData(data);
@@ -72,14 +75,15 @@ export async function renderProfiles(container) {
         }
       }
     },
+    // === Долгий тап — редактирование ===
     (id) => {
       const profile = profiles.find((p) => p.id === id);
       if (!profile) return;
       logger.info(`Editing profile: ${id}`);
       openProfileEditor(profile, {
-        onSave: async ({ name, icon }, done) => {
-          profile.name = name;
-          profile.icon = icon;
+        onSave: async (updatedEntity, done) => {
+          // Переносим ВСЁ, что вернул редактор, включая imageId
+          Object.assign(profile, updatedEntity);
           await saveProfile(profile);
           if (profile.id === getState().currentProfileId) {
             setState({

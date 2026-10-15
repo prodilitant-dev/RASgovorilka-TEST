@@ -18,7 +18,7 @@ export { DEFAULT_GLOBAL_SETTINGS } from './defaultSettings';
  * @param {string} icon - эмодзи иконки
  * @returns {Object} объект профиля
  */
-export function createDefaultProfile(name = 'дом', icon = 'profile-default') {
+export function createDefaultProfile(name = 'дом', icon = '') {
   // 1. Создаём категории
   const categories = CATEGORIES.map((cat) => ({ ...cat }));
 

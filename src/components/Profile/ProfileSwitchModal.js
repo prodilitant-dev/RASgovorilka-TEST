@@ -18,16 +18,22 @@ export function openProfileSwitchModal(onProfileSwitched) {
 
       loadAppData().then((appData) => {
         data = appData;
-        if (!data || !data.profiles) {
-          listContainer.innerHTML = '<div class="text-muted p-4 text-center">Нет данных</div>';
+
+        if (!data || !Array.isArray(data.profiles)) {
+          const empty = document.createElement('div');
+          empty.className = 'text-muted p-4 text-center';
+          empty.textContent = 'Нет данных';
+          listContainer.appendChild(empty);
           return;
         }
 
         const activeId = data.activeProfileId;
+
         const items = data.profiles.map((prof) => ({
           id: prof.id,
           text: prof.name,
-          emoji: prof.icon || '🧑',
+          emoji: prof.icon || '',
+          imageId: prof.imageId || null,
           active: prof.id === activeId,
         }));
 
@@ -38,7 +44,6 @@ export function openProfileSwitchModal(onProfileSwitched) {
             if (!profile) return;
             data.activeProfileId = id;
             saveAppData(data).then(() => {
-              // ✅ Обновляем состояние: профиль, modeOrder, hiddenModes
               setState({
                 currentProfileId: id,
                 profiles: data.profiles,
@@ -55,7 +60,9 @@ export function openProfileSwitchModal(onProfileSwitched) {
           layout: 'grid',
         });
 
-        cleanup = listCleanup;
+        if (listCleanup) {
+          cleanup = listCleanup;
+        }
       });
 
       return wrap;
