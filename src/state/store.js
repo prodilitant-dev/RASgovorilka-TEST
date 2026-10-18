@@ -14,6 +14,7 @@ const state = {
     fullscreen: false,
     sentenceBarPosition: 'bottom',
     categoriesShowImages: true,
+    uiSize: 'small',
   },
   activityState: null,
 };

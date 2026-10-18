@@ -8,6 +8,8 @@ import { openSentenceBarSettings } from './SentenceBarSettingsModal';
 import { openVoiceSettings } from '@components/common/Settings/VoiceSettingsModal';
 import { saveSentenceBarPosition, saveVoiceSettings } from '../General.controller';
 import { openCategoriesSettings } from './CategoriesSettingsModal';
+import { openUISizeSettings } from './UISizeSettingsModal';
+import { saveUISize } from '../General.controller';
 
 /**
  * Плитка в стиле DataManagerModal.
@@ -83,6 +85,23 @@ export function openInterfaceHub(onClose) {
             modal.close();
             if (onClose) onClose();
             openCategoriesSettings();
+          },
+        })
+      );
+
+      grid.appendChild(
+        createTile({
+          id: 'ui-size',
+          iconName: 'edit',
+          fallbackEmoji: '🔠',
+          text: 'Размер',
+          onClick: () => {
+            modal.close();
+            if (onClose) onClose();
+            const state = getState();
+            openUISizeSettings(state.globalSettings || {}, (size) => {
+              saveUISize(size);
+            });
           },
         })
       );

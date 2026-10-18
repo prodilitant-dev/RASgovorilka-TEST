@@ -8,6 +8,7 @@
   border-bottom: 1px solid var(--border);
   background: var(--surface);
   flex-shrink: 0;
+  touch-action: pan-x;
 }
 .categories-wrap::-webkit-scrollbar {
   display: none;
@@ -23,10 +24,10 @@
 .category {
   background: #e9ecef;
   padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition:
@@ -38,12 +39,14 @@
   position: relative;
   user-select: none;
   -webkit-user-select: none;
+  flex: 0 0 auto;
+  min-width: max-content;
+  box-sizing: border-box;
+  /* overflow: visible; — по умолчанию, чтобы аватарка вылезала */
 }
 
-/* Отступ под аватарку — только если аватарка реально есть внутри.
-   Формула: padding-left = left аватарки + ширина аватарки + зазор до текста. */
-.category:has(.cat-avatar) {
-  padding-left: 48px;
+.category.category--has-avatar {
+  padding-left: 2.75rem;
 }
 
 .category.active {
@@ -75,8 +78,8 @@
 .category .cat-actions {
   display: none;
   align-items: center;
-  gap: 4px;
-  margin-left: 4px;
+  gap: 0.25rem;
+  margin-left: 0.25rem;
 }
 
 .category.edit-mode .cat-actions {
@@ -151,8 +154,8 @@ body.editing-mode .category:not(.category-add) {
   background: #b71c1c;
 }
 .cat-action-btn__icon {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   object-fit: contain;
   display: block;
   pointer-events: none;
@@ -165,39 +168,27 @@ body.editing-mode .category:not(.category-add) {
   justify-content: center;
 }
 
-/* ============================================================
-   АВАТАРКА КАТЕГОРИИ (в списке категорий Say-режима)
-   ============================================================
-   Абсолютно позиционирована: её размер НЕ влияет на высоту таблетки.
-   Меняешь размер — таблетка не двигается, аватарка просто свисает.
-
-   Как настроить:
-   - Размер: width / height ниже (например 32px → 40px)
-   - Сдвиг влево/вправо: left (6px по умолчанию)
-   - Отступ текста от аватарки: padding-left у .category:has(.cat-avatar) выше
-     Формула: padding-left = left + width + gap_до_текста
-
-   .category.active .cat-avatar--fallback — цвет фолбека на активной таблетке
-   ============================================================ */
-
 .cat-avatar {
   position: absolute;
-  left: 0; /* ← прижата к левому краю */
+  left: 0; /* Прижата влево */
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 2.8rem; /* Было 2rem. Теперь 40px (или 45px при крупном шрифте) */
+  height: 2.8rem;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #e0e0e0;
-  font-size: 14px;
+  font-size: 1rem; /* Для буквы-фолбека */
   font-weight: 600;
   color: #666;
   pointer-events: none;
   -webkit-user-drag: none;
+  border: 2px solid transparent; /* Рамка по умолчанию невидимая */
+  box-sizing: border-box; /* Чтобы рамка не меняла размер */
+  z-index: 1; /* Чтобы вылезающая аватарка была поверх соседей */
 }
 
 .cat-avatar--fallback {

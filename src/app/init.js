@@ -1,5 +1,6 @@
 // src/app/init.js
 import { loadInitialState } from '@state/actions';
+import { getState } from '@state/store';
 import { renderApp } from './render';
 import { setContainers, subscribeToStore } from './sync';
 import { initKeyboardHandler } from '@utils/keyboardHandler';
@@ -8,6 +9,7 @@ import { resetDatabaseIfPending } from '@storage/db';
 import { logger } from '@utils/logger';
 import { toast } from '@utils/toast';
 import { initSpeech, warmUpSpeech, ensureVoicesLoaded } from '@utils/speech';
+import { applyUISize } from '@utils/uiSize';
 
 /**
  * Обработка открытия файла .rasbackup через файловый менеджер.
@@ -95,6 +97,11 @@ export async function initApp() {
   ensureVoicesLoaded().catch(() => {});
 
   await loadInitialState();
+
+  // Применяем размер интерфейса (small/medium/large) до рендера,
+  // чтобы не было «мигания» при переключении.
+  const state = getState();
+  applyUISize(state.globalSettings?.uiSize || 'small');
 
   initFullscreenManager();
 

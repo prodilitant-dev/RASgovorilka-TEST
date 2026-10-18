@@ -44,6 +44,7 @@ export function renderCategories(
 
     // === Аватарка категории ===
     if (showImages) {
+      el.classList.add('category--has-avatar'); // <- Добавляем класс
       el.appendChild(createCategoryAvatar(cat));
     }
 

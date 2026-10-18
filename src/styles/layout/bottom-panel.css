@@ -35,11 +35,11 @@
 .quick-btn {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   padding: var(--spacing-xs) var(--spacing-md);
   white-space: nowrap;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -50,14 +50,14 @@
   background: #e9ecef;
 }
 .quick-btn img {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   object-fit: contain;
 }
 
 .quick-btn__icon {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   object-fit: contain;
   display: block;
   pointer-events: none;
@@ -68,5 +68,5 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
+  min-width: 2.75rem;
 }

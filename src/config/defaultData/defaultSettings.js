@@ -47,4 +47,5 @@ export const DEFAULT_GLOBAL_SETTINGS = {
   fullscreen: false,
   sentenceBarPosition: 'bottom',
   categoriesShowImages: true,
+  uiSize: 'small',
 };

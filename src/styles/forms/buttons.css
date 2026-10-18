@@ -7,10 +7,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
   border: 1px solid var(--border);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
   transition:
@@ -20,8 +20,8 @@
     transform 0.1s;
   user-select: none;
   text-align: center;
-  min-height: 36px;
-  min-width: 60px;
+  min-height: 2.25rem;
+  min-width: 3.75rem;
   background: #e9ecef;
   color: var(--text-secondary);
   box-sizing: border-box;
@@ -72,8 +72,8 @@
 }
 
 .btn-sm {
-  padding: 4px 12px;
-  font-size: 12px;
-  min-height: 28px;
-  min-width: 28px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  min-height: 1.75rem;
+  min-width: 1.75rem;
 }

@@ -9,6 +9,8 @@ import { renderModeBar } from '@components/ModeBar/ModeBar';
 import { openExportDialog } from './components/ExportDialog';
 import { applyAutoInflectToAllCards } from '@utils/inflect';
 import { logger } from '@utils/logger';
+import { syncFullscreenState } from '@utils/fullscreen';
+import { applyUISize } from '@utils/uiSize';
 
 function updateModeBar() {
   const container = document.querySelector('.mode-bar');
@@ -28,9 +30,6 @@ function updateModeBar() {
     state.modeOrder || []
   );
 }
-
-import { syncFullscreenState } from '@utils/fullscreen';
-// (добавь в шапку файла)
 
 export function toggleFullscreen(enabled) {
   if (enabled) {
@@ -63,6 +62,20 @@ export function saveSentenceBarPosition(position) {
   savePersistentState();
   toast('Настройка интерфейса сохранена');
   setState({ profiles: [...state.profiles] });
+}
+
+/**
+ * Сохраняет размер интерфейса и применяет его.
+ * @param {'small'|'medium'|'large'} size
+ */
+export function saveUISize(size) {
+  if (!['small', 'medium', 'large'].includes(size)) return;
+  const state = getState();
+  const globalSettings = { ...state.globalSettings, uiSize: size };
+  setState({ globalSettings });
+  savePersistentState();
+  applyUISize(size);
+  toast('Размер интерфейса сохранён');
 }
 
 /**
@@ -170,8 +183,7 @@ export async function resetAllData() {
 }
 
 export function exportData() {
-  openExportDialog(async (selectedKeys, selectedCategoryIds) => {
-    const { exportToZip } = await import('@services/backup/export');
+  openExportDialog((selectedKeys, selectedCategoryIds) => {
     exportToZip(selectedKeys, selectedCategoryIds);
   });
 }
