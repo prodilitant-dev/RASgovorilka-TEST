@@ -67,47 +67,7 @@ export default defineConfig({
   plugins: [
     seoPlugin(base),
     VitePWA({
-      manifest: {
-        name: 'РАСговорилка',
-        short_name: 'РАСговорилка',
-        description: 'Помощник для коммуникации при РАС',
-        display: 'standalone',
-        orientation: 'any',
-        background_color: '#f0f2f5',
-        theme_color: '#4caf50',
-        lang: 'ru',
-        dir: 'ltr',
-        categories: ['education', 'medical', 'utilities'],
-        start_url: base,
-        scope: base,
-        id: base,
-        file_handlers: [
-          {
-            action: base,
-            accept: {
-              'application/octet-stream': ['.rasbackup'],
-            },
-          },
-        ],
-        icons: [
-          {
-            src: 'icon-192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: 'icon-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: 'icon-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-        ],
-      },
+      manifest: false,
       registerType: 'prompt',
       injectRegister: false,
       workbox: {

@@ -1,27 +1,28 @@
-# dependencies
+# Служебные дампы и бэкапы
+*.RAS.json
+https://github.com/prodilitant-dev/RASgovorilka.RAS.json
+RAS.json
+import_collect_bot_files.py
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
 node_modules/
-.pnp
-.pnp.js
-
-# build
 dist/
-dist-ssr/
-*.local
 
-# logs
-logs/
+# OS
+.DS_Store
+Thumbs.db
+
+# Логи
+debug.log
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-# editor / OS
-.vscode/*
-!.vscode/extensions.json
-.idea/
-.DS_Store
-Thumbs.db
 
 # env
 .env
@@ -35,3 +36,8 @@ dev-dist/
 lint-baseline.txt
 lint-after-fix.txt
 format-check.txt
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
