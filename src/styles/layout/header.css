@@ -8,12 +8,20 @@
   padding: 4px 12px;
   gap: var(--spacing-sm);
   z-index: 10;
+  position: relative; /* Добавлено для absolute-кнопки */
 }
+
 .back-btn {
   display: none;
-} /* пока скрыта */
+}
+
 .profile-fab {
-  background: var(--surface);
+  position: absolute; /* Вырываем из потока */
+  right: 12px; /* Прижимаем к правому краю */
+  top: 50%;
+  transform: translateY(-50%); /* Центрируем по вертикали */
+  z-index: 20; /* Поверх всего */
+
   border: 1px solid var(--border);
   border-radius: 50%;
   width: 34px;
@@ -22,7 +30,9 @@
   cursor: pointer;
   box-shadow: var(--shadow);
   flex-shrink: 0;
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-fab__icon {
@@ -34,24 +44,32 @@
   -webkit-user-drag: none;
 }
 
-.profile-fab {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .mode-bar {
   display: flex;
   gap: var(--spacing-xs);
   padding: var(--spacing-sm);
+  /* Убираем padding-right, он не работает при скролле во flex */
   overflow-x: auto;
   scrollbar-width: none;
   flex: 1;
   background: var(--surface);
 }
+
+/* Невидимый распорщик в конце списка */
+.mode-bar::after {
+  content: '';
+  flex-shrink: 0;
+  width: 24px; /* Ширина FAB + отступ, чтобы кнопка полностью выехала из-под него */
+}
+
 .mode-bar::-webkit-scrollbar {
   display: none;
 }
+
+.mode-bar::-webkit-scrollbar {
+  display: none;
+}
+
 .mode-btn {
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 20px;
@@ -65,11 +83,14 @@
     background var(--transition),
     color var(--transition);
   color: var(--text-secondary);
+  flex-shrink: 0;
 }
+
 .mode-btn.active {
   background: var(--primary);
   color: #000;
 }
+
 .mode-btn:active {
   transform: scale(0.96);
 }

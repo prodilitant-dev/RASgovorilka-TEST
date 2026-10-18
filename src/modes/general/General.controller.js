@@ -183,7 +183,8 @@ export async function resetAllData() {
 }
 
 export function exportData() {
-  openExportDialog((selectedKeys, selectedCategoryIds) => {
+  openExportDialog(async (selectedKeys, selectedCategoryIds) => {
+    const { exportToZip } = await import('@services/backup/export');
     exportToZip(selectedKeys, selectedCategoryIds);
   });
 }

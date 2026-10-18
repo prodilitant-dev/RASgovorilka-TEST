@@ -1,0 +1,50 @@
+// src/config/cardBank.js
+
+/**
+ * Банк карточек.
+ * Ключ — нормализованный текст (нижний регистр, ё->е).
+ * Значение — путь относительно папки public.
+ */
+export const CARD_BANK = {
+  яблоко: 'cards/apple.webp',
+  банан: 'cards/banana.webp',
+  хлеб: 'cards/bread.webp',
+  сыр: 'cards/cheese.webp',
+  печенье: 'cards/cookie.webp',
+  пить: 'cards/drink.webp',
+  есть: 'cards/eat.webp',
+  сок: 'cards/juice.webp',
+  молоко: 'cards/milk.webp',
+  каша: 'cards/porridge.webp',
+  суп: 'cards/soup.webp',
+  чай: 'cards/tea.webp',
+  вода: 'cards/water.webp',
+  машина: 'cards/car.webp',
+  лего: 'cards/lego.webp',
+  кубики: 'cards/blocks.webp',
+  игра: 'cards/game.webp',
+  играть: 'cards/game.webp',
+  злость: 'cards/anger.webp',
+  скучно: 'cards/bored.webp',
+  спокойно: 'cards/calm.webp',
+  спокойствие: 'cards/calm.webp',
+  страх: 'cards/fear.webp',
+  радость: 'cards/joy.webp',
+  грусть: 'cards/sadness.webp',
+  устал: 'cards/tired.webp',
+  больно: 'cards/pain.webp',
+  обнимашки: 'cards/hug.webp',
+  помоги: 'cards/help-request.webp',
+  помощь: 'cards/help-request.webp',
+  'не знаю': 'cards/dont-know.webp',
+  'не хочу': 'cards/dont-want.webp',
+  дай: 'cards/give.webp',
+  покажи: 'cards/show.webp',
+  спать: 'cards/sleep.webp',
+  стоп: 'cards/stop.webp',
+  туалет: 'cards/toilet.webp',
+  хочу: 'cards/hochu.webp',
+  я: 'cards/ya.webp',
+  да: 'cards/yes.webp',
+  нет: 'cards/no.webp',
+};

@@ -5,6 +5,7 @@ import { autoDetectCard } from '@utils/inflect';
 import { openDeclensionModal } from '@components/common/DeclensionModal/DeclensionModal';
 import { getState } from '@state/store';
 import { getActiveProfile } from '@state/actions';
+import { findCardImage } from '@utils/cardBank';
 
 export function openCardEditor(cardData, onSave, onDelete) {
   const isNew = !cardData.id;
@@ -40,7 +41,6 @@ export function openCardEditor(cardData, onSave, onDelete) {
         return;
       }
 
-      // Если текст изменился — пересчитываем формы молча
       if (updated.text !== cardData.text) {
         autoDetectCard(updated);
       }
@@ -58,6 +58,18 @@ export function openCardEditor(cardData, onSave, onDelete) {
         type: 'text',
         required: true,
         placeholder: 'Например: Молоко',
+        autocomplete: true, // <-- Включаем выпадающий список
+        onChange: (value, ent) => {
+          if (ent.imageId) return; // Пользовательская картинка в приоритете
+
+          const found = findCardImage(value);
+          if (found) {
+            ent.imagePath = found;
+          } else {
+            // Если точного совпадения нет — сбрасываем картинку из банка
+            ent.imagePath = null;
+          }
+        },
       },
       {
         id: 'wordType',
@@ -76,20 +88,29 @@ export function openCardEditor(cardData, onSave, onDelete) {
         id: 'emoji',
         label: 'Эмодзи',
         type: 'text',
-        visible: (entity) => !entity.imageId,
+        visible: (ent) => !ent.imageId && !ent.imagePath,
+        onChange: (value, ent) => {
+          if (!ent.imageId && !ent.imagePath) {
+            const found = findCardImage(value);
+            if (found) {
+              ent.imagePath = found;
+              ent.emoji = '';
+            }
+          }
+        },
       },
     ],
     extraActions: [
       {
         id: 'declensions',
         label: '📖 Склонения',
-        visible: (entity) => {
-          const type = entity.wordType || 'noun';
+        visible: (ent) => {
+          const type = ent.wordType || 'noun';
           return type === 'noun' || type === 'pronoun' || type === 'adjective';
         },
-        onClick: (entity, _closeModal) => {
-          openDeclensionModal(entity, (updatedEntity) => {
-            Object.assign(entity, updatedEntity);
+        onClick: (ent, _closeModal) => {
+          openDeclensionModal(ent, (updatedEntity) => {
+            Object.assign(ent, updatedEntity);
             toast('Падежи обновлены');
           });
         },

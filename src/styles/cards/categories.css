@@ -230,3 +230,14 @@ body.editing-mode .category:not(.category-add) {
 .category.active .cat-avatar {
   border: 2px solid var(--primary);
 }
+
+/* Специально для модалки создания/редактирования категории */
+.cat-avatar--upload {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin: 0 auto; /* чтобы был по центру */
+  border: 2px dashed var(--border); /* пунктирная рамка, как у загрузки */
+  background: var(--bg);
+}
