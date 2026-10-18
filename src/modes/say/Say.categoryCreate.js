@@ -7,17 +7,14 @@ import { saveProfile } from '@storage/appStorage';
 import { setState } from '@state/store';
 import { openImageCropper } from '@components/common/ImageCropper';
 import { uploadImage, getImageUrl, deleteImage } from '@services/image';
+import { findCardImage } from '@utils/cardBank';
 import { logger } from '@utils/logger';
 
-/**
- * Открывает модалку создания новой категории.
- * @param {Object} profile - текущий профиль
- * @param {Function} onCreated - (newCategoryId) => void, вызывается после создания
- */
 export function openCategoryCreateModal(profile, onCreated) {
   let nameInput = null;
   let wordTypeSelect = null;
-  let imageId = null; // локально, пока не создана категория
+  let imageId = null;
+  let imagePath = null; // NEW: картинка из банка
   let previewAvatar = null;
   let removeBtn = null;
 
@@ -30,17 +27,12 @@ export function openCategoryCreateModal(profile, onCreated) {
     { value: 'other', label: 'Другое' },
   ];
 
-  /**
-   * Обновляет кружок-превью в соответствии с текущим imageId и name.
-   * Также управляет видимостью кнопки удаления.
-   */
   async function updatePreviewAvatar() {
     if (!previewAvatar) return;
 
     const name = nameInput?.value?.trim() || '';
     const letter = name.charAt(0).toUpperCase() || '?';
 
-    // Сброс содержимого
     previewAvatar.innerHTML = '';
     previewAvatar.classList.remove('cat-avatar--fallback');
 
@@ -63,30 +55,41 @@ export function openCategoryCreateModal(profile, onCreated) {
       }
     }
 
-    // Фолбек: буква или камера-иконка, если имени ещё нет
+    if (imagePath) {
+      const base = import.meta.env.BASE_URL || '/';
+      const url = base.endsWith('/') ? `${base}${imagePath}` : `${base}/${imagePath}`;
+      const img = createElement('img', {
+        src: url,
+        alt: '',
+        className: 'cat-avatar__img',
+        draggable: 'false',
+      });
+      previewAvatar.appendChild(img);
+      if (removeBtn) removeBtn.style.display = 'inline-flex';
+      return;
+    }
+
+    // Фолбек: буква или камера-иконка
     previewAvatar.classList.add('cat-avatar--fallback');
     previewAvatar.textContent = name ? letter : '📷';
     if (removeBtn) removeBtn.style.display = 'none';
   }
 
-  /**
-   * Обрабатывает выбор файла: кроппер → uploadImage → сохранение imageId.
-   */
   async function handleFileSelected(file) {
     try {
       const croppedBlob = await openImageCropper(file, { size: 256 });
       if (!croppedBlob) return;
 
-      // Если уже была картинка — удалим прежнюю, чтобы не оставлять мусор
       if (imageId) {
         try {
           await deleteImage(imageId);
         } catch {
-          /* игнорируем */
+          /* ignore */
         }
       }
 
       imageId = await uploadImage(croppedBlob, { size: 256, showToast: false });
+      imagePath = null; // приоритет у загруженной
       await updatePreviewAvatar();
     } catch (err) {
       logger.error('categoryCreate: upload failed', err);
@@ -126,7 +129,6 @@ export function openCategoryCreateModal(profile, onCreated) {
 
       on(previewAvatar, 'click', () => fileInput.click());
 
-      // Удаление картинки (появляется после загрузки)
       removeBtn = createElement(
         'button',
         {
@@ -144,10 +146,11 @@ export function openCategoryCreateModal(profile, onCreated) {
           try {
             await deleteImage(imageId);
           } catch {
-            /* игнорируем */
+            /* ignore */
           }
           imageId = null;
         }
+        imagePath = null;
         await updatePreviewAvatar();
       });
 
@@ -170,7 +173,15 @@ export function openCategoryCreateModal(profile, onCreated) {
         placeholder: 'Например: Одежда',
         autofocus: true,
       });
-      on(nameInput, 'input', () => updatePreviewAvatar());
+
+      on(nameInput, 'input', () => {
+        if (!imageId) {
+          const found = findCardImage(nameInput.value);
+          imagePath = found || null;
+        }
+        updatePreviewAvatar();
+      });
+
       nameRow.appendChild(nameLabel);
       nameRow.appendChild(nameInput);
       wrap.appendChild(nameRow);
@@ -210,13 +221,11 @@ export function openCategoryCreateModal(profile, onCreated) {
       },
     ],
     onClose: async () => {
-      // Если пользователь отменил, а картинка уже загружена — удаляем её,
-      // чтобы не оставлять мусор в IndexedDB.
       if (imageId) {
         try {
           await deleteImage(imageId);
         } catch {
-          /* игнорируем */
+          /* ignore */
         }
       }
     },
@@ -248,6 +257,7 @@ export function openCategoryCreateModal(profile, onCreated) {
       wordType: wordTypeSelect.value,
       hidden: false,
       imageId: imageId || null,
+      imagePath: imagePath || null,
     };
 
     profile.categories.push(newCategory);
@@ -257,9 +267,7 @@ export function openCategoryCreateModal(profile, onCreated) {
 
     toast('Категория создана');
 
-    // Защищаем imageId от удаления в onClose
-    imageId = null;
-
+    imageId = null; // защищаем от удаления в onClose
     modal.close();
     if (onCreated) onCreated(newCategory.id);
   }

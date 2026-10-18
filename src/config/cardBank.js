@@ -47,4 +47,11 @@ export const CARD_BANK = {
   я: 'cards/ya.webp',
   да: 'cards/yes.webp',
   нет: 'cards/no.webp',
+  потребности: 'cards/toilet.webp',
+  эмоции: 'cards/joy.webp',
+  просьбы: 'cards/give.webp',
+  цвета: 'cards/blocks.webp',
+  еда: 'cards/porridge.webp',
+  напитки: 'cards/tea.webp',
+  игры: 'cards/game.webp',
 };

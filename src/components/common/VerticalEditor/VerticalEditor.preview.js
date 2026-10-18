@@ -156,7 +156,7 @@ export function renderPreview(entity, callbacks) {
     openImageSourcePopup(box, { fileInput, cameraInput });
   });
 
-  if (entity.imageId) {
+  if (entity.imageId || entity.imagePath) {
     const removeBtn = createElement('button', { className: 've-preview-remove' }, '✕');
     on(removeBtn, 'click', (e) => {
       e.stopPropagation();

@@ -60,6 +60,8 @@ export function openVerticalEditor(config) {
         },
         onRemoveImage: () => {
           workingEntity.imageId = null;
+          workingEntity.imagePath = null;
+          workingEntity.emoji = '';
           renderContent();
         },
         onExtraActionClick: (actionId) => {

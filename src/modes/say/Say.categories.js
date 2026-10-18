@@ -145,7 +145,6 @@ function createCategoryAvatar(cat) {
   const letter = (cat.name || '?').trim().charAt(0).toUpperCase();
 
   if (cat.imageId) {
-    // Пока грузится — показываем букву, после загрузки — картинку
     avatar.classList.add('cat-avatar--fallback');
     avatar.textContent = letter;
 
@@ -163,8 +162,18 @@ function createCategoryAvatar(cat) {
         avatar.appendChild(img);
       })
       .catch(() => {
-        /* оставляем фолбек */
+        /* остаётся fallback */
       });
+  } else if (cat.imagePath) {
+    const base = import.meta.env.BASE_URL || '/';
+    const url = base.endsWith('/') ? `${base}${cat.imagePath}` : `${base}/${cat.imagePath}`;
+    const img = createElement('img', {
+      src: url,
+      alt: '',
+      className: 'cat-avatar__img',
+      draggable: 'false',
+    });
+    avatar.appendChild(img);
   } else {
     avatar.classList.add('cat-avatar--fallback');
     avatar.textContent = letter;
