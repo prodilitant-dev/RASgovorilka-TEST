@@ -1,0 +1,115 @@
+/* ============================================================
+   КОМПОНЕНТ: Игра Математика
+   ОТВЕЧАЕТ ЗА: Отображение примеров, drop-зон для ответов и вариантов.
+   ИЗМЕНЕНИЯ: Размер шрифта цифр и ячеек для перетаскивания.
+   ============================================================ */
+
+.math-equation {
+  font-size: 36px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.math-equation .math-part {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  background: transparent;
+}
+
+.math-equation .math-drop-zone {
+  width: 60px;
+  height: 60px;
+  border: 3px dashed var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  background: #f8f9fa;
+  color: var(--text);
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: grab;
+  pointer-events: auto;
+}
+
+.math-equation .math-drop-zone.drag-over {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  cursor: copy;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.3);
+}
+
+.math-equation .math-drop-zone.filled {
+  border-style: solid;
+  border-color: var(--primary);
+  background: var(--surface);
+  cursor: default;
+}
+
+.math-equation .math-drop-zone.correct {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.math-equation .math-drop-zone.wrong {
+  border-color: var(--danger);
+  background: #ffebee;
+}
+
+.math-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  margin-top: var(--spacing-md);
+}
+
+.math-options .math-option {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: grab;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+  touch-action: none;
+  min-width: 60px;
+  text-align: center;
+}
+
+.math-options .math-option:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+}
+
+.math-options .math-option.dragging {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.math-options .math-option.used {
+  opacity: 0.3;
+  pointer-events: none;
+}

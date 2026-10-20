@@ -1,0 +1,49 @@
+/* ============================================================
+   КОМПОНЕНТ: Vertical Editor (Поля ввода)
+   ОТВЕЧАЕТ ЗА: Стили полей формы (input, select, label).
+   ИЗМЕНЕНИЯ: Высота полей и отступы при вводе текста.
+   ============================================================ */
+
+.ve-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.ve-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.ve-field-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ve-field input,
+.ve-field select {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 16px;
+  font-family: var(--font);
+  background: var(--surface);
+  color: var(--text);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ve-field input:focus,
+.ve-field select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+.ve-field input:disabled,
+.ve-field select:disabled {
+  background: var(--bg);
+  opacity: 0.7;
+}

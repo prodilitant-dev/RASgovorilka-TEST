@@ -36,8 +36,8 @@
 }
 
 .profile-fab__icon {
-  width: 24px;
-  height: 24px;
+  width: 2rem;
+  height: 2rem;
   object-fit: contain;
   display: block;
   pointer-events: none;

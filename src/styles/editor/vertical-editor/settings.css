@@ -1,0 +1,59 @@
+/* ============================================================
+   КОМПОНЕНТ: Настройки интерфейса (вынесено из VE)
+   ОТВЕЧАЕТ ЗА: Стили модалки InterfaceSettingsModal (выбор верха/низа).
+   ИЗМЕНЕНИЯ: Внешний вид опций выбора (рамки, активный фон).
+   ============================================================ */
+
+.interface-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.interface-settings__label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text, #333);
+  margin-bottom: 4px;
+}
+
+.interface-settings__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.interface-settings__option {
+  padding: 12px 14px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.interface-settings__option:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.interface-settings__option.active {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.08);
+}
+
+.interface-settings__option-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text, #333);
+}
+
+.interface-settings__option-hint {
+  font-size: 12px;
+  color: var(--text-muted, #777);
+  margin-top: 2px;
+}

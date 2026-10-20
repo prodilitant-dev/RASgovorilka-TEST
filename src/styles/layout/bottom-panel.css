@@ -26,47 +26,76 @@
   gap: var(--spacing-sm);
   overflow-x: auto;
   scrollbar-width: none;
-  padding-bottom: 2px;
+
+  /* Увеличиваем отступы, чтобы аватарка 36px не обрезалась контейнером */
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .quick-buttons::-webkit-scrollbar {
   display: none;
 }
 
+/* Компактная кнопка (тонкая) */
 .quick-btn {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 1.25rem;
-  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 0.75rem;
+
+  /* Высота кнопки 24px */
+  height: 1.5rem;
+
+  /* Оставляем место под текст */
+  padding: 0 var(--spacing-sm) 0 2.25rem;
+
   white-space: nowrap;
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
   flex-shrink: 0;
   transition: background var(--transition);
+  /* overflow: visible; — не поможет, если родитель обрезает */
 }
+
 .quick-btn:active {
   background: #e9ecef;
 }
-.quick-btn img {
-  width: 1.5rem;
-  height: 1.5rem;
-  object-fit: contain;
-}
 
+/* Иконка: идеальный круг поверх кнопки */
+.quick-btn img,
 .quick-btn__icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  object-fit: contain;
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* Аватарка больше кнопки (36px) */
+  width: 2.25rem;
+  height: 2.25rem;
+
+  border-radius: 50%;
+  background: #ffffff; /* БЕЛЫЙ ФОН, как ты просил */
+  object-fit: cover;
+
   display: block;
   pointer-events: none;
   -webkit-user-drag: none;
+
+  /* Легкая тень, чтобы белый кружок было видно на белой кнопке */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border); /* Тонкая рамка для четкости */
+  box-sizing: border-box;
+  z-index: 1;
 }
 
+/* Кнопка "Добавить" (плюсик) */
 .quick-btn--add {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.75rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 var(--spacing-md);
+  border-radius: 0.75rem;
 }

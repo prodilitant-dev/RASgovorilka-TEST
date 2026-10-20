@@ -28,7 +28,7 @@
 @import './modals/editor.css';
 
 /* === Editors: крупные редакторы === */
-@import './editor/vertical-editor.css';
+@import './editor/vertical-editor/index.css';
 @import './editor/image-cropper.css';
 
 /* === Common: общие компоненты === */
@@ -42,7 +42,7 @@
 /* === Режимы === */
 @import './modes/profiles.css';
 @import './modes/settings.css';
-@import './modes/learning.css';
+@import './modes/learning/index.css';
 @import './modes/games.css';
 
 html,
