@@ -1,32 +1,33 @@
+// src/config/defaultData/cards.js
 export const CARDS_BY_CATEGORY = {
   // ----- Потребности -----
   needs: [
-    { text: 'Пить', emoji: '🚰', wordType: 'other', imagePath: 'cards/drink.webp' },
-    { text: 'Есть', emoji: '🍽️', wordType: 'other', imagePath: 'cards/eat.webp' },
-    { text: 'Спать', emoji: '😴', wordType: 'other', imagePath: 'cards/sleep.webp' },
-    { text: 'Туалет', emoji: '🚽', wordType: 'other', imagePath: 'cards/toilet.webp' },
-    { text: 'Помоги', emoji: '🆘', wordType: 'other', imagePath: 'cards/help-request.webp' },
+    { text: 'Пить', emoji: '🚰', wordType: 'verb', imagePath: 'cards/drink.webp' },
+    { text: 'Есть', emoji: '🍽️', wordType: 'verb', imagePath: 'cards/eat.webp' },
+    { text: 'Спать', emoji: '😴', wordType: 'verb', imagePath: 'cards/sleep.webp' },
+    { text: 'Туалет', emoji: '🚽', wordType: 'noun', imagePath: 'cards/toilet.webp' },
+    { text: 'Помоги', emoji: '🆘', wordType: 'verb', imagePath: 'cards/help-request.webp' },
     { text: 'Больно', emoji: '🤕', wordType: 'other', imagePath: 'cards/pain.webp' },
     { text: 'Устал', emoji: '😩', wordType: 'other', imagePath: 'cards/tired.webp' },
-    { text: 'Обнимашки', emoji: '🤗', wordType: 'other', imagePath: 'cards/hug.webp' },
-    { text: 'Играть', emoji: '🎮', wordType: 'other', imagePath: 'cards/game.webp' },
+    { text: 'Обнимашки', emoji: '🤗', wordType: 'noun', imagePath: 'cards/hug.webp' },
+    { text: 'Играть', emoji: '🎮', wordType: 'verb', imagePath: 'cards/game.webp' },
   ],
 
   // ----- Эмоции -----
   emotions: [
-    { text: 'Радость', emoji: '😊', wordType: 'other', imagePath: 'cards/joy.webp' },
-    { text: 'Грусть', emoji: '😢', wordType: 'other', imagePath: 'cards/sadness.webp' },
-    { text: 'Злость', emoji: '😡', wordType: 'other', imagePath: 'cards/anger.webp' },
-    { text: 'Страх', emoji: '😨', wordType: 'other', imagePath: 'cards/fear.webp' },
+    { text: 'Радость', emoji: '😊', wordType: 'noun', imagePath: 'cards/joy.webp' },
+    { text: 'Грусть', emoji: '😢', wordType: 'noun', imagePath: 'cards/sadness.webp' },
+    { text: 'Злость', emoji: '😡', wordType: 'noun', imagePath: 'cards/anger.webp' },
+    { text: 'Страх', emoji: '😨', wordType: 'noun', imagePath: 'cards/fear.webp' },
     { text: 'Спокойно', emoji: '😌', wordType: 'other', imagePath: 'cards/calm.webp' },
     { text: 'Скучно', emoji: '😐', wordType: 'other', imagePath: 'cards/bored.webp' },
   ],
 
   // ----- Просьбы -----
   requests: [
-    { text: 'Дай', emoji: '🤲', wordType: 'other', imagePath: 'cards/give.webp' },
-    { text: 'Помоги', emoji: '🆘', wordType: 'other', imagePath: 'cards/help-request.webp' },
-    { text: 'Покажи', emoji: '👀', wordType: 'other', imagePath: 'cards/show.webp' },
+    { text: 'Дай', emoji: '🤲', wordType: 'verb', imagePath: 'cards/give.webp' },
+    { text: 'Помоги', emoji: '🆘', wordType: 'verb', imagePath: 'cards/help-request.webp' },
+    { text: 'Покажи', emoji: '👀', wordType: 'verb', imagePath: 'cards/show.webp' },
   ],
 
   // ----- Еда (существительные) -----
@@ -50,9 +51,9 @@ export const CARDS_BY_CATEGORY = {
 
   // ----- Игры -----
   games: [
-    { text: 'Конструктор', emoji: '🧩', wordType: 'other', imagePath: 'cards/lego.webp' },
-    { text: 'Кубики', emoji: '🎲', wordType: 'other', imagePath: 'cards/blocks.webp' },
-    { text: 'Машинка', emoji: '🚗', wordType: 'other', imagePath: 'cards/car.webp' },
+    { text: 'Конструктор', emoji: '🧩', wordType: 'noun', imagePath: 'cards/lego.webp' },
+    { text: 'Кубики', emoji: '🎲', wordType: 'noun', imagePath: 'cards/blocks.webp' },
+    { text: 'Машинка', emoji: '🚗', wordType: 'noun', imagePath: 'cards/car.webp' },
   ],
 
   // ----- Цвета (прилагательные) -----

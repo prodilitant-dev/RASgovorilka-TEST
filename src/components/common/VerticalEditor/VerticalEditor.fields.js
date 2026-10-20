@@ -1,6 +1,7 @@
 // src/components/common/VerticalEditor/VerticalEditor.fields.js
 import { createElement, on } from '@utils/dom';
 import { iconUrl, isIconName } from '@utils/icon';
+import { searchCardBank } from '@utils/cardBank';
 
 let idCounter = 0;
 function generateId() {
@@ -66,7 +67,8 @@ export function renderFields(entity, fields, callbacks) {
               }
               li.appendChild(document.createTextNode(item.text));
 
-              li.addEventListener('click', () => {
+              li.addEventListener('mousedown', (e) => {
+                e.preventDefault(); // Предотвращаем blur инпута, чтобы `change` не уничтожил модалку раньше времени
                 input.value = item.text;
                 entity[field.id] = item.text;
                 list.style.display = 'none';
@@ -84,11 +86,9 @@ export function renderFields(entity, fields, callbacks) {
             entity[field.id] = value;
             if (field.onChange) field.onChange(value, entity);
             updatePreviewText(entity);
-            // Автокомплит
-            import('@utils/cardBank').then(({ searchCardBank }) => {
-              const results = searchCardBank(value);
-              renderList(results);
-            });
+            // Автокомплит — синхронно
+            const results = searchCardBank(value);
+            renderList(results);
           });
 
           on(input, 'change', (e) => {
