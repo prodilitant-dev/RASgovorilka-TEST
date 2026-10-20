@@ -1,7 +1,7 @@
 // src/components/common/VerticalEditor/VerticalEditor.view.js
 import { createElement } from '@utils/dom';
-import { renderPreview } from './VerticalEditor.preview';
-import { renderFields } from './VerticalEditor.fields';
+import { renderFields } from './fields/index.js';
+import { renderPreview } from './preview/index.js';
 import { renderFooter } from './VerticalEditor.footer';
 import { iconUrl } from '@utils/icon';
 
