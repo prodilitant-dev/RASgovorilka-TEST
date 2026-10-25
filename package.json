@@ -1,7 +1,7 @@
 {
   "name": "rasgovorilka-test",
   "private": true,
-  "version": "0.9.8",
+  "version": "0.9.9",
   "type": "module",
   "license": "GPL-3.0-or-later",
   "description": "РАСговорилка — TEST-репозиторий для аудита кода и экспериментов",
