@@ -40,4 +40,6 @@ format-check.txt
 # editor
 .vscode/*
 !.vscode/extensions.json
-.idea/
+.idea/*.zip
+cards_list.txt
+fix_*.cjs

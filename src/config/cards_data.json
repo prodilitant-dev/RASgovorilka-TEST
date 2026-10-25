@@ -1,0 +1,546 @@
+{
+  "words": {
+    "бомбер": {
+      "word": "бомбер",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "бомбер_2.webp"
+      ],
+      "filename": "бомбер.webp"
+    },
+    "брюки": {
+      "word": "брюки",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "брюки_2.webp",
+        "брюки_3.webp",
+        "брюки_4.webp",
+        "брюки_5.webp"
+      ],
+      "filename": "брюки.webp"
+    },
+    "брюки карго": {
+      "word": "брюки карго",
+      "filename": "брюки_карго.webp",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "брюки_карго_2.webp"
+      ]
+    },
+    "ветровка": {
+      "word": "ветровка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "ветровка.webp"
+    },
+    "галстук": {
+      "word": "галстук",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "галстук.webp"
+    },
+    "джинсовая куртка": {
+      "word": "джинсовая куртка",
+      "filename": "джинсовая_куртка.webp",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "джинсовая_куртка_2.webp",
+        "джинсовая_куртка_3.webp"
+      ]
+    },
+    "джинсы": {
+      "word": "джинсы",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "джинсы_2.webp",
+        "джинсы_3.webp",
+        "джинсы_4.webp"
+      ],
+      "filename": "джинсы.webp"
+    },
+    "дождевик": {
+      "word": "дождевик",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "дождевик_2.webp",
+        "дождевик_3.webp"
+      ],
+      "filename": "дождевик.webp"
+    },
+    "жилет": {
+      "word": "жилет",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "жилет_2.webp",
+        "жилет_3.webp"
+      ],
+      "filename": "жилет.webp"
+    },
+    "зимняя куртка": {
+      "word": "зимняя куртка",
+      "filename": "зимняя_куртка.webp",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": []
+    },
+    "кардиган": {
+      "word": "кардиган",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "кардиган_2.webp",
+        "кардиган_3.webp"
+      ],
+      "filename": "кардиган.webp"
+    },
+    "кепка": {
+      "word": "кепка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "кепка_2.webp"
+      ],
+      "filename": "кепка.webp"
+    },
+    "кимоно": {
+      "word": "кимоно",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "кимоно.webp"
+    },
+    "кожаная куртка": {
+      "word": "кожаная куртка",
+      "filename": "кожаная_куртка.webp",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "кожаная_куртка_2.webp"
+      ]
+    },
+    "комбинезон": {
+      "word": "комбинезон",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "комбинезон_2.webp",
+        "комбинезон_3.webp"
+      ],
+      "filename": "комбинезон.webp"
+    },
+    "костюм": {
+      "word": "костюм",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "костюм.webp"
+    },
+    "кофта": {
+      "word": "кофта",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "кофта.webp"
+    },
+    "кроссовки": {
+      "word": "кроссовки",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "кроссовки_2.webp"
+      ],
+      "filename": "кроссовки.webp"
+    },
+    "куртка": {
+      "word": "куртка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "куртка_2.webp",
+        "куртка_3.webp",
+        "куртка_4.webp"
+      ],
+      "filename": "куртка.webp"
+    },
+    "леггинсы": {
+      "word": "леггинсы",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "леггинсы.webp"
+    },
+    "майка": {
+      "word": "майка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "майка_2.webp",
+        "майка_3.webp"
+      ],
+      "filename": "майка.webp"
+    },
+    "накидка": {
+      "word": "накидка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "накидка.webp"
+    },
+    "носки": {
+      "word": "носки",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "носки.webp"
+    },
+    "пальто": {
+      "word": "пальто",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "пальто.webp"
+    },
+    "пиджак": {
+      "word": "пиджак",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "пиджак_2.webp",
+        "пиджак_3.webp"
+      ],
+      "filename": "пиджак.webp"
+    },
+    "пижама": {
+      "word": "пижама",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "пижама.webp"
+    },
+    "платье": {
+      "word": "платье",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "платье_2.webp",
+        "платье_3.webp",
+        "платье_4.webp",
+        "платье_5.webp"
+      ],
+      "filename": "платье.webp"
+    },
+    "плед": {
+      "word": "плед",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "плед.webp"
+    },
+    "поло": {
+      "word": "поло",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "поло_2.webp",
+        "поло_3.webp"
+      ],
+      "filename": "поло.webp"
+    },
+    "пончо": {
+      "word": "пончо",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "пончо.webp"
+    },
+    "ремень": {
+      "word": "ремень",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "ремень.webp"
+    },
+    "рубашка": {
+      "word": "рубашка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "рубашка_2.webp",
+        "рубашка_3.webp"
+      ],
+      "filename": "рубашка.webp"
+    },
+    "свитер": {
+      "word": "свитер",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "свитер_2.webp",
+        "свитер_3.webp"
+      ],
+      "filename": "свитер.webp"
+    },
+    "спортивные штаны": {
+      "word": "спортивные штаны",
+      "filename": "спортивные_штаны.webp",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "спортивные_штаны_2.webp"
+      ]
+    },
+    "спортивный костюм": {
+      "word": "спортивный костюм",
+      "filename": "спортивный_костюм.webp",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": []
+    },
+    "топ": {
+      "word": "топ",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "топ_2.webp"
+      ],
+      "filename": "топ.webp"
+    },
+    "трусы": {
+      "word": "трусы",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "трусы.webp"
+    },
+    "туника": {
+      "word": "туника",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "туника.webp"
+    },
+    "футболка": {
+      "word": "футболка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "футболка_2.webp",
+        "футболка_3.webp",
+        "футболка_4.webp",
+        "футболка_5.webp",
+        "футболка_6.webp"
+      ],
+      "filename": "футболка.webp"
+    },
+    "халат": {
+      "word": "халат",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "халат_2.webp"
+      ],
+      "filename": "халат.webp"
+    },
+    "худи": {
+      "word": "худи",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "худи_2.webp",
+        "худи_3.webp"
+      ],
+      "filename": "худи.webp"
+    },
+    "шапка": {
+      "word": "шапка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "шапка.webp"
+    },
+    "шарф": {
+      "word": "шарф",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "шарф.webp"
+    },
+    "шляпа": {
+      "word": "шляпа",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [],
+      "filename": "шляпа.webp"
+    },
+    "шорты": {
+      "word": "шорты",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "шорты_2.webp",
+        "шорты_3.webp",
+        "шорты_4.webp"
+      ],
+      "filename": "шорты.webp"
+    },
+    "юбка": {
+      "word": "юбка",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": [],
+      "variants": [
+        "юбка_2.webp",
+        "юбка_3.webp",
+        "юбка_4.webp",
+        "юбка_5.webp"
+      ],
+      "filename": "юбка.webp"
+    }
+  }
+}

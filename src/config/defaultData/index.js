@@ -2,54 +2,47 @@
 import { uid } from '@utils/id';
 import { autoDetectCard } from '@utils/inflect';
 import { CATEGORIES } from './categories';
-import { CARDS_BY_CATEGORY } from './cards';
+import { CARD_BANK } from '@config/cardBank';
 import { QUICK_BUTTONS } from './quickButtons';
 import { YESNO_BUTTONS } from './yesnoButtons';
 import { SCHEDULE_TEMPLATES } from './scheduleTemplates';
 import { SCHEDULE_DAY_MAPPING } from './scheduleDayMapping';
 import { DEFAULT_LEARNING_SETTINGS, DEFAULT_GAMES_SETTINGS } from './defaultSettings';
 
-// Реэкспорт глобальных дефолтов — чтобы можно было импортировать из '@config/defaultData'
 export { DEFAULT_GLOBAL_SETTINGS } from './defaultSettings';
 
-/**
- * Создаёт профиль по умолчанию с актуальными стоковыми данными
- * @param {string} name - имя профиля
- * @param {string} icon - эмодзи иконки
- * @returns {Object} объект профиля
- */
 export function createDefaultProfile(name = 'дом', icon = 'profile-default') {
-  // 1. Создаём категории
   const categories = CATEGORIES.map((cat) => ({ ...cat }));
 
-  // 2. Создаём карточки для каждой категории
   const cards = {};
   categories.forEach((cat) => {
-    const rawCards = CARDS_BY_CATEGORY[cat.id] || [];
-    cards[cat.id] = rawCards.map((raw) => {
+    // Если это "Банк карточек" — берем ВСЕ слова. Иначе — только этой категории.
+    const sourceCards = cat.id === 'dictionary' 
+      ? CARD_BANK 
+      : CARD_BANK.filter(item => item.category === cat.id);
+      
+    cards[cat.id] = sourceCards.map((raw) => {
       const card = {
         id: uid(),
-        text: raw.text,
-        emoji: raw.emoji,
+        text: raw.word.charAt(0).toUpperCase() + raw.word.slice(1),
+        emoji: raw.emoji || '🖼️',
         wordType: raw.wordType || cat.wordType,
-        animate: raw.animate,
+        gender: raw.gender || null,
+        animate: false,
         imageId: null,
-        imagePath: raw.imagePath || null, // ← стоковая WebP-картинка
+        // Используем filename из базы (например, "спортивные_штаны.webp")
+        imagePath: `cards/${raw.category}/${raw.filename || (raw.word + '.webp')}`,
         forms: null,
+        variants: raw.variants || []
       };
-      // Автосклонение только для склоняемых частей речи
-      if (
-        card.wordType === 'noun' ||
-        card.wordType === 'pronoun' ||
-        card.wordType === 'adjective'
-      ) {
+      
+      if (['noun', 'pronoun', 'adjective'].includes(card.wordType)) {
         autoDetectCard(card);
       }
       return card;
     });
   });
 
-  // 3. Быстрые кнопки
   const quickButtons = QUICK_BUTTONS.map((btn) => ({
     ...btn,
     id: uid(),
@@ -57,7 +50,6 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
     forms: null,
   }));
 
-  // 4. Кнопки Да/Нет
   const yesnoButtons = YESNO_BUTTONS.map((btn) => ({
     ...btn,
     id: uid(),
@@ -65,7 +57,6 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
     forms: null,
   }));
 
-  // 5. Шаблоны расписания
   const scheduleTemplates = SCHEDULE_TEMPLATES.map((template) => ({
     ...template,
     id: uid(),
@@ -76,22 +67,17 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
     })),
   }));
 
-  // 6. Привязка дней
   const scheduleDayMapping = {};
   const weekdayTemplate = scheduleTemplates.find((t) => t.name === 'Будний день');
   const weekendTemplate = scheduleTemplates.find((t) => t.name === 'Выходной день');
   if (weekdayTemplate && weekendTemplate) {
     for (const day in SCHEDULE_DAY_MAPPING) {
       const templateName = SCHEDULE_DAY_MAPPING[day];
-      if (templateName === 'wd' && weekdayTemplate) {
-        scheduleDayMapping[day] = weekdayTemplate.id;
-      } else if (templateName === 'we' && weekendTemplate) {
-        scheduleDayMapping[day] = weekendTemplate.id;
-      }
+      if (templateName === 'wd' && weekdayTemplate) scheduleDayMapping[day] = weekdayTemplate.id;
+      else if (templateName === 'we' && weekendTemplate) scheduleDayMapping[day] = weekendTemplate.id;
     }
   }
 
-  // 7. Настройки по умолчанию
   const learningSettings = JSON.parse(JSON.stringify(DEFAULT_LEARNING_SETTINGS));
   const categoryIds = categories.map((c) => c.id);
   learningSettings.quiz.categoryIds = [...categoryIds];
@@ -101,7 +87,6 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
   const gamesSettings = JSON.parse(JSON.stringify(DEFAULT_GAMES_SETTINGS));
   gamesSettings.memory.categoryIds = [...categoryIds];
 
-  // 8. Собираем профиль
   return {
     id: uid(),
     name,

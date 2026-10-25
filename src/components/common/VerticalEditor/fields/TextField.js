@@ -3,10 +3,6 @@ import { createElement, on } from '@utils/dom';
 import { updatePreviewText } from '../preview/index.js';
 import { searchCardBank } from '@utils/cardBank';
 
-/**
- * Рендерит текстовое поле (text, number, time).
- * Поддерживает автокомплит для карточек.
- */
 export function renderTextField(entity, field, fieldId, callbacks) {
   const input = createElement('input', {
     type: field.type || 'text',
@@ -16,7 +12,6 @@ export function renderTextField(entity, field, fieldId, callbacks) {
     placeholder: field.placeholder || '',
   });
 
-  // Если автокомплит не нужен — просто возвращаем инпут
   if (!field.autocomplete) {
     on(input, 'input', (e) => {
       const value = e.target.value;
@@ -24,19 +19,17 @@ export function renderTextField(entity, field, fieldId, callbacks) {
       if (field.onChange) field.onChange(value, entity);
       updatePreviewText(entity);
     });
-    on(input, 'change', (e) => {
-      callbacks.onFieldChange(field.id, e.target.value);
-    });
+    on(input, 'change', (e) => callbacks.onFieldChange(field.id, e.target.value));
     return input;
   }
 
-  // === Логика с автокомплитом ===
+  // === Автокомплит ===
   const wrapper = createElement('div', { className: 've-autocomplete-wrapper' });
   const list = createElement('ul', { className: 've-autocomplete-list' });
   list.style.display = 'none';
   wrapper.appendChild(input);
   wrapper.appendChild(list);
-
+  
   let activeIndex = -1;
 
   const renderList = (items) => {
@@ -48,26 +41,52 @@ export function renderTextField(entity, field, fieldId, callbacks) {
     }
     items.forEach((item, index) => {
       const li = createElement('li', { 'data-index': index });
-
+      
+      // Показываем миниатюру картинки в списке (если она есть)
       if (item.imagePath) {
         const base = import.meta.env.BASE_URL || '/';
         const url = base.endsWith('/') ? `${base}${item.imagePath}` : `${base}/${item.imagePath}`;
         const img = createElement('img', { src: url, className: 've-autocomplete-img' });
+        
+        // Если картинка не загрузилась, показываем эмодзи
+        img.addEventListener('error', () => {
+          img.remove();
+          if (item.emoji) {
+            const spanEmoji = createElement('span', { className: 've-autocomplete-emoji' }, item.emoji);
+            li.insertBefore(spanEmoji, li.firstChild);
+          }
+        });
+        
         li.appendChild(img);
+      } else if (item.emoji) {
+        const spanEmoji = createElement('span', { className: 've-autocomplete-emoji' }, item.emoji);
+        li.appendChild(spanEmoji);
       }
-
       li.appendChild(document.createTextNode(item.text));
 
       li.addEventListener('mousedown', (e) => {
-        e.preventDefault(); // Предотвращаем blur, чтобы модалка не перерендерилась
+        e.preventDefault(); 
+        
+        // Подставляем данные
         input.value = item.text;
         entity[field.id] = item.text;
+        
+        entity.imagePath = item.imagePath; 
+        entity.emoji = item.emoji || '';
+        if (item.wordType) entity.wordType = item.wordType;
+        if (item.gender) entity.gender = item.gender;
+        
+        // ЗАДЕЛ НА БУДУЩЕЕ: сохраняем варианты картинок в сущность
+        if (item.variants && item.variants.length > 0) {
+           entity.imageVariants = item.variants; 
+        }
+
         list.style.display = 'none';
-        if (field.onChange) field.onChange(item.text, entity);
         updatePreviewText(entity);
         callbacks.onFieldChange(field.id, item.text);
+        if (entity.wordType) callbacks.onFieldChange('wordType', entity.wordType);
       });
-
+      
       list.appendChild(li);
     });
     list.style.display = 'block';
@@ -87,6 +106,7 @@ export function renderTextField(entity, field, fieldId, callbacks) {
     if (!wrapper.contains(e.target)) list.style.display = 'none';
   });
 
+  // Управление стрелками
   on(input, 'keydown', (e) => {
     if (list.style.display === 'none') return;
     const items = list.querySelectorAll('li');
