@@ -15,14 +15,14 @@ export function searchCardBank(query) {
 
   const results = CARD_BANK.filter((item) => {
     if (normalizeText(item.word).includes(norm)) return true;
-    return item.synonyms?.some(a => normalizeText(a).includes(norm));
+    return item.synonyms?.some((a) => normalizeText(a).includes(norm));
   });
 
   results.sort((a, b) => {
     const aWord = normalizeText(a.word);
     const bWord = normalizeText(b.word);
-    const aExact = aWord === norm || a.synonyms?.some(al => normalizeText(al) === norm);
-    const bExact = bWord === norm || b.synonyms?.some(al => normalizeText(al) === norm);
+    const aExact = aWord === norm || a.synonyms?.some((al) => normalizeText(al) === norm);
+    const bExact = bWord === norm || b.synonyms?.some((al) => normalizeText(al) === norm);
     if (aExact && !bExact) return -1;
     if (!aExact && bExact) return 1;
     const aStarts = aWord.startsWith(norm);
@@ -32,16 +32,16 @@ export function searchCardBank(query) {
     return aWord.localeCompare(bWord);
   });
 
-  return results.slice(0, 10).map(item => ({
+  return results.slice(0, 10).map((item) => ({
     text: item.word.charAt(0).toUpperCase() + item.word.slice(1),
     rawWord: item.word,
-    imagePath: `cards/${item.category}/${item.filename || (item.word + '.webp')}`,
+    imagePath: `cards/${item.category}/${item.filename || item.word + '.webp'}`,
     emoji: item.emoji,
     wordType: item.wordType,
     gender: item.gender,
-    category: item.category,   // <--- ВАЖНО: добавили
-    filename: item.filename,   // <--- ВАЖНО: добавили
-    variants: item.variants || []
+    category: item.category, // <--- ВАЖНО: добавили
+    filename: item.filename, // <--- ВАЖНО: добавили
+    variants: item.variants || [],
   }));
 }
 
@@ -51,8 +51,8 @@ export function searchCardBank(query) {
 export function findCardImage(text) {
   const norm = normalizeText(text);
   const found = CARD_BANK.find(
-    (item) => normalizeText(item.word) === norm || 
-              item.synonyms?.some(a => normalizeText(a) === norm)
+    (item) =>
+      normalizeText(item.word) === norm || item.synonyms?.some((a) => normalizeText(a) === norm)
   );
-  return found ? `cards/${found.category}/${found.filename || (found.word + '.webp')}` : null;
+  return found ? `cards/${found.category}/${found.filename || found.word + '.webp'}` : null;
 }

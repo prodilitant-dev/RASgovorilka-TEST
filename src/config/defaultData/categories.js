@@ -10,7 +10,7 @@ export const CATEGORIES = [
   { id: 'zhivotnye', name: 'Животные', wordType: 'noun' },
   { id: 'transport', name: 'Транспорт', wordType: 'noun' },
   { id: 'deystviya', name: 'Действия', wordType: 'verb' },
-  
+
   // СКРЫТАЯ КАТЕГОРИЯ (содержит вообще все слова из банка)
-  { id: 'dictionary', name: 'Банк карточек', wordType: 'other'},
+  { id: 'dictionary', name: 'Банк карточек', wordType: 'other' },
 ];

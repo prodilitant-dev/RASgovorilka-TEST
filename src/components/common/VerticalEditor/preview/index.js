@@ -45,7 +45,12 @@ export function renderPreview(entity, callbacks) {
 
     if (emoji && isIconName(emoji)) {
       textEl.textContent = '';
-      const img = createElement('img', { src: iconUrl(emoji), alt: '', className: 've-preview-img', draggable: 'false' });
+      const img = createElement('img', {
+        src: iconUrl(emoji),
+        alt: '',
+        className: 've-preview-img',
+        draggable: 'false',
+      });
       img.style.maxWidth = '70%';
       img.style.maxHeight = '70%';
       img.style.objectFit = 'contain';
@@ -68,8 +73,14 @@ export function renderPreview(entity, callbacks) {
     const base = import.meta.env.BASE_URL || '/';
     const url = base.endsWith('/') ? `${base}${imagePath}` : `${base}/${imagePath}`;
     const probe = new Image();
-    probe.onload = () => { boxEl.classList.remove('loading'); onLoad(url); };
-    probe.onerror = () => { boxEl.classList.remove('loading'); onError(); };
+    probe.onload = () => {
+      boxEl.classList.remove('loading');
+      onLoad(url);
+    };
+    probe.onerror = () => {
+      boxEl.classList.remove('loading');
+      onError();
+    };
     probe.src = url;
   };
 
@@ -79,7 +90,8 @@ export function renderPreview(entity, callbacks) {
     getImageUrl(entity.imageId).then((url) => {
       box.classList.remove('loading');
       if (url) applyImageUrl(url);
-      else if (entity.imagePath) loadStockImage(entity.imagePath, box, applyImageUrl, () => showFallback(box, entity));
+      else if (entity.imagePath)
+        loadStockImage(entity.imagePath, box, applyImageUrl, () => showFallback(box, entity));
       else showFallback(box, entity);
     });
   } else if (entity.imagePath) {
@@ -93,7 +105,13 @@ export function renderPreview(entity, callbacks) {
   const cleanupPopup = () => document.querySelector('.ve-image-source-popup')?.remove();
 
   const fileInputId = generateId();
-  const fileInput = createElement('input', { type: 'file', accept: 'image/*', id: fileInputId, name: fileInputId, style: 'display:none;' });
+  const fileInput = createElement('input', {
+    type: 'file',
+    accept: 'image/*',
+    id: fileInputId,
+    name: fileInputId,
+    style: 'display:none;',
+  });
   on(fileInput, 'change', async (e) => {
     cleanupPopup();
     const file = e.target.files[0];
@@ -103,7 +121,14 @@ export function renderPreview(entity, callbacks) {
   box.appendChild(fileInput);
 
   const cameraInputId = generateId();
-  const cameraInput = createElement('input', { type: 'file', accept: 'image/*', capture: 'environment', id: cameraInputId, name: cameraInputId, style: 'display:none;' });
+  const cameraInput = createElement('input', {
+    type: 'file',
+    accept: 'image/*',
+    capture: 'environment',
+    id: cameraInputId,
+    name: cameraInputId,
+    style: 'display:none;',
+  });
   on(cameraInput, 'change', async (e) => {
     cleanupPopup();
     const file = e.target.files[0];
@@ -139,7 +164,7 @@ export function renderPreview(entity, callbacks) {
   // 3. Блок с вариантами
   if (!entity.imageId && entity.variants && entity.variants.length > 0 && entity.category) {
     const allImages = [entity.filename, ...entity.variants].filter(Boolean);
-    
+
     // Если картинка не выбрана — ставим первую
     if (!entity.imagePath) {
       entity.imagePath = `cards/${entity.category}/${allImages[0]}`;
@@ -147,32 +172,34 @@ export function renderPreview(entity, callbacks) {
     }
 
     const variantsRow = createElement('div', { className: 've-variants-row' });
-    
+
     allImages.forEach((imgName) => {
       const fullPath = `cards/${entity.category}/${imgName}`;
       const base = import.meta.env.BASE_URL || '/';
       const url = base.endsWith('/') ? `${base}${fullPath}` : `${base}/${fullPath}`;
-      
+
       const thumb = createElement('div', {
         className: `ve-variant-thumb${entity.imagePath.endsWith(imgName) ? ' active' : ''}`,
-        style: `background-image: url(${url});`
+        style: `background-image: url(${url});`,
       });
 
       on(thumb, 'click', (e) => {
         e.stopPropagation();
         entity.imagePath = fullPath;
-        
+
         loadStockImage(entity.imagePath, box, applyImageUrl, () => showFallback(box, entity));
-        
-        variantsRow.querySelectorAll('.ve-variant-thumb').forEach(t => t.classList.remove('active'));
+
+        variantsRow
+          .querySelectorAll('.ve-variant-thumb')
+          .forEach((t) => t.classList.remove('active'));
         thumb.classList.add('active');
-        
+
         if (callbacks.onFieldChange) callbacks.onFieldChange('imagePath', fullPath);
       });
 
       variantsRow.appendChild(thumb);
     });
-    
+
     block.appendChild(variantsRow);
   }
 
@@ -193,7 +220,7 @@ export function updatePreviewText(entity) {
     box.style.backgroundPosition = 'center';
     box.style.backgroundRepeat = 'no-repeat';
     box.setAttribute('data-has-image', 'true');
-    
+
     const textEl = box.querySelector('.ve-preview-text');
     if (textEl) textEl.textContent = '';
     const existingImg = box.querySelector('.ve-preview-img');
@@ -209,7 +236,12 @@ export function updatePreviewText(entity) {
   if (emoji && isIconName(emoji)) {
     if (existingImg) return;
     if (textEl) textEl.textContent = '';
-    const img = createElement('img', { src: iconUrl(emoji), alt: '', className: 've-preview-img', draggable: 'false' });
+    const img = createElement('img', {
+      src: iconUrl(emoji),
+      alt: '',
+      className: 've-preview-img',
+      draggable: 'false',
+    });
     img.style.maxWidth = '70%';
     img.style.maxHeight = '70%';
     img.style.objectFit = 'contain';

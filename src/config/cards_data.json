@@ -48,9 +48,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "арбуз_2.webp"
-      ]
+      "variants": ["арбуз_2.webp"]
     },
     "артишок": {
       "word": "артишок",
@@ -170,9 +168,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "виноград_2.webp"
-      ]
+      "variants": ["виноград_2.webp"]
     },
     "вишня": {
       "word": "вишня",
@@ -192,9 +188,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "годжи_2.webp"
-      ]
+      "variants": ["годжи_2.webp"]
     },
     "голубика": {
       "word": "голубика",
@@ -204,12 +198,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "голубика_2.webp",
-        "голубика_3.webp",
-        "голубика_4.webp",
-        "голубика_5.webp"
-      ]
+      "variants": ["голубика_2.webp", "голубика_3.webp", "голубика_4.webp", "голубика_5.webp"]
     },
     "горох": {
       "word": "горох",
@@ -269,9 +258,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "дыня_2.webp"
-      ]
+      "variants": ["дыня_2.webp"]
     },
     "ежевика": {
       "word": "ежевика",
@@ -351,9 +338,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "клубника_2.webp"
-      ]
+      "variants": ["клубника_2.webp"]
     },
     "клюква": {
       "word": "клюква",
@@ -363,9 +348,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "клюква_2.webp"
-      ]
+      "variants": ["клюква_2.webp"]
     },
     "кокос": {
       "word": "кокос",
@@ -395,10 +378,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "красная_смородина_2.webp",
-        "красная_смородина_3.webp"
-      ]
+      "variants": ["красная_смородина_2.webp", "красная_смородина_3.webp"]
     },
     "красный лук": {
       "word": "красный лук",
@@ -498,10 +478,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "малина_2.webp",
-        "малина_3.webp"
-      ]
+      "variants": ["малина_2.webp", "малина_3.webp"]
     },
     "манго": {
       "word": "манго",
@@ -571,9 +548,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "облепиха_2.webp"
-      ]
+      "variants": ["облепиха_2.webp"]
     },
     "огурец": {
       "word": "огурец",
@@ -803,9 +778,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "черешня_2.webp"
-      ]
+      "variants": ["черешня_2.webp"]
     },
     "черная смородина": {
       "word": "черная смородина",
@@ -815,10 +788,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "черная_смородина_2.webp",
-        "черная_смородина_3.webp"
-      ]
+      "variants": ["черная_смородина_2.webp", "черная_смородина_3.webp"]
     },
     "чеснок": {
       "word": "чеснок",
@@ -877,9 +847,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "бомбер_2.webp"
-      ],
+      "variants": ["бомбер_2.webp"],
       "filename": "бомбер.webp"
     },
     "брюки": {
@@ -889,12 +857,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "брюки_2.webp",
-        "брюки_3.webp",
-        "брюки_4.webp",
-        "брюки_5.webp"
-      ],
+      "variants": ["брюки_2.webp", "брюки_3.webp", "брюки_4.webp", "брюки_5.webp"],
       "filename": "брюки.webp"
     },
     "брюки карго": {
@@ -905,9 +868,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "брюки_карго_2.webp"
-      ]
+      "variants": ["брюки_карго_2.webp"]
     },
     "ветровка": {
       "word": "ветровка",
@@ -937,10 +898,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "джинсовая_куртка_2.webp",
-        "джинсовая_куртка_3.webp"
-      ]
+      "variants": ["джинсовая_куртка_2.webp", "джинсовая_куртка_3.webp"]
     },
     "джинсы": {
       "word": "джинсы",
@@ -949,11 +907,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "джинсы_2.webp",
-        "джинсы_3.webp",
-        "джинсы_4.webp"
-      ],
+      "variants": ["джинсы_2.webp", "джинсы_3.webp", "джинсы_4.webp"],
       "filename": "джинсы.webp"
     },
     "дождевик": {
@@ -963,10 +917,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "дождевик_2.webp",
-        "дождевик_3.webp"
-      ],
+      "variants": ["дождевик_2.webp", "дождевик_3.webp"],
       "filename": "дождевик.webp"
     },
     "жилет": {
@@ -976,10 +927,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "жилет_2.webp",
-        "жилет_3.webp"
-      ],
+      "variants": ["жилет_2.webp", "жилет_3.webp"],
       "filename": "жилет.webp"
     },
     "зимняя куртка": {
@@ -999,10 +947,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "кардиган_2.webp",
-        "кардиган_3.webp"
-      ],
+      "variants": ["кардиган_2.webp", "кардиган_3.webp"],
       "filename": "кардиган.webp"
     },
     "кепка": {
@@ -1012,9 +957,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "кепка_2.webp"
-      ],
+      "variants": ["кепка_2.webp"],
       "filename": "кепка.webp"
     },
     "кимоно": {
@@ -1035,9 +978,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "кожаная_куртка_2.webp"
-      ]
+      "variants": ["кожаная_куртка_2.webp"]
     },
     "комбинезон": {
       "word": "комбинезон",
@@ -1046,10 +987,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "комбинезон_2.webp",
-        "комбинезон_3.webp"
-      ],
+      "variants": ["комбинезон_2.webp", "комбинезон_3.webp"],
       "filename": "комбинезон.webp"
     },
     "костюм": {
@@ -1079,9 +1017,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "кроссовки_2.webp"
-      ],
+      "variants": ["кроссовки_2.webp"],
       "filename": "кроссовки.webp"
     },
     "куртка": {
@@ -1091,11 +1027,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "куртка_2.webp",
-        "куртка_3.webp",
-        "куртка_4.webp"
-      ],
+      "variants": ["куртка_2.webp", "куртка_3.webp", "куртка_4.webp"],
       "filename": "куртка.webp"
     },
     "леггинсы": {
@@ -1115,10 +1047,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "майка_2.webp",
-        "майка_3.webp"
-      ],
+      "variants": ["майка_2.webp", "майка_3.webp"],
       "filename": "майка.webp"
     },
     "накидка": {
@@ -1158,10 +1087,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "пиджак_2.webp",
-        "пиджак_3.webp"
-      ],
+      "variants": ["пиджак_2.webp", "пиджак_3.webp"],
       "filename": "пиджак.webp"
     },
     "пижама": {
@@ -1181,12 +1107,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "платье_2.webp",
-        "платье_3.webp",
-        "платье_4.webp",
-        "платье_5.webp"
-      ],
+      "variants": ["платье_2.webp", "платье_3.webp", "платье_4.webp", "платье_5.webp"],
       "filename": "платье.webp"
     },
     "плед": {
@@ -1206,10 +1127,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "поло_2.webp",
-        "поло_3.webp"
-      ],
+      "variants": ["поло_2.webp", "поло_3.webp"],
       "filename": "поло.webp"
     },
     "пончо": {
@@ -1239,10 +1157,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "рубашка_2.webp",
-        "рубашка_3.webp"
-      ],
+      "variants": ["рубашка_2.webp", "рубашка_3.webp"],
       "filename": "рубашка.webp"
     },
     "свитер": {
@@ -1252,10 +1167,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "свитер_2.webp",
-        "свитер_3.webp"
-      ],
+      "variants": ["свитер_2.webp", "свитер_3.webp"],
       "filename": "свитер.webp"
     },
     "спортивные штаны": {
@@ -1266,9 +1178,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "спортивные_штаны_2.webp"
-      ]
+      "variants": ["спортивные_штаны_2.webp"]
     },
     "спортивный костюм": {
       "word": "спортивный костюм",
@@ -1287,9 +1197,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "топ_2.webp"
-      ],
+      "variants": ["топ_2.webp"],
       "filename": "топ.webp"
     },
     "трусы": {
@@ -1335,9 +1243,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "халат_2.webp"
-      ],
+      "variants": ["халат_2.webp"],
       "filename": "халат.webp"
     },
     "худи": {
@@ -1347,10 +1253,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "худи_2.webp",
-        "худи_3.webp"
-      ],
+      "variants": ["худи_2.webp", "худи_3.webp"],
       "filename": "худи.webp"
     },
     "шапка": {
@@ -1390,11 +1293,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "шорты_2.webp",
-        "шорты_3.webp",
-        "шорты_4.webp"
-      ],
+      "variants": ["шорты_2.webp", "шорты_3.webp", "шорты_4.webp"],
       "filename": "шорты.webp"
     },
     "юбка": {
@@ -1404,12 +1303,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": [],
-      "variants": [
-        "юбка_2.webp",
-        "юбка_3.webp",
-        "юбка_4.webp",
-        "юбка_5.webp"
-      ],
+      "variants": ["юбка_2.webp", "юбка_3.webp", "юбка_4.webp", "юбка_5.webp"],
       "filename": "юбка.webp"
     }
   }

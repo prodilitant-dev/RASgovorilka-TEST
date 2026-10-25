@@ -17,10 +17,9 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
   const cards = {};
   categories.forEach((cat) => {
     // Если это "Банк карточек" — берем ВСЕ слова. Иначе — только этой категории.
-    const sourceCards = cat.id === 'dictionary' 
-      ? CARD_BANK 
-      : CARD_BANK.filter(item => item.category === cat.id);
-      
+    const sourceCards =
+      cat.id === 'dictionary' ? CARD_BANK : CARD_BANK.filter((item) => item.category === cat.id);
+
     cards[cat.id] = sourceCards.map((raw) => {
       const card = {
         id: uid(),
@@ -31,11 +30,11 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
         animate: false,
         imageId: null,
         // Используем filename из базы (например, "спортивные_штаны.webp")
-        imagePath: `cards/${raw.category}/${raw.filename || (raw.word + '.webp')}`,
+        imagePath: `cards/${raw.category}/${raw.filename || raw.word + '.webp'}`,
         forms: null,
-        variants: raw.variants || []
+        variants: raw.variants || [],
       };
-      
+
       if (['noun', 'pronoun', 'adjective'].includes(card.wordType)) {
         autoDetectCard(card);
       }
@@ -74,7 +73,8 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
     for (const day in SCHEDULE_DAY_MAPPING) {
       const templateName = SCHEDULE_DAY_MAPPING[day];
       if (templateName === 'wd' && weekdayTemplate) scheduleDayMapping[day] = weekdayTemplate.id;
-      else if (templateName === 'we' && weekendTemplate) scheduleDayMapping[day] = weekendTemplate.id;
+      else if (templateName === 'we' && weekendTemplate)
+        scheduleDayMapping[day] = weekendTemplate.id;
     }
   }
 

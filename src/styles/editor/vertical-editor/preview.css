@@ -7,8 +7,8 @@
 /* Обертка блока превью — делаем колонку, чтобы кружочки были СНИЗУ */
 .ve-preview-block {
   display: flex;
-  flex-direction: column; 
-  align-items: center;    
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: var(--spacing-sm) 0;
 }

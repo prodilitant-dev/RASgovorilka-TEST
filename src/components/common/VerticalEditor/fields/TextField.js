@@ -29,7 +29,7 @@ export function renderTextField(entity, field, fieldId, callbacks) {
   list.style.display = 'none';
   wrapper.appendChild(input);
   wrapper.appendChild(list);
-  
+
   let activeIndex = -1;
 
   const renderList = (items) => {
@@ -41,22 +41,26 @@ export function renderTextField(entity, field, fieldId, callbacks) {
     }
     items.forEach((item, index) => {
       const li = createElement('li', { 'data-index': index });
-      
+
       // Показываем миниатюру картинки в списке (если она есть)
       if (item.imagePath) {
         const base = import.meta.env.BASE_URL || '/';
         const url = base.endsWith('/') ? `${base}${item.imagePath}` : `${base}/${item.imagePath}`;
         const img = createElement('img', { src: url, className: 've-autocomplete-img' });
-        
+
         // Если картинка не загрузилась, показываем эмодзи
         img.addEventListener('error', () => {
           img.remove();
           if (item.emoji) {
-            const spanEmoji = createElement('span', { className: 've-autocomplete-emoji' }, item.emoji);
+            const spanEmoji = createElement(
+              'span',
+              { className: 've-autocomplete-emoji' },
+              item.emoji
+            );
             li.insertBefore(spanEmoji, li.firstChild);
           }
         });
-        
+
         li.appendChild(img);
       } else if (item.emoji) {
         const spanEmoji = createElement('span', { className: 've-autocomplete-emoji' }, item.emoji);
@@ -65,19 +69,19 @@ export function renderTextField(entity, field, fieldId, callbacks) {
       li.appendChild(document.createTextNode(item.text));
 
       li.addEventListener('mousedown', (e) => {
-        e.preventDefault(); 
-        
+        e.preventDefault();
+
         // Подставляем данные
         input.value = item.text;
         entity[field.id] = item.text;
-        
-        entity.imagePath = item.imagePath; 
+
+        entity.imagePath = item.imagePath;
         entity.emoji = item.emoji || '';
-        
+
         // НОВОЕ: сохраняем данные для вариантов
         entity.filename = item.filename;
         entity.category = item.category;
-        entity.variants = item.variants || []; 
+        entity.variants = item.variants || [];
 
         if (item.wordType) entity.wordType = item.wordType;
         if (item.gender) entity.gender = item.gender;
@@ -87,7 +91,7 @@ export function renderTextField(entity, field, fieldId, callbacks) {
         callbacks.onFieldChange(field.id, item.text);
         if (entity.wordType) callbacks.onFieldChange('wordType', entity.wordType);
       });
-      
+
       list.appendChild(li);
     });
     list.style.display = 'block';
