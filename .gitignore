@@ -43,3 +43,9 @@ format-check.txt
 .idea/*.zip
 cards_list.txt
 fix_*.cjs
+
+# Локальные скрипты и временные файлы
+manage_cards.cjs
+*.zip
+lint-*.txt
+cards_list.txt

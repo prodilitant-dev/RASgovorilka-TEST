@@ -73,13 +73,14 @@ export function renderTextField(entity, field, fieldId, callbacks) {
         
         entity.imagePath = item.imagePath; 
         entity.emoji = item.emoji || '';
+        
+        // НОВОЕ: сохраняем данные для вариантов
+        entity.filename = item.filename;
+        entity.category = item.category;
+        entity.variants = item.variants || []; 
+
         if (item.wordType) entity.wordType = item.wordType;
         if (item.gender) entity.gender = item.gender;
-        
-        // ЗАДЕЛ НА БУДУЩЕЕ: сохраняем варианты картинок в сущность
-        if (item.variants && item.variants.length > 0) {
-           entity.imageVariants = item.variants; 
-        }
 
         list.style.display = 'none';
         updatePreviewText(entity);

@@ -21,18 +21,14 @@ export function searchCardBank(query) {
   results.sort((a, b) => {
     const aWord = normalizeText(a.word);
     const bWord = normalizeText(b.word);
-    
     const aExact = aWord === norm || a.synonyms?.some(al => normalizeText(al) === norm);
     const bExact = bWord === norm || b.synonyms?.some(al => normalizeText(al) === norm);
-    
     if (aExact && !bExact) return -1;
     if (!aExact && bExact) return 1;
-    
     const aStarts = aWord.startsWith(norm);
     const bStarts = bWord.startsWith(norm);
     if (aStarts && !bStarts) return -1;
     if (!aStarts && bStarts) return 1;
-    
     return aWord.localeCompare(bWord);
   });
 
@@ -43,6 +39,8 @@ export function searchCardBank(query) {
     emoji: item.emoji,
     wordType: item.wordType,
     gender: item.gender,
+    category: item.category,   // <--- ВАЖНО: добавили
+    filename: item.filename,   // <--- ВАЖНО: добавили
     variants: item.variants || []
   }));
 }
