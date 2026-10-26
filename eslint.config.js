@@ -4,7 +4,14 @@ import unusedImports from 'eslint-plugin-unused-imports';
 
 export default [
   {
-    ignores: ['dist/**', 'dev-dist/**', 'node_modules/**', 'coverage/**', 'lint-baseline.txt'],
+    ignores: [
+      'dist/**',
+      'dev-dist/**',
+      'node_modules/**',
+      'coverage/**',
+      'lint-baseline.txt',
+      'scripts/**',
+    ],
   },
   js.configs.recommended,
 

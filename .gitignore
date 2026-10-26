@@ -49,3 +49,9 @@ manage_cards.cjs
 *.zip
 lint-*.txt
 cards_list.txt
+
+# Папка со скриптами и бэкапами
+scripts/
+src/config/backups/
+*.backup.json
+scripts/cards_hints.json

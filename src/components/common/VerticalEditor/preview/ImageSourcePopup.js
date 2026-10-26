@@ -1,10 +1,7 @@
 // src/components/common/VerticalEditor/preview/ImageSourcePopup.js
 import { createElement } from '@utils/dom';
 
-/**
- * Показывает мини-меню «Камера / Галерея» на мобильных.
- */
-export function openImageSourcePopup(anchor, { fileInput, cameraInput }) {
+export function openImageSourcePopup(anchor, { fileInput, cameraInput, onSelectFromBank }) {
   document.querySelector('.ve-image-source-popup')?.remove();
 
   const popup = createElement('div', { className: 've-image-source-popup' });
@@ -18,13 +15,17 @@ export function openImageSourcePopup(anchor, { fileInput, cameraInput }) {
     { type: 'button', className: 've-image-source-popup__btn' },
     '🖼 Выбрать из галереи'
   );
+  const bankBtn = createElement(
+    'button',
+    { type: 'button', className: 've-image-source-popup__btn' },
+    '📚 Выбрать из банка'
+  );
 
   const close = () => {
     popup.remove();
     document.removeEventListener('click', onDocClick, true);
     document.removeEventListener('keydown', onKey, true);
   };
-
   const onDocClick = (e) => {
     if (!popup.contains(e.target) && !anchor.contains(e.target)) close();
   };
@@ -41,8 +42,19 @@ export function openImageSourcePopup(anchor, { fileInput, cameraInput }) {
     fileInput.click();
   });
 
-  popup.appendChild(cameraBtn);
-  popup.appendChild(galleryBtn);
+  if (onSelectFromBank) {
+    bankBtn.addEventListener('click', () => {
+      close();
+      onSelectFromBank();
+    });
+    popup.appendChild(cameraBtn);
+    popup.appendChild(galleryBtn);
+    popup.appendChild(bankBtn);
+  } else {
+    popup.appendChild(cameraBtn);
+    popup.appendChild(galleryBtn);
+  }
+
   document.body.appendChild(popup);
 
   const rect = anchor.getBoundingClientRect();

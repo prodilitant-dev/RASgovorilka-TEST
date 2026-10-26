@@ -6,16 +6,15 @@ export function normalizeText(text) {
   return text.toLowerCase().replace(/ё/g, 'е').trim();
 }
 
-/**
- * Ищет совпадения для автокомплита (по тексту и синонимам).
- */
 export function searchCardBank(query) {
   const norm = normalizeText(query);
   if (!norm) return [];
 
   const results = CARD_BANK.filter((item) => {
-    if (normalizeText(item.word).includes(norm)) return true;
-    return item.synonyms?.some((a) => normalizeText(a).includes(norm));
+    return (
+      normalizeText(item.word).includes(norm) ||
+      item.synonyms?.some((a) => normalizeText(a).includes(norm))
+    );
   });
 
   results.sort((a, b) => {
@@ -25,34 +24,57 @@ export function searchCardBank(query) {
     const bExact = bWord === norm || b.synonyms?.some((al) => normalizeText(al) === norm);
     if (aExact && !bExact) return -1;
     if (!aExact && bExact) return 1;
-    const aStarts = aWord.startsWith(norm);
-    const bStarts = bWord.startsWith(norm);
-    if (aStarts && !bStarts) return -1;
-    if (!aStarts && bStarts) return 1;
     return aWord.localeCompare(bWord);
   });
 
-  return results.slice(0, 10).map((item) => ({
-    text: item.word.charAt(0).toUpperCase() + item.word.slice(1),
-    rawWord: item.word,
-    imagePath: `cards/${item.category}/${item.filename || item.word + '.webp'}`,
-    emoji: item.emoji,
-    wordType: item.wordType,
-    gender: item.gender,
-    category: item.category, // <--- ВАЖНО: добавили
-    filename: item.filename, // <--- ВАЖНО: добавили
-    variants: item.variants || [],
-  }));
+  return results.slice(0, 10).map((item) => {
+    const isWordMatch = normalizeText(item.word).includes(norm);
+    let displayText, inputValue;
+
+    if (!isWordMatch) {
+      // Совпадение по синониму
+      const matchedSyn = item.synonyms.find((s) => normalizeText(s).includes(norm));
+      const capSyn = matchedSyn.charAt(0).toUpperCase() + matchedSyn.slice(1);
+      const capWord = item.word.charAt(0).toUpperCase() + item.word.slice(1);
+
+      displayText = `${capSyn} (${capWord})`; // "Пёс (Собака)"
+      inputValue = capSyn; // В поле подставим "Пёс"
+    } else {
+      // Совпадение по главному слову
+      displayText = item.word.charAt(0).toUpperCase() + item.word.slice(1);
+      inputValue = displayText;
+    }
+
+    return {
+      text: displayText,
+      inputValue: inputValue,
+      rawWord: item.word,
+      imagePath: `cards/${item.category}/${item.filename || item.word + '.webp'}`,
+      emoji: item.emoji,
+      wordType: item.wordType,
+      gender: item.gender,
+      category: item.category,
+      filename: item.filename,
+      variants: item.variants || [],
+    };
+  });
 }
 
-/**
- * Точное совпадение (когда пользователь полностью ввел слово).
- */
 export function findCardImage(text) {
   const norm = normalizeText(text);
+  // Ищем по слову или синониму
   const found = CARD_BANK.find(
     (item) =>
       normalizeText(item.word) === norm || item.synonyms?.some((a) => normalizeText(a) === norm)
   );
   return found ? `cards/${found.category}/${found.filename || found.word + '.webp'}` : null;
+}
+
+// Добавим функцию для поиска карточки в базе (для редактора)
+export function findBankItem(text) {
+  const norm = normalizeText(text);
+  return CARD_BANK.find(
+    (item) =>
+      normalizeText(item.word) === norm || item.synonyms?.some((a) => normalizeText(a) === norm)
+  );
 }

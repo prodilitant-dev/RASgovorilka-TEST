@@ -3,6 +3,7 @@ import { createElement, on } from '@utils/dom';
 import { getImageUrl } from '@services/image';
 import { iconUrl, isIconName } from '@utils/icon';
 import { openImageSourcePopup } from './ImageSourcePopup.js';
+import { findBankItem } from '@utils/cardBank'; // <-- Импорт для поиска в банке
 
 let idCounter = 0;
 function generateId() {
@@ -11,6 +12,21 @@ function generateId() {
 
 export function renderPreview(entity, callbacks) {
   const block = createElement('div', { className: 've-preview-block' });
+
+  // 1. Если карточка старая и у неё нет variants, пробуем найти их в банке по тексту
+  if (entity.text && (!entity.variants || entity.variants.length === 0)) {
+    const bankItem = findBankItem(entity.text);
+    if (bankItem) {
+      entity.variants = bankItem.variants || [];
+      entity.filename = bankItem.filename || entity.filename;
+      entity.category = bankItem.category || entity.category;
+      // Если у старой карточки не было картинки, подставим первую из банка
+      if (!entity.imagePath && !entity.imageId) {
+        entity.imagePath = `cards/${entity.category}/${entity.filename || bankItem.word + '.webp'}`;
+      }
+    }
+  }
+
   const box = createElement('div', {
     className: 've-preview-box',
     'data-has-image': !!(entity.imageId || entity.imagePath),
@@ -84,7 +100,7 @@ export function renderPreview(entity, callbacks) {
     probe.src = url;
   };
 
-  // 1. Первичная отрисовка картинки
+  // Первичная отрисовка
   if (entity.imageId) {
     box.classList.add('loading');
     getImageUrl(entity.imageId).then((url) => {
@@ -101,7 +117,7 @@ export function renderPreview(entity, callbacks) {
     showFallback(box, entity);
   }
 
-  // 2. Скрытые инпуты для загрузки
+  // Скрытые инпуты
   const cleanupPopup = () => document.querySelector('.ve-image-source-popup')?.remove();
 
   const fileInputId = generateId();
@@ -137,17 +153,39 @@ export function renderPreview(entity, callbacks) {
   });
   box.appendChild(cameraInput);
 
-  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
-
+  // Клик по превью — открываем меню (на всех устройствах)
   on(box, 'click', (e) => {
     if (e.target.closest('.ve-preview-remove')) return;
     if (e.target.closest('.ve-image-source-popup')) return;
 
-    if (!isMobile) {
-      fileInput.click();
-      return;
-    }
-    openImageSourcePopup(box, { fileInput, cameraInput });
+    openImageSourcePopup(box, {
+      fileInput,
+      cameraInput,
+      onSelectFromBank: () => {
+        // Динамически импортируем модалку банка, чтобы не грузить её без надобности
+        import('../BankPickerModal.js').then(({ openBankPicker }) => {
+          openBankPicker((item) => {
+            // Обновляем данные карточки
+            entity.imageId = null; // Сбрасываем пользовательское фото
+            entity.imagePath = `cards/${item.category}/${item.filename || item.word + '.webp'}`;
+            entity.emoji = item.emoji || '';
+            entity.filename = item.filename;
+            entity.category = item.category;
+            entity.variants = item.variants || [];
+
+            // Перерисовываем весь блок превью, чтобы обновились картинки и кружочки
+            const newBlock = renderPreview(entity, callbacks);
+            block.replaceWith(newBlock);
+
+            // Сообщаем модалке, что данные изменились
+            if (callbacks.onFieldChange) {
+              callbacks.onFieldChange('imagePath', entity.imagePath);
+              callbacks.onFieldChange('variants', entity.variants);
+            }
+          });
+        });
+      },
+    });
   });
 
   if (entity.imageId || entity.imagePath) {
@@ -161,12 +199,12 @@ export function renderPreview(entity, callbacks) {
 
   block.appendChild(box);
 
-  // 3. Блок с вариантами
+  // Блок с вариантами
   if (!entity.imageId && entity.variants && entity.variants.length > 0 && entity.category) {
     const allImages = [entity.filename, ...entity.variants].filter(Boolean);
 
-    // Если картинка не выбрана — ставим первую
-    if (!entity.imagePath) {
+    // Если картинка не выбрана, ставим первую
+    if (!entity.imagePath || !allImages.some((f) => entity.imagePath.endsWith(f))) {
       entity.imagePath = `cards/${entity.category}/${allImages[0]}`;
       loadStockImage(entity.imagePath, box, applyImageUrl, () => showFallback(box, entity));
     }
@@ -207,7 +245,6 @@ export function renderPreview(entity, callbacks) {
 }
 
 export function updatePreviewText(entity) {
-  // ... (оставляем без изменений)
   const box = document.querySelector('.ve-preview-box');
   if (!box) return;
   if (entity.imageId) return;

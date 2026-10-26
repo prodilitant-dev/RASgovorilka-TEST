@@ -5,7 +5,7 @@ import { autoDetectCard } from '@utils/inflect';
 import { openDeclensionModal } from '@components/common/DeclensionModal/DeclensionModal';
 import { getState } from '@state/store';
 import { getActiveProfile } from '@state/actions';
-import { findCardImage } from '@utils/cardBank';
+import { findBankItem } from '@utils/cardBank'; // <-- Импорт для поиска в банке
 
 export function openCardEditor(cardData, onSave, onDelete) {
   const isNew = !cardData.id;
@@ -13,7 +13,27 @@ export function openCardEditor(cardData, onSave, onDelete) {
     autoDetectCard(cardData);
   }
 
-  const entity = cardData;
+  // Делаем копию, чтобы не менять оригинальный объект до сохранения
+  const entity = { ...cardData };
+
+  // ОБОГАЩЕНИЕ ДАННЫМИ ИЗ БАНКА (чтобы сразу показать варианты картинок)
+  if (entity.text) {
+    const bankItem = findBankItem(entity.text);
+    if (bankItem) {
+      // Подтягиваем варианты, категорию и имя файла, если их еще нет в карточке
+      if (!entity.variants || entity.variants.length === 0) {
+        entity.variants = bankItem.variants || [];
+      }
+      if (!entity.filename) entity.filename = bankItem.filename;
+      if (!entity.category) entity.category = bankItem.category;
+
+      // Если у карточки вообще нет картинки, но она есть в банке — подставим
+      if (!entity.imagePath && !entity.imageId) {
+        entity.imagePath = `cards/${entity.category}/${entity.filename}`;
+      }
+    }
+  }
+
   const state = getState();
   const profile = getActiveProfile();
   const categoryId = state.currentCategoryId;
@@ -41,14 +61,15 @@ export function openCardEditor(cardData, onSave, onDelete) {
         return;
       }
 
+      // Если текст изменился — пересчитываем формы молча
       if (updated.text !== cardData.text) {
         autoDetectCard(updated);
       }
       onSave(updated, done);
     },
-    onDelete: (entity, close) => {
+    onDelete: (ent, close) => {
       if (onDelete) {
-        onDelete(entity.id, close);
+        onDelete(ent.id, close);
       }
     },
     fields: [
@@ -58,15 +79,20 @@ export function openCardEditor(cardData, onSave, onDelete) {
         type: 'text',
         required: true,
         placeholder: 'Например: Молоко',
-        autocomplete: true, // <-- Включаем выпадающий список
+        autocomplete: true,
         onChange: (value, ent) => {
-          if (ent.imageId) return; // Пользовательская картинка в приоритете
+          if (ent.imageId) return;
 
-          const found = findCardImage(value);
-          if (found) {
-            ent.imagePath = found;
+          const bankItem = findBankItem(value);
+          if (bankItem) {
+            ent.imagePath = `cards/${bankItem.category}/${bankItem.filename}`;
+            ent.emoji = bankItem.emoji || '';
+            ent.wordType = bankItem.wordType || ent.wordType;
+            ent.gender = bankItem.gender || ent.gender;
+            ent.filename = bankItem.filename;
+            ent.category = bankItem.category;
+            ent.variants = bankItem.variants || [];
           } else {
-            // Если точного совпадения нет — сбрасываем картинку из банка
             ent.imagePath = null;
           }
         },
@@ -91,9 +117,12 @@ export function openCardEditor(cardData, onSave, onDelete) {
         visible: (ent) => !ent.imageId && !ent.imagePath,
         onChange: (value, ent) => {
           if (!ent.imageId && !ent.imagePath) {
-            const found = findCardImage(value);
-            if (found) {
-              ent.imagePath = found;
+            const bankItem = findBankItem(value);
+            if (bankItem) {
+              ent.imagePath = `cards/${bankItem.category}/${bankItem.filename}`;
+              ent.filename = bankItem.filename;
+              ent.category = bankItem.category;
+              ent.variants = bankItem.variants || [];
               ent.emoji = '';
             }
           }

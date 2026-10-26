@@ -71,14 +71,12 @@ export function renderTextField(entity, field, fieldId, callbacks) {
       li.addEventListener('mousedown', (e) => {
         e.preventDefault();
 
-        // Подставляем данные
-        input.value = item.text;
-        entity[field.id] = item.text;
+        // Используем inputValue (то, что пользователь набрал/выбрал)
+        input.value = item.inputValue;
+        entity[field.id] = item.inputValue;
 
         entity.imagePath = item.imagePath;
         entity.emoji = item.emoji || '';
-
-        // НОВОЕ: сохраняем данные для вариантов
         entity.filename = item.filename;
         entity.category = item.category;
         entity.variants = item.variants || [];
@@ -88,7 +86,7 @@ export function renderTextField(entity, field, fieldId, callbacks) {
 
         list.style.display = 'none';
         updatePreviewText(entity);
-        callbacks.onFieldChange(field.id, item.text);
+        callbacks.onFieldChange(field.id, item.inputValue);
         if (entity.wordType) callbacks.onFieldChange('wordType', entity.wordType);
       });
 

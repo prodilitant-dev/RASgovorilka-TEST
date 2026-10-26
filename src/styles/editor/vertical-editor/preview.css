@@ -169,3 +169,57 @@
     height: 38px;
   }
 }
+
+/* Стили для модалки выбора из банка */
+.bank-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 60vh;
+}
+
+.bank-picker__input {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  width: 100%;
+}
+
+.bank-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.bank-picker__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.bank-picker__item:hover {
+  background: var(--bg-alt, #f0f0f0);
+  border-color: var(--border);
+}
+
+.bank-picker__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--bg);
+  border-radius: 6px;
+}
+
+.bank-picker__label {
+  font-size: 12px;
+  text-align: center;
+  word-break: break-word;
+}
