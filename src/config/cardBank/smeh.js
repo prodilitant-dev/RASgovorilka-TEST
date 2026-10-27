@@ -1,0 +1,16 @@
+// Сгенерировано автоматически из src/config/cards_data.json
+
+export const SMEH = [
+  { word: "10", filename: "10.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "11", filename: "11.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "12", filename: "12.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "01", filename: "01.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "02", filename: "02.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "03", filename: "03.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "04", filename: "04.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "05", filename: "05.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "06", filename: "06.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "07", filename: "07.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "08", filename: "08.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] },
+  { word: "09", filename: "09.webp", category: "smeh", emoji: "🖼️", wordType: null, gender: null, synonyms: [], variants: [] }
+];
