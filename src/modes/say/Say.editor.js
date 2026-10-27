@@ -80,22 +80,6 @@ export function openCardEditor(cardData, onSave, onDelete) {
         required: true,
         placeholder: 'Например: Молоко',
         autocomplete: true,
-        onChange: (value, ent) => {
-          if (ent.imageId) return;
-
-          const bankItem = findBankItem(value);
-          if (bankItem) {
-            ent.imagePath = `cards/${bankItem.category}/${bankItem.filename}`;
-            ent.emoji = bankItem.emoji || '';
-            ent.wordType = bankItem.wordType || ent.wordType;
-            ent.gender = bankItem.gender || ent.gender;
-            ent.filename = bankItem.filename;
-            ent.category = bankItem.category;
-            ent.variants = bankItem.variants || [];
-          } else {
-            ent.imagePath = null;
-          }
-        },
       },
       {
         id: 'wordType',

@@ -16,15 +16,42 @@ export function renderQuickButtons(
   const wrap = createElement('div', { className: 'quick-buttons' });
 
   buttons.forEach((btn) => {
-    const el = createElement(
-      'div',
-      {
-        className: 'quick-btn',
-        'data-id': btn.id,
-        'data-log': `quick-btn:${btn.id}`,
-      },
-      `${btn.emoji || ''} ${btn.text}`
-    );
+    const el = createElement('div', {
+      className: 'quick-btn',
+      'data-id': btn.id,
+      'data-log': `quick-btn:${btn.id}`,
+    });
+
+    // Если есть картинка — показываем её
+    if (btn.imagePath) {
+      const base = import.meta.env.BASE_URL || '/';
+      const url = base.endsWith('/') ? `${base}${btn.imagePath}` : `${base}/${btn.imagePath}`;
+      
+      const img = createElement('img', {
+        src: url,
+        alt: '',
+        className: 'quick-btn__icon',
+        draggable: 'false',
+      });
+      
+      // Фолбек на эмодзи, если картинка не загрузилась
+      img.addEventListener('error', () => {
+        img.remove();
+        const emojiSpan = createElement('span', { className: 'quick-btn__emoji' }, btn.emoji);
+        el.insertBefore(emojiSpan, el.firstChild);
+      });
+      
+      el.appendChild(img);
+    } else if (btn.emoji) {
+      // Если картинки нет, показываем эмодзи
+      const emojiSpan = createElement('span', { className: 'quick-btn__emoji' }, btn.emoji);
+      el.appendChild(emojiSpan);
+    }
+
+    // Текст кнопки
+    const label = createElement('span', { className: 'quick-btn__label' }, btn.text);
+    el.appendChild(label);
+
     if (editingMode) {
       el.setAttribute('draggable', 'true');
     }
@@ -34,7 +61,7 @@ export function renderQuickButtons(
 
   container.appendChild(wrap);
 
-  // Очистка старых обработчиков
+  // === Логика Drag & Drop (остается без изменений) ===
   if (container._quickDragCleanup) {
     container._quickDragCleanup();
     container._quickDragCleanup = null;

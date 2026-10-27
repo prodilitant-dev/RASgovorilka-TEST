@@ -42,12 +42,20 @@ export function createDefaultProfile(name = 'дом', icon = 'profile-default') 
     });
   });
 
-  const quickButtons = QUICK_BUTTONS.map((btn) => ({
-    ...btn,
-    id: uid(),
-    imageId: null,
-    forms: null,
-  }));
+  const quickButtons = QUICK_BUTTONS.map((btn) => {
+    // Ищем слово в банке (без учета регистра)
+    const bankItem = CARD_BANK.find(
+      item => item.word.toLowerCase() === btn.text.toLowerCase()
+    );
+
+    return {
+      ...btn,
+      id: uid(),
+      imageId: null,
+      imagePath: bankItem ? `cards/${bankItem.category}/${bankItem.filename}` : null,
+      forms: null,
+    };
+  });
 
   const yesnoButtons = YESNO_BUTTONS.map((btn) => ({
     ...btn,

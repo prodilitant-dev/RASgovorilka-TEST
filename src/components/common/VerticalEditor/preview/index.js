@@ -14,7 +14,8 @@ export function renderPreview(entity, callbacks) {
   const block = createElement('div', { className: 've-preview-block' });
 
   // 1. Если карточка старая и у неё нет variants, пробуем найти их в банке по тексту
-  if (entity.text && (!entity.variants || entity.variants.length === 0)) {
+  // НО только если у нее еще нет явно заданного файла (чтобы не перезаписывать ручной выбор)
+  if (entity.text && !entity.filename && (!entity.variants || entity.variants.length === 0)) {
     const bankItem = findBankItem(entity.text);
     if (bankItem) {
       entity.variants = bankItem.variants || [];
@@ -201,7 +202,8 @@ export function renderPreview(entity, callbacks) {
 
   // Блок с вариантами
   if (!entity.imageId && entity.variants && entity.variants.length > 0 && entity.category) {
-    const allImages = [entity.filename, ...entity.variants].filter(Boolean);
+    // Берем главную + максимум 3 варианта (итого 4 кружочка)
+const allImages = [entity.filename, ...(entity.variants || []).slice(0, 3)].filter(Boolean);
 
     // Если картинка не выбрана, ставим первую
     if (!entity.imagePath || !allImages.some((f) => entity.imagePath.endsWith(f))) {
