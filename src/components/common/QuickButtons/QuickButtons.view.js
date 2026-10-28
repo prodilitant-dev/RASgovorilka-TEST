@@ -26,21 +26,21 @@ export function renderQuickButtons(
     if (btn.imagePath) {
       const base = import.meta.env.BASE_URL || '/';
       const url = base.endsWith('/') ? `${base}${btn.imagePath}` : `${base}/${btn.imagePath}`;
-      
+
       const img = createElement('img', {
         src: url,
         alt: '',
         className: 'quick-btn__icon',
         draggable: 'false',
       });
-      
+
       // Фолбек на эмодзи, если картинка не загрузилась
       img.addEventListener('error', () => {
         img.remove();
         const emojiSpan = createElement('span', { className: 'quick-btn__emoji' }, btn.emoji);
         el.insertBefore(emojiSpan, el.firstChild);
       });
-      
+
       el.appendChild(img);
     } else if (btn.emoji) {
       // Если картинки нет, показываем эмодзи

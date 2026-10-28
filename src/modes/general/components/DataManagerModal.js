@@ -6,7 +6,7 @@ import { toast } from '@utils/toast';
 import { logger } from '@utils/logger';
 import { exportData, importData, resetAllData } from '../General.controller';
 import { checkForUpdate, applyUpdate } from '@services/pwa/updateService';
-import { openPrintExport } from '@components/print/PrintExportModal';
+import { openPrintView } from '@components/print/PrintView';
 
 /**
  * Обработка кнопки «Проверить обновление».
@@ -123,17 +123,19 @@ export function openDataManager(onClose) {
         })
       );
 
-            grid.appendChild(createDataTile({
-        id: 'print',
-        iconName: 'print', // Если нарисуешь иконку принтера, будет супер
-        fallbackEmoji: '🖨️',
-        text: 'Печать',
-        onClick: () => {
-          modal.close();
-          if (onClose) onClose();
-          openPrintExport();
-        },
-      }));
+      grid.appendChild(
+        createDataTile({
+          id: 'print',
+          iconName: 'print', // Если нарисуешь иконку принтера, будет супер
+          fallbackEmoji: '🖨️',
+          text: 'Печать',
+          onClick: () => {
+            modal.close();
+            if (onClose) onClose();
+            openPrintView();
+          },
+        })
+      );
 
       wrap.appendChild(grid);
       return wrap;

@@ -203,7 +203,7 @@ export function renderPreview(entity, callbacks) {
   // Блок с вариантами
   if (!entity.imageId && entity.variants && entity.variants.length > 0 && entity.category) {
     // Берем главную + максимум 3 варианта (итого 4 кружочка)
-const allImages = [entity.filename, ...(entity.variants || []).slice(0, 3)].filter(Boolean);
+    const allImages = [entity.filename, ...(entity.variants || []).slice(0, 3)].filter(Boolean);
 
     // Если картинка не выбрана, ставим первую
     if (!entity.imagePath || !allImages.some((f) => entity.imagePath.endsWith(f))) {

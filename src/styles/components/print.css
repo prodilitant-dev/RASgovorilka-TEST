@@ -1,148 +1,256 @@
 /* src/styles/components/print.css */
 
-/* Скрытый контейнер, который существует только в памяти */
-.print-generator-container {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  background: #fff;
-  font-family: system-ui, -apple-system, sans-serif;
-}
-
-/* Лист А4 */
-.print-page {
-  width: 794px;
-  height: 1123px;
-  padding: 40px;
-  box-sizing: border-box;
-  background: #fff;
+/* =========================================
+   1. ОБЩИЕ СТИЛИ ПОЛНОЭКРАННОГО РЕЖИМА
+   ========================================= */
+.print-view-fullscreen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 900;
   display: flex;
   flex-direction: column;
 }
 
+.print-view-fullscreen .categories-wrap {
+  flex-shrink: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.print-view-fullscreen .categories-wrap::-webkit-scrollbar {
+  display: none;
+}
+.print-view-fullscreen .categories {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  flex-wrap: nowrap;
+}
+.print-view-fullscreen .category .toggle-switch {
+  transform: scale(0.7);
+  transform-origin: right center;
+  margin-left: 4px;
+}
+
+/* Зона скролла */
+.print-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Обертка, сохраняющая пропорции листа А4 для корректного скролла */
+.print-page-wrapper {
+  width: 100%;
+  max-width: 794px;
+  aspect-ratio: 794 / 1123;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
 /* =========================================
-   ШАПКА
+   2. ЛИСТ А4 (Базовые стили для UI и Экспорта)
    ========================================= */
+.print-page {
+  width: 794px;
+  height: 1123px;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: #000;
+  flex-shrink: 0;
+
+  /* По умолчанию для UI делаем absolute, чтобы он лег поверх wrapper */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+
+/* Для экспорта мы перезаписываем это через inline-стили в JS (position: relative) */
+
+/* --- Шапка --- */
 .print-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
+  padding-bottom: 15px;
 }
-
 .print-logo {
-  font-size: 42px; /* Увеличили */
+  font-size: 36px;
   font-weight: 800;
   color: #1a4f76;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .print-category {
-  font-size: 28px; /* Увеличили */
+  font-size: 22px;
   font-weight: 700;
-  color: #ff6d00; /* Оранжевый цвет */
-  margin-top: 8px;
+  color: #ff6d00;
+  margin-top: 4px;
 }
-
-/* Изящная изогнутая линия */
 .print-arch {
   width: 60%;
-  height: 15px;
-  border-bottom: 2.5px solid #888;
-  border-radius: 50%;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  height: 12px;
+  margin: 4px 0;
 }
 
-/* =========================================
-   СЕТКА И КАРТОЧКИ
-   ========================================= */
+/* --- Сетка --- */
 .print-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-content: flex-start;
-  flex: 1; /* Занимает всё свободное место */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
 }
 
+/* --- Карточка --- */
 .print-card {
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-radius: 8px;
   overflow: hidden;
   box-sizing: border-box;
+  position: relative;
 }
 
-.print-card.with-cut-lines {
-  border: 2px dashed #777;
-}
-
-.print-card.no-cut-lines {
-  border: 1.5px solid #333;
-}
-
-.print-card__image {
+.print-card-img {
   flex: 1;
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
-  overflow: hidden;
+  padding: 4px;
 }
-
-.print-card__image img {
+.print-card-img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.print-card__image span {
-  font-size: 48px;
-}
-
-.print-card__label {
+.print-card-label {
   flex-shrink: 0;
   text-align: center;
-  font-size: 18px; /* Увеличили шрифт подписей */
+  font-size: 22px;
   font-weight: 700;
-  padding: 8px 4px;
+  padding: 12px 6px;
   background: #fff;
-  word-break: break-word;
-  line-height: 1.1;
-  color: #1a1a1a;
-}
-
-.print-card.no-cut-lines .print-card__label {
-  border-top: 1.5px solid #333;
-}
-
-.print-card.with-cut-lines .print-card__label {
-  border-top: 2px dashed #777;
-}
-
-/* =========================================
-   ПОДВАЛ
-   ========================================= */
-.print-footer {
-  height: 40px;
+  line-height: 1.2;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  margin-top: 15px;
 }
 
+/* Дуга над подписью */
+.print-card-label::before {
+  content: '';
+  display: block;
+  width: 75%;
+  height: 8px;
+  margin: 0 auto 8px;
+  border-bottom: 2px solid #888;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* --- Линии разреза --- */
+.print-cut-line {
+  position: absolute;
+  inset: -1.5px;
+  border: 2px dashed #999;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* --- Подвал --- */
+.print-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  margin-top: 10px;
+}
 .print-footer-line {
-  width: 40%;
+  width: 100%;
   height: 1px;
   background: #ccc;
   margin-bottom: 6px;
 }
-
 .print-footer-text {
   font-size: 12px;
   color: #888;
-  font-weight: 500;
+}
+
+/* --- Кнопка удаления (только в UI) --- */
+.print-delete-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.print-delete-btn:hover {
+  background: rgba(220, 0, 0, 0.8);
+}
+
+/* --- Нижняя панель UI --- */
+.print-bottom-bar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 20px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+/* Настройки (модалка) */
+.print-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.print-setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.print-options-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.print-select {
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-family: var(--font);
 }
