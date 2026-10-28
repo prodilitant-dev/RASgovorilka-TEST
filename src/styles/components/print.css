@@ -1,0 +1,148 @@
+/* src/styles/components/print.css */
+
+/* Скрытый контейнер, который существует только в памяти */
+.print-generator-container {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Лист А4 */
+.print-page {
+  width: 794px;
+  height: 1123px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   ШАПКА
+   ========================================= */
+.print-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.print-logo {
+  font-size: 42px; /* Увеличили */
+  font-weight: 800;
+  color: #1a4f76;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.print-category {
+  font-size: 28px; /* Увеличили */
+  font-weight: 700;
+  color: #ff6d00; /* Оранжевый цвет */
+  margin-top: 8px;
+}
+
+/* Изящная изогнутая линия */
+.print-arch {
+  width: 60%;
+  height: 15px;
+  border-bottom: 2.5px solid #888;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   СЕТКА И КАРТОЧКИ
+   ========================================= */
+.print-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-content: flex-start;
+  flex: 1; /* Занимает всё свободное место */
+}
+
+.print-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.print-card.with-cut-lines {
+  border: 2px dashed #777;
+}
+
+.print-card.no-cut-lines {
+  border: 1.5px solid #333;
+}
+
+.print-card__image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  overflow: hidden;
+}
+
+.print-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.print-card__image span {
+  font-size: 48px;
+}
+
+.print-card__label {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 18px; /* Увеличили шрифт подписей */
+  font-weight: 700;
+  padding: 8px 4px;
+  background: #fff;
+  word-break: break-word;
+  line-height: 1.1;
+  color: #1a1a1a;
+}
+
+.print-card.no-cut-lines .print-card__label {
+  border-top: 1.5px solid #333;
+}
+
+.print-card.with-cut-lines .print-card__label {
+  border-top: 2px dashed #777;
+}
+
+/* =========================================
+   ПОДВАЛ
+   ========================================= */
+.print-footer {
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.print-footer-line {
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.print-footer-text {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
