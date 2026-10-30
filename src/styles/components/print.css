@@ -63,7 +63,7 @@
 .print-page {
   width: 794px;
   height: 1123px;
-  padding: 20px;
+  padding: 15px;
   background: #fff;
   box-sizing: border-box;
   display: grid;
@@ -71,48 +71,54 @@
   color: #000;
   flex-shrink: 0;
 
-  /* По умолчанию для UI делаем absolute, чтобы он лег поверх wrapper */
   position: absolute;
   top: 0;
   left: 0;
   transform-origin: top left;
 }
 
-/* Для экспорта мы перезаписываем это через inline-стили в JS (position: relative) */
-
 /* --- Шапка --- */
 .print-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
+  padding-top: 0px;
 }
 .print-logo {
   font-size: 36px;
   font-weight: 800;
-  color: #1a4f76;
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1;
 }
+
+/* Цвета логотипа */
+.brand-ras {
+  color: #f58220;
+}
+.brand-talk {
+  color: #0054a6;
+}
+
 .print-category {
   font-size: 22px;
   font-weight: 700;
   color: #ff6d00;
-  margin-top: 4px;
+  margin-top: 2px;
+  outline: none;
+  cursor: text;
 }
 .print-arch {
   width: 60%;
   height: 12px;
-  margin: 4px 0;
+  margin: 2px 0;
 }
 
 /* --- Сетка --- */
 .print-grid {
   display: grid;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  height: 100%;
+  /* justify-content и align-content убраны, так как работает margin: auto из JS */
 }
 
 /* --- Карточка --- */
@@ -144,7 +150,7 @@
   text-align: center;
   font-size: 22px;
   font-weight: 700;
-  padding: 12px 6px;
+  padding: 8px 6px;
   background: #fff;
   line-height: 1.2;
   width: 100%;
@@ -161,19 +167,53 @@
   display: block;
   width: 75%;
   height: 8px;
-  margin: 0 auto 8px;
+  margin: 0 auto 4px;
   border-bottom: 2px solid #888;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-/* --- Линии разреза --- */
-.print-cut-line {
+/* 
+ * ПЕРЕКРЕСТИЯ ДЛЯ РАЗРЕЗА
+ */
+.print-cut-marks-layer {
   position: absolute;
-  inset: -1.5px;
-  border: 2px dashed #999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  z-index: 10;
+  z-index: 20;
+}
+
+.print-cut-mark {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+}
+
+.print-cut-mark::before,
+.print-cut-mark::after {
+  content: '';
+  position: absolute;
+  background: #333;
+}
+
+.print-cut-mark::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.print-cut-mark::after {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
 }
 
 /* --- Подвал --- */
@@ -181,14 +221,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10px;
-  margin-top: 10px;
+  padding-top: 5px;
+  margin-top: 5px;
 }
 .print-footer-line {
   width: 100%;
   height: 1px;
-  background: #ccc;
-  margin-bottom: 6px;
+  background: #333;
+  margin-bottom: 4px;
 }
 .print-footer-text {
   font-size: 12px;

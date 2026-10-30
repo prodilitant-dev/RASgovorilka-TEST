@@ -1,5 +1,215 @@
 {
   "words": {
+    "алкоголь": {
+      "word": "алкоголь",
+      "filename": "алкоголь.webp",
+      "category": "alkogol",
+      "emoji": "🍷",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["выпивка"],
+      "variants": ["алкоголь_2.webp"]
+    },
+    "американо": {
+      "word": "американо",
+      "filename": "американо.webp",
+      "category": "alkogol",
+      "emoji": "☕",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["кофе", "напиток"],
+      "variants": ["американо_2.webp"]
+    },
+    "бренди": {
+      "word": "бренди",
+      "filename": "бренди.webp",
+      "category": "alkogol",
+      "emoji": "🥃",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["напиток", "алкоголь"],
+      "variants": ["бренди_2.webp"]
+    },
+    "вино": {
+      "word": "вино",
+      "filename": "вино.webp",
+      "category": "alkogol",
+      "emoji": "🍷",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["напиток", "алкоголь"],
+      "variants": ["вино_2.webp"]
+    },
+    "виски": {
+      "word": "виски",
+      "filename": "виски.webp",
+      "category": "alkogol",
+      "emoji": "🥃",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["напиток", "алкоголь"],
+      "variants": ["виски_2.webp"]
+    },
+    "джин": {
+      "word": "джин",
+      "filename": "джин.webp",
+      "category": "alkogol",
+      "emoji": "🍸",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["напиток", "алкоголь"],
+      "variants": ["джин_2.webp"]
+    },
+    "коньяк": {
+      "word": "коньяк",
+      "filename": "коньяк.webp",
+      "category": "alkogol",
+      "emoji": "🥃",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["напиток", "алкоголь"],
+      "variants": ["коньяк_2.webp"]
+    },
+    "пиво": {
+      "word": "пиво",
+      "filename": "пиво.webp",
+      "category": "alkogol",
+      "emoji": "🍺",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["напиток", "алкоголь"],
+      "variants": ["пиво_2.webp"]
+    },
+    "ром": {
+      "word": "ром",
+      "filename": "ром.webp",
+      "category": "alkogol",
+      "emoji": "🥃",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["напиток", "алкоголь"],
+      "variants": ["ром_2.webp"]
+    },
+    "ваза": {
+      "word": "ваза",
+      "filename": "ваза.webp",
+      "category": "bagazh",
+      "emoji": "🏺",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["посуда", "цветы"],
+      "variants": []
+    },
+    "ведро": {
+      "word": "ведро",
+      "filename": "ведро.webp",
+      "category": "bagazh",
+      "emoji": "🪣",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["посуда", "вода"],
+      "variants": []
+    },
+    "конверт": {
+      "word": "конверт",
+      "filename": "конверт.webp",
+      "category": "bagazh",
+      "emoji": "✉️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["письмо", "бумага"],
+      "variants": []
+    },
+    "корзина": {
+      "word": "корзина",
+      "filename": "корзина.webp",
+      "category": "bagazh",
+      "emoji": "🧺",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["грибы", "плетеная"],
+      "variants": []
+    },
+    "коробка": {
+      "word": "коробка",
+      "filename": "коробка.webp",
+      "category": "bagazh",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
+      "variants": []
+    },
+    "кошелек": {
+      "word": "кошелек",
+      "filename": "кошелек.webp",
+      "category": "bagazh",
+      "emoji": "👛",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["деньги", "сумка"],
+      "variants": []
+    },
+    "папка": {
+      "word": "папка",
+      "filename": "папка.webp",
+      "category": "bagazh",
+      "emoji": "📁",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["бумаги", "документы"],
+      "variants": []
+    },
+    "пенал": {
+      "word": "пенал",
+      "filename": "пенал.webp",
+      "category": "bagazh",
+      "emoji": "✏️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["ручки", "школа"],
+      "variants": []
+    },
+    "поднос": {
+      "word": "поднос",
+      "filename": "поднос.webp",
+      "category": "bagazh",
+      "emoji": "🍽️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["посуда", "таскать"],
+      "variants": []
+    },
+    "рюкзак": {
+      "word": "рюкзак",
+      "filename": "рюкзак.webp",
+      "category": "bagazh",
+      "emoji": "🎒",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["сумка", "спина"],
+      "variants": []
+    },
+    "сумка": {
+      "word": "сумка",
+      "filename": "сумка.webp",
+      "category": "bagazh",
+      "emoji": "👜",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["носить", "вещи"],
+      "variants": []
+    },
+    "чемодан": {
+      "word": "чемодан",
+      "filename": "чемодан.webp",
+      "category": "bagazh",
+      "emoji": "🧳",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["путешествие", "вещи"],
+      "variants": []
+    },
     "барсук": {
       "word": "барсук",
       "filename": "барсук.webp",
@@ -7,7 +217,7 @@
       "emoji": "🦡",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["барсучишка", "зверь"],
+      "synonyms": ["животное", "зверь"],
       "variants": []
     },
     "белка": {
@@ -17,7 +227,7 @@
       "emoji": "🐿️",
       "wordType": "noun",
       "gender": "f",
-      "synonyms": ["белочка", "грызун"],
+      "synonyms": ["животное", "грызун"],
       "variants": []
     },
     "бобр": {
@@ -27,7 +237,7 @@
       "emoji": "🦫",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["бобрик", "грызун"],
+      "synonyms": ["животное", "грызун"],
       "variants": []
     },
     "варан": {
@@ -57,7 +267,7 @@
       "emoji": "🦦",
       "wordType": "noun",
       "gender": "f",
-      "synonyms": ["выдрочка", "зверь"],
+      "synonyms": ["животное", "река"],
       "variants": []
     },
     "гиена": {
@@ -107,7 +317,7 @@
       "emoji": "🐇",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["зайка", "зайчик", "косой"],
+      "synonyms": ["животное", "зайка"],
       "variants": []
     },
     "кабан": {
@@ -117,7 +327,17 @@
       "emoji": "🐗",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["кабанчик", "дикая свинья"],
+      "synonyms": ["свинья", "дикий"],
+      "variants": []
+    },
+    "кот": {
+      "word": "кот",
+      "filename": "кот.webp",
+      "category": "dikie_zveri",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
       "variants": []
     },
     "кошка": {
@@ -137,7 +357,7 @@
       "emoji": "🐊",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["крокодильчик", "рептилия"],
+      "synonyms": ["животное", "зубы"],
       "variants": []
     },
     "лев": {
@@ -147,7 +367,7 @@
       "emoji": "🦁",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["львёнок", "царь зверей"],
+      "synonyms": ["животное", "царь"],
       "variants": []
     },
     "леопард": {
@@ -157,7 +377,7 @@
       "emoji": "🐆",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["леопардик", "хищник"],
+      "synonyms": ["животное", "пятна"],
       "variants": []
     },
     "лиса": {
@@ -177,7 +397,7 @@
       "emoji": "🫎",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["лосик", "сохатый"],
+      "synonyms": ["животное", "рога"],
       "variants": []
     },
     "марал": {
@@ -237,7 +457,7 @@
       "emoji": "🐼",
       "wordType": "noun",
       "gender": "f",
-      "synonyms": ["пандочка", "бамбуковый медведь"],
+      "synonyms": ["животное", "бамбук"],
       "variants": ["панда_2.webp"]
     },
     "питон": {
@@ -320,1281 +540,1294 @@
       "synonyms": [],
       "variants": []
     },
-    "грусть": {
-      "word": "грусть",
-      "filename": "грусть.webp",
-      "category": "emocii",
-      "emoji": "😔",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["печаль", "тоска"],
-      "variants": ["грусть_2.webp"]
-    },
-    "злость": {
-      "word": "злость",
-      "filename": "злость.webp",
-      "category": "emocii",
-      "emoji": "😡",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["гнев", "злиться"],
-      "variants": ["злость_2.webp", "злость_2.webp", "злость_3.webp", "злость_4.webp"]
-    },
-    "радость": {
-      "word": "радость",
-      "filename": "радость.webp",
-      "category": "emocii",
-      "emoji": "😃",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["счастье", "веселье"],
-      "variants": ["радость_2.webp"]
-    },
-    "скука": {
-      "word": "скука",
-      "filename": "скука.webp",
-      "category": "emocii",
-      "emoji": "🥱",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["скучно", "грусть"],
-      "variants": ["скука_2.webp"]
-    },
-    "смех": {
-      "word": "смех",
-      "filename": "смех.webp",
-      "category": "emocii",
-      "emoji": "😂",
+    "балкон": {
+      "word": "балкон",
+      "filename": "балкон.webp",
+      "category": "dom",
+      "emoji": "🪟",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["смеяться", "хохотать", "шутка"],
-      "variants": ["смех_2.webp"]
+      "synonyms": ["лоджия", "дом"],
+      "variants": []
     },
-    "спокойствие": {
-      "word": "спокойствие",
-      "filename": "спокойствие.webp",
-      "category": "emocii",
-      "emoji": "😌",
+    "ванная": {
+      "word": "ванная",
+      "filename": "ванная.webp",
+      "category": "dom",
+      "emoji": "🛁",
       "wordType": "noun",
-      "gender": "n",
-      "synonyms": ["тихо", "мир"],
-      "variants": ["спокойствие_2.webp"]
+      "gender": "f",
+      "synonyms": ["мыться", "вода"],
+      "variants": []
     },
-    "страх": {
-      "word": "страх",
-      "filename": "страх.webp",
-      "category": "emocii",
-      "emoji": "😨",
+    "дом": {
+      "word": "дом",
+      "filename": "дом.webp",
+      "category": "dom",
+      "emoji": "🏠",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["бояться", "страх"],
-      "variants": ["страх_2.webp"]
+      "synonyms": ["жилище", "квартира"],
+      "variants": []
     },
-    "удивление": {
-      "word": "удивление",
-      "filename": "удивление.webp",
-      "category": "emocii",
-      "emoji": "😲",
+    "квартира": {
+      "word": "квартира",
+      "filename": "квартира.webp",
+      "category": "dom",
+      "emoji": "🏢",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["дом", "комната"],
+      "variants": []
+    },
+    "комната": {
+      "word": "комната",
+      "filename": "комната.webp",
+      "category": "dom",
+      "emoji": "🛋️",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["дом", "помещение"],
+      "variants": []
+    },
+    "коридор": {
+      "word": "коридор",
+      "filename": "коридор.webp",
+      "category": "dom",
+      "emoji": "🚪",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["дом", "проход"],
+      "variants": []
+    },
+    "крыша": {
+      "word": "крыша",
+      "filename": "крыша.webp",
+      "category": "dom",
+      "emoji": "🏠",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["дом", "сверху"],
+      "variants": []
+    },
+    "кухня": {
+      "word": "кухня",
+      "filename": "кухня.webp",
+      "category": "dom",
+      "emoji": "🍳",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["готовить", "комната"],
+      "variants": []
+    },
+    "подвал": {
+      "word": "подвал",
+      "filename": "подвал.webp",
+      "category": "dom",
+      "emoji": "🏚️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["дом"],
+      "variants": []
+    },
+    "прихожая": {
+      "word": "прихожая",
+      "filename": "прихожая.webp",
+      "category": "dom",
+      "emoji": "🚪",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["дом", "вход"],
+      "variants": []
+    },
+    "спальня": {
+      "word": "спальня",
+      "filename": "спальня.webp",
+      "category": "dom",
+      "emoji": "🛏️",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["дом", "кровать"],
+      "variants": []
+    },
+    "чердак": {
+      "word": "чердак",
+      "filename": "чердак.webp",
+      "category": "dom",
+      "emoji": "🏠",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["крыша", "дом"],
+      "variants": []
+    },
+    "багет": {
+      "word": "багет",
+      "filename": "багет.webp",
+      "category": "eda",
+      "emoji": "🥖",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["хлеб", "булка"],
+      "variants": []
+    },
+    "бекон": {
+      "word": "бекон",
+      "filename": "бекон.webp",
+      "category": "eda",
+      "emoji": "🥓",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мясо", "еда"],
+      "variants": []
+    },
+    "бублик": {
+      "word": "бублик",
+      "filename": "бублик.webp",
+      "category": "eda",
+      "emoji": "🍩",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["еда", "хлеб"],
+      "variants": []
+    },
+    "булка": {
+      "word": "булка",
+      "filename": "булка.webp",
+      "category": "eda",
+      "emoji": "🥖",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["хлеб", "еда"],
+      "variants": []
+    },
+    "вареники": {
+      "word": "вареники",
+      "filename": "вареники.webp",
+      "category": "eda",
+      "emoji": "🥟",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["еда", "тесто"],
+      "variants": []
+    },
+    "ветчина": {
+      "word": "ветчина",
+      "filename": "ветчина.webp",
+      "category": "eda",
+      "emoji": "🥓",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["мясо", "еда"],
+      "variants": ["ветчина_2.webp"]
+    },
+    "гранола": {
+      "word": "гранола",
+      "filename": "гранола.webp",
+      "category": "eda",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["еда", "завтрак"],
+      "variants": []
+    },
+    "индейка": {
+      "word": "индейка",
+      "filename": "индейка.webp",
+      "category": "eda",
+      "emoji": "🦃",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["птица", "мясо"],
+      "variants": ["индейка_2.webp"]
+    },
+    "каша": {
+      "word": "каша",
+      "filename": "каша.webp",
+      "category": "eda",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["еда", "завтрак"],
+      "variants": []
+    },
+    "колбаса": {
+      "word": "колбаса",
+      "filename": "колбаса.webp",
+      "category": "eda",
+      "emoji": "🌭",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["еда", "мясо"],
+      "variants": []
+    },
+    "колбасака": {
+      "word": "колбасака",
+      "filename": "колбасака.webp",
+      "category": "eda",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
+      "variants": []
+    },
+    "котлета": {
+      "word": "котлета",
+      "filename": "котлета.webp",
+      "category": "eda",
+      "emoji": "🍖",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["мясо", "еда"],
+      "variants": ["котлета_2.webp"]
+    },
+    "круассан": {
+      "word": "круассан",
+      "filename": "круассан.webp",
+      "category": "eda",
+      "emoji": "🥐",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["хлеб", "франция"],
+      "variants": []
+    },
+    "курица": {
+      "word": "курица",
+      "filename": "курица.webp",
+      "category": "eda",
+      "emoji": "🍗",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["птица", "мясо"],
+      "variants": []
+    },
+    "лаваш": {
+      "word": "лаваш",
+      "filename": "лаваш.webp",
+      "category": "eda",
+      "emoji": "🫓",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["хлеб", "тонкий"],
+      "variants": []
+    },
+    "лапша": {
+      "word": "лапша",
+      "filename": "лапша.webp",
+      "category": "eda",
+      "emoji": "🍜",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["еда", "макароны"],
+      "variants": []
+    },
+    "макароны": {
+      "word": "макароны",
+      "filename": "макароны.webp",
+      "category": "eda",
+      "emoji": "🍝",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["еда", "паста"],
+      "variants": []
+    },
+    "манты": {
+      "word": "манты",
+      "filename": "манты.webp",
+      "category": "eda",
+      "emoji": "🥟",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["еда", "тесто"],
+      "variants": []
+    },
+    "мюсли": {
+      "word": "мюсли",
+      "filename": "мюсли.webp",
+      "category": "eda",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["еда", "завтрак"],
+      "variants": []
+    },
+    "мясо": {
+      "word": "мясо",
+      "filename": "мясо.webp",
+      "category": "eda",
+      "emoji": "🥩",
       "wordType": "noun",
       "gender": "n",
-      "synonyms": ["удивить", "вау"],
-      "variants": ["удивление_2.webp"]
+      "synonyms": ["еда", "курица"],
+      "variants": ["мясо_2.webp"]
+    },
+    "овсянка": {
+      "word": "овсянка",
+      "filename": "овсянка.webp",
+      "category": "eda",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["каша", "завтрак"],
+      "variants": []
+    },
+    "паста": {
+      "word": "паста",
+      "filename": "паста.webp",
+      "category": "eda",
+      "emoji": "🪥",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["макароны", "еда"],
+      "variants": []
+    },
+    "паштет": {
+      "word": "паштет",
+      "filename": "паштет.webp",
+      "category": "eda",
+      "emoji": "🥫",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мясо", "еда"],
+      "variants": []
+    },
+    "пельмени": {
+      "word": "пельмени",
+      "filename": "пельмени.webp",
+      "category": "eda",
+      "emoji": "🥟",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["еда", "тесто"],
+      "variants": []
+    },
+    "салат": {
+      "word": "салат",
+      "filename": "салат.webp",
+      "category": "eda",
+      "emoji": "🥗",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["еда", "овощи"],
+      "variants": ["салат_2.webp"]
+    },
+    "сосиска": {
+      "word": "сосиска",
+      "filename": "сосиска.webp",
+      "category": "eda",
+      "emoji": "🌭",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["еда", "мясо"],
+      "variants": ["сосиска_2.webp"]
+    },
+    "спагетти": {
+      "word": "спагетти",
+      "filename": "спагетти.webp",
+      "category": "eda",
+      "emoji": "🍝",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["макароны", "еда"],
+      "variants": []
+    },
+    "сухарик": {
+      "word": "сухарик",
+      "filename": "сухарик.webp",
+      "category": "eda",
+      "emoji": "🍞",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["хлеб", "печенье", "гренки"],
+      "variants": []
+    },
+    "сухарики": {
+      "word": "сухарики",
+      "filename": "сухарики.webp",
+      "category": "eda",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
+      "variants": []
+    },
+    "тесто": {
+      "word": "тесто",
+      "filename": "тесто.webp",
+      "category": "eda",
+      "emoji": "🍩",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["хлеб", "пирог", "печь"],
+      "variants": []
+    },
+    "тост": {
+      "word": "тост",
+      "filename": "тост.webp",
+      "category": "eda",
+      "emoji": "🍞",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["хлеб", "еда"],
+      "variants": []
+    },
+    "хлеб": {
+      "word": "хлеб",
+      "filename": "хлеб.webp",
+      "category": "eda",
+      "emoji": "🍞",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["еда", "булка"],
+      "variants": ["хлеб_2.webp"]
+    },
+    "хлопья": {
+      "word": "хлопья",
+      "filename": "хлопья.webp",
+      "category": "eda",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["еда", "завтрак"],
+      "variants": []
+    },
+    "шашлык": {
+      "word": "шашлык",
+      "filename": "шашлык.webp",
+      "category": "eda",
+      "emoji": "🍢",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мясо", "еда"],
+      "variants": ["шашлык_2.webp"]
     },
     "абрикос": {
       "word": "абрикос",
       "filename": "абрикос.webp",
-      "category": "frukti_ovochi",
+      "category": "frukti",
       "emoji": "🍑",
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["фрукт", "плод"],
-      "variants": []
-    },
-    "авокадо": {
-      "word": "авокадо",
-      "filename": "авокадо.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥑",
-      "wordType": "noun",
-      "gender": "n",
-      "synonyms": ["фрукт", "овощ"],
-      "variants": []
+      "variants": ["абрикос_2.webp"]
     },
     "ананас": {
       "word": "ананас",
       "filename": "ананас.webp",
-      "category": "frukti_ovochi",
+      "category": "frukti",
       "emoji": "🍍",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["ананасик", "фрукт"],
-      "variants": []
+      "synonyms": ["фрукт", "экзотика"],
+      "variants": ["ананас_2.webp"]
     },
     "апельсин": {
       "word": "апельсин",
       "filename": "апельсин.webp",
-      "category": "frukti_ovochi",
+      "category": "frukti",
       "emoji": "🍊",
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["фрукт", "цитрус"],
-      "variants": []
-    },
-    "арбуз": {
-      "word": "арбуз",
-      "filename": "арбуз.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍉",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["арбузик", "ягода"],
-      "variants": ["арбуз_2.webp"]
-    },
-    "артишок": {
-      "word": "артишок",
-      "filename": "артишок.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "баклажан": {
-      "word": "баклажан",
-      "filename": "баклажан.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍆",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "синенький"],
-      "variants": []
+      "variants": ["апельсин_2.webp"]
     },
     "банан": {
       "word": "банан",
       "filename": "банан.webp",
-      "category": "frukti_ovochi",
+      "category": "frukti",
       "emoji": "🍌",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["бананчик"],
-      "variants": []
-    },
-    "барбарис": {
-      "word": "барбарис",
-      "filename": "барбарис.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "батат": {
-      "word": "батат",
-      "filename": "батат.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "белая смородина": {
-      "word": "белая смородина",
-      "filename": "белая_смородина.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "бок чой": {
-      "word": "бок чой",
-      "filename": "бок_чой.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "болгарский перец": {
-      "word": "болгарский перец",
-      "filename": "болгарский_перец.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "брокколи": {
-      "word": "брокколи",
-      "filename": "брокколи.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥦",
-      "wordType": "noun",
-      "gender": "n",
-      "synonyms": ["овощ", "капуста"],
-      "variants": []
-    },
-    "брюссельская капуста": {
-      "word": "брюссельская капуста",
-      "filename": "брюссельская_капуста.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "бузина": {
-      "word": "бузина",
-      "filename": "бузина.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
+      "synonyms": ["фрукт", "еда"],
+      "variants": ["банан_2.webp"]
     },
     "виноград": {
       "word": "виноград",
       "filename": "виноград.webp",
-      "category": "frukti_ovochi",
+      "category": "frukti",
       "emoji": "🍇",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["виноградик", "ягода"],
+      "synonyms": ["ягода", "фрукт"],
       "variants": ["виноград_2.webp"]
+    },
+    "гранат": {
+      "word": "гранат",
+      "filename": "гранат.webp",
+      "category": "frukti",
+      "emoji": "🍎",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["фрукт", "красный"],
+      "variants": ["гранат_2.webp"]
+    },
+    "груша": {
+      "word": "груша",
+      "filename": "груша.webp",
+      "category": "frukti",
+      "emoji": "🍐",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["фрукт", "еда"],
+      "variants": ["груша_2.webp"]
+    },
+    "киви": {
+      "word": "киви",
+      "filename": "киви.webp",
+      "category": "frukti",
+      "emoji": "🥝",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["фрукт", "зеленый"],
+      "variants": ["киви_2.webp"]
+    },
+    "лимон": {
+      "word": "лимон",
+      "filename": "лимон.webp",
+      "category": "frukti",
+      "emoji": "🍋",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["фрукт", "кислый"],
+      "variants": ["лимон_2.webp"]
+    },
+    "манго": {
+      "word": "манго",
+      "filename": "манго.webp",
+      "category": "frukti",
+      "emoji": "🥭",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["фрукт", "экзотика"],
+      "variants": ["манго_2.webp"]
+    },
+    "персик": {
+      "word": "персик",
+      "filename": "персик.webp",
+      "category": "frukti",
+      "emoji": "🍑",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["фрукт", "сладкий"],
+      "variants": ["персик_2.webp"]
+    },
+    "яблоко": {
+      "word": "яблоко",
+      "filename": "яблоко.webp",
+      "category": "frukti",
+      "emoji": "🍎",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["фрукт", "еда"],
+      "variants": ["яблоко_2.webp"]
+    },
+    "берет": {
+      "word": "берет",
+      "filename": "берет.webp",
+      "category": "golovnie_ubori",
+      "emoji": "🧢",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["шапка"],
+      "variants": ["берет_2.webp"]
+    },
+    "заколка": {
+      "word": "заколка",
+      "filename": "заколка.webp",
+      "category": "golovnie_ubori",
+      "emoji": "🎀",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["волосы", "украшение"],
+      "variants": ["заколка_2.webp"]
+    },
+    "кепка": {
+      "word": "кепка",
+      "filename": "кепка.webp",
+      "category": "golovnie_ubori",
+      "emoji": "🧢",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["шапка", "козырек"],
+      "variants": ["кепка_2.webp"]
+    },
+    "ободок": {
+      "word": "ободок",
+      "filename": "ободок.webp",
+      "category": "golovnie_ubori",
+      "emoji": "👑",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["волосы", "украшение"],
+      "variants": []
+    },
+    "расческа": {
+      "word": "расческа",
+      "filename": "расческа.webp",
+      "category": "golovnie_ubori",
+      "emoji": "💈",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["волосы", "прическа"],
+      "variants": ["расческа_2.webp"]
+    },
+    "шапка": {
+      "word": "шапка",
+      "filename": "шапка.webp",
+      "category": "golovnie_ubori",
+      "emoji": "🧢",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["одежда", "голова"],
+      "variants": ["шапка_2.webp"]
+    },
+    "шарф": {
+      "word": "шарф",
+      "filename": "шарф.webp",
+      "category": "golovnie_ubori",
+      "emoji": "🧣",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["одежда", "шея"],
+      "variants": ["шарф_2.webp", "шарф_3.webp"]
+    },
+    "шлем": {
+      "word": "шлем",
+      "filename": "шлем.webp",
+      "category": "golovnie_ubori",
+      "emoji": "⛑️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["голова", "защита"],
+      "variants": ["шлем_2.webp"]
+    },
+    "шляпа": {
+      "word": "шляпа",
+      "filename": "шляпа.webp",
+      "category": "golovnie_ubori",
+      "emoji": "👒",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["одежда", "голова"],
+      "variants": ["шляпа_2.webp"]
+    },
+    "арбуз": {
+      "word": "арбуз",
+      "filename": "арбуз.webp",
+      "category": "jgodi",
+      "emoji": "🍉",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["ягода", "еда"],
+      "variants": []
     },
     "вишня": {
       "word": "вишня",
       "filename": "вишня.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🍒",
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["ягода"],
       "variants": []
     },
-    "годжи": {
-      "word": "годжи",
-      "filename": "годжи.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["годжи_2.webp"]
-    },
-    "голубика": {
-      "word": "голубика",
-      "filename": "голубика.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["голубика_2.webp", "голубика_3.webp", "голубика_4.webp"]
-    },
-    "горох": {
-      "word": "горох",
-      "filename": "горох.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🫛",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "бобовые"],
-      "variants": []
-    },
-    "гранат": {
-      "word": "гранат",
-      "filename": "гранат.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍎",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["фрукт", "красный"],
-      "variants": []
-    },
-    "грейпфрут": {
-      "word": "грейпфрут",
-      "filename": "грейпфрут.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍊",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["фрукт", "цитрус"],
-      "variants": []
-    },
-    "груша": {
-      "word": "груша",
-      "filename": "груша.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍐",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["грушка", "фрукт"],
-      "variants": []
-    },
-    "гуава": {
-      "word": "гуава",
-      "filename": "гуава.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
     "дыня": {
       "word": "дыня",
       "filename": "дыня.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🍈",
       "wordType": "noun",
-      "gender": "m",
+      "gender": "f",
       "synonyms": ["фрукт", "сладкий"],
-      "variants": ["дыня_2.webp"]
+      "variants": []
     },
     "ежевика": {
       "word": "ежевика",
       "filename": "ежевика.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🫐",
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["ягода", "черная"],
       "variants": []
     },
-    "земляника": {
-      "word": "земляника",
-      "filename": "земляника.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
     "инжир": {
       "word": "инжир",
       "filename": "инжир.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🍇",
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["фрукт", "сладкий"],
       "variants": []
     },
-    "кабачок": {
-      "word": "кабачок",
-      "filename": "кабачок.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥒",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "зеленый"],
-      "variants": []
-    },
-    "капуста": {
-      "word": "капуста",
-      "filename": "капуста.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥬",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["овощ", "зеленый"],
-      "variants": []
-    },
-    "картофель": {
-      "word": "картофель",
-      "filename": "картофель.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥔",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["картошка", "овощ"],
-      "variants": []
-    },
-    "киви": {
-      "word": "киви",
-      "filename": "киви.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥝",
-      "wordType": "noun",
-      "gender": "n",
-      "synonyms": ["фрукт"],
-      "variants": []
-    },
     "клубника": {
       "word": "клубника",
       "filename": "клубника.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🍓",
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["ягода", "красная"],
-      "variants": ["клубника_2.webp"]
-    },
-    "клюква": {
-      "word": "клюква",
-      "filename": "клюква.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["клюква_2.webp"]
-    },
-    "кокос": {
-      "word": "кокос",
-      "filename": "кокос.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥥",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["орех", "тропики"],
-      "variants": []
-    },
-    "кольраби": {
-      "word": "кольраби",
-      "filename": "кольраби.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "красная смородина": {
-      "word": "красная смородина",
-      "filename": "красная_смородина.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["красная_смородина_2.webp", "красная_смородина_3.webp"]
-    },
-    "красный лук": {
-      "word": "красный лук",
-      "filename": "красный_лук.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "кресс салат": {
-      "word": "кресс салат",
-      "filename": "кресс_салат.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
       "variants": []
     },
     "крыжовник": {
       "word": "крыжовник",
       "filename": "крыжовник.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🍇",
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["ягода", "зеленый"],
       "variants": []
     },
-    "кудрявая капуста": {
-      "word": "кудрявая капуста",
-      "filename": "кудрявая_капуста.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "кукуруза": {
-      "word": "кукуруза",
-      "filename": "кукуруза.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🌽",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["кукурузка", "злак"],
-      "variants": []
-    },
-    "лайм": {
-      "word": "лайм",
-      "filename": "лайм.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍋",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["фрукт", "зеленый"],
-      "variants": []
-    },
-    "лимон": {
-      "word": "лимон",
-      "filename": "лимон.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍋",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["фрукт", "кислый"],
-      "variants": []
-    },
-    "личи": {
-      "word": "личи",
-      "filename": "личи.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "лук порей": {
-      "word": "лук порей",
-      "filename": "лук_порей.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
     "малина": {
       "word": "малина",
       "filename": "малина.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🍓",
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["ягода", "красная"],
-      "variants": ["малина_2.webp", "малина_3.webp"]
-    },
-    "манго": {
-      "word": "манго",
-      "filename": "манго.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥭",
-      "wordType": "noun",
-      "gender": "n",
-      "synonyms": ["фрукт", "экзотика"],
       "variants": []
     },
-    "мандарин": {
-      "word": "мандарин",
-      "filename": "мандарин.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍊",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["фрукт", "цитрус"],
-      "variants": []
-    },
-    "маракуйя": {
-      "word": "маракуйя",
-      "filename": "маракуйя.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "морковь": {
-      "word": "морковь",
-      "filename": "морковь.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥕",
+    "смородина": {
+      "word": "смородина",
+      "filename": "смородина.webp",
+      "category": "jgodi",
+      "emoji": "🍇",
       "wordType": "noun",
       "gender": "f",
-      "synonyms": ["овощ", "оранжевый"],
-      "variants": []
-    },
-    "морошка": {
-      "word": "морошка",
-      "filename": "морошка.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "нектарин": {
-      "word": "нектарин",
-      "filename": "нектарин.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍑",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["фрукт", "персик"],
-      "variants": []
-    },
-    "облепиха": {
-      "word": "облепиха",
-      "filename": "облепиха.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["облепиха_2.webp"]
-    },
-    "огурец": {
-      "word": "огурец",
-      "filename": "огурец.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥒",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["огурчик", "овощ"],
-      "variants": []
-    },
-    "папайя": {
-      "word": "папайя",
-      "filename": "папайя.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "пастернак": {
-      "word": "пастернак",
-      "filename": "пастернак.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "пекинская капуста": {
-      "word": "пекинская капуста",
-      "filename": "пекинская_капуста.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "персик": {
-      "word": "персик",
-      "filename": "персик.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍑",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["фрукт", "сладкий"],
-      "variants": []
-    },
-    "питахайя": {
-      "word": "питахайя",
-      "filename": "питахайя.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "помидор": {
-      "word": "помидор",
-      "filename": "помидор.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍅",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "красный"],
-      "variants": []
-    },
-    "редис": {
-      "word": "редис",
-      "filename": "редис.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🌶️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "красный"],
-      "variants": []
-    },
-    "репа": {
-      "word": "репа",
-      "filename": "репа.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥔",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["овощ", "желтый"],
-      "variants": []
-    },
-    "руккола": {
-      "word": "руккола",
-      "filename": "руккола.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "рябина": {
-      "word": "рябина",
-      "filename": "рябина.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "свекла": {
-      "word": "свекла",
-      "filename": "свекла.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍠",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["овощ", "красный"],
-      "variants": []
-    },
-    "сельдерей": {
-      "word": "сельдерей",
-      "filename": "сельдерей.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥬",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "зеленый"],
-      "variants": []
-    },
-    "слива": {
-      "word": "слива",
-      "filename": "слива.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🫐",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["фрукт", "синий"],
-      "variants": []
-    },
-    "спаржа": {
-      "word": "спаржа",
-      "filename": "спаржа.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🌱",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["овощ", "зеленый"],
-      "variants": []
-    },
-    "стручковая фасоль": {
-      "word": "стручковая фасоль",
-      "filename": "стручковая_фасоль.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "тыква": {
-      "word": "тыква",
-      "filename": "тыква.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🎃",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["овощ", "оранжевый"],
-      "variants": []
-    },
-    "фейхоа": {
-      "word": "фейхоа",
-      "filename": "фейхоа.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "фенхель": {
-      "word": "фенхель",
-      "filename": "фенхель.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
+      "synonyms": ["ягода", "черная"],
       "variants": []
     },
     "финик": {
       "word": "финик",
       "filename": "финик.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🌴",
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["фрукт", "сладкий"],
       "variants": []
     },
-    "хурма": {
-      "word": "хурма",
-      "filename": "хурма.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍅",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["фрукт", "оранжевый"],
-      "variants": []
-    },
-    "цветная капуста": {
-      "word": "цветная капуста",
-      "filename": "цветная_капуста.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
     "черешня": {
       "word": "черешня",
       "filename": "черешня.webp",
-      "category": "frukti_ovochi",
+      "category": "jgodi",
       "emoji": "🍒",
       "wordType": "noun",
-      "gender": "m",
+      "gender": "f",
       "synonyms": ["ягода", "вишня"],
-      "variants": ["черешня_2.webp"]
-    },
-    "черная смородина": {
-      "word": "черная смородина",
-      "filename": "черная_смородина.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["черная_смородина_2.webp", "черная_смородина_3.webp"]
-    },
-    "чеснок": {
-      "word": "чеснок",
-      "filename": "чеснок.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🧄",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["чесночок", "овощ"],
       "variants": []
     },
-    "шампиньоны": {
-      "word": "шампиньоны",
-      "filename": "шампиньоны.webp",
-      "category": "frukti_ovochi",
+    "черника": {
+      "word": "черника",
+      "filename": "черника.webp",
+      "category": "jgodi",
+      "emoji": "🫐",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["ягода", "черная"],
+      "variants": []
+    },
+    "блендер": {
+      "word": "блендер",
+      "filename": "блендер.webp",
+      "category": "kuhonnay_tehnika",
+      "emoji": "🥤",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["кухня", "техника"],
+      "variants": []
+    },
+    "духовка": {
+      "word": "духовка",
+      "filename": "духовка.webp",
+      "category": "kuhonnay_tehnika",
+      "emoji": "🍳",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["печь", "готовить"],
+      "variants": []
+    },
+    "кофеварка": {
+      "word": "кофеварка",
+      "filename": "кофеварка.webp",
+      "category": "kuhonnay_tehnika",
+      "emoji": "☕",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["кофе", "техника"],
+      "variants": []
+    },
+    "микроволновка": {
+      "word": "микроволновка",
+      "filename": "микроволновка.webp",
+      "category": "kuhonnay_tehnika",
+      "emoji": "📻",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["кухня", "греть"],
+      "variants": []
+    },
+    "мультиварка": {
+      "word": "мультиварка",
+      "filename": "мультиварка.webp",
+      "category": "kuhonnay_tehnika",
+      "emoji": "🍲",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["кухня", "готовить"],
+      "variants": []
+    },
+    "тостер": {
+      "word": "тостер",
+      "filename": "тостер.webp",
+      "category": "kuhonnay_tehnika",
+      "emoji": "🍞",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["хлеб", "техника"],
+      "variants": []
+    },
+    "холодильник": {
+      "word": "холодильник",
+      "filename": "холодильник.webp",
+      "category": "kuhonnay_tehnika",
+      "emoji": "🧊",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["холод", "еда"],
+      "variants": []
+    },
+    "борода": {
+      "word": "борода",
+      "filename": "борода.webp",
+      "category": "lico",
+      "emoji": "🧔",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["волосы", "лицо"],
+      "variants": []
+    },
+    "веснушки": {
+      "word": "веснушки",
+      "filename": "веснушки.webp",
+      "category": "lico",
+      "emoji": "🙂",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["лицо", "точки"],
+      "variants": []
+    },
+    "волосы": {
+      "word": "волосы",
+      "filename": "волосы.webp",
+      "category": "lico",
+      "emoji": "💇",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["голова", "прическа"],
+      "variants": ["волосы_2.webp"]
+    },
+    "глаз": {
+      "word": "глаз",
+      "filename": "глаз.webp",
+      "category": "lico",
+      "emoji": "👁️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["око", "видеть"],
+      "variants": []
+    },
+    "губы": {
+      "word": "губы",
+      "filename": "губы.webp",
+      "category": "lico",
+      "emoji": "💋",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["рот", "целовать"],
+      "variants": []
+    },
+    "зубы": {
+      "word": "зубы",
+      "filename": "зубы.webp",
+      "category": "lico",
       "emoji": "🖼️",
       "wordType": "noun",
       "gender": null,
-      "synonyms": [],
+      "synonyms": ["зубки", "рот", "жевать"],
       "variants": []
     },
-    "шелковица": {
-      "word": "шелковица",
-      "filename": "шелковица.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "шпинат": {
-      "word": "шпинат",
-      "filename": "шпинат.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🥬",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "зеленый"],
-      "variants": []
-    },
-    "яблоко": {
-      "word": "яблоко",
-      "filename": "яблоко.webp",
-      "category": "frukti_ovochi",
-      "emoji": "🍎",
+    "лицо": {
+      "word": "лицо",
+      "filename": "лицо.webp",
+      "category": "lico",
+      "emoji": "😐",
       "wordType": "noun",
       "gender": "n",
-      "synonyms": ["фрукт", "еда"],
+      "synonyms": ["голова", "глаза"],
       "variants": []
     },
-    "бежать": {
-      "word": "бежать",
-      "filename": "бежать.webp",
-      "category": "glagoli",
-      "emoji": "🏃",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["бег", "мчаться"],
-      "variants": ["бежать_2.webp"]
-    },
-    "грустить": {
-      "word": "грустить",
-      "filename": "грустить.webp",
-      "category": "glagoli",
-      "emoji": "😔",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["грусть", "печаль"],
-      "variants": ["грустить_2.webp", "грустить_3.webp", "грустить_4.webp"]
-    },
-    "думать": {
-      "word": "думать",
-      "filename": "думать.webp",
-      "category": "glagoli",
-      "emoji": "🤔",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["мысль", "размышлять"],
-      "variants": ["думать_2.webp", "думать_3.webp"]
-    },
-    "ехать": {
-      "word": "ехать",
-      "filename": "ехать.webp",
-      "category": "glagoli",
-      "emoji": "🚗",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["ездить", "машина"],
-      "variants": ["ехать_2.webp"]
-    },
-    "зевать": {
-      "word": "зевать",
-      "filename": "зевать.webp",
-      "category": "glagoli",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
+    "лоб": {
+      "word": "лоб",
+      "filename": "лоб.webp",
+      "category": "lico",
+      "emoji": "🧠",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["лицо", "голова"],
       "variants": []
     },
-    "злиться": {
-      "word": "злиться",
-      "filename": "злиться.webp",
-      "category": "glagoli",
-      "emoji": "😡",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["злость", "сердиться"],
+    "нос": {
+      "word": "нос",
+      "filename": "нос.webp",
+      "category": "lico",
+      "emoji": "👃",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["лицо", "нюхать"],
+      "variants": ["нос_2.webp", "нос_3.webp"]
+    },
+    "подбородок": {
+      "word": "подбородок",
+      "filename": "подбородок.webp",
+      "category": "lico",
+      "emoji": "🗣️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["лицо", "челюсть"],
       "variants": []
     },
-    "идти": {
-      "word": "идти",
-      "filename": "идти.webp",
-      "category": "glagoli",
-      "emoji": "🚶",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["ходить", "шагать"],
-      "variants": ["идти_2.webp"]
-    },
-    "лежать": {
-      "word": "лежать",
-      "filename": "лежать.webp",
-      "category": "glagoli",
-      "emoji": "🛌",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["кровать", "отдыхать"],
-      "variants": ["лежать_2.webp", "лежать_3.webp"]
-    },
-    "плакать": {
-      "word": "плакать",
-      "filename": "плакать.webp",
-      "category": "glagoli",
-      "emoji": "😢",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["слезы", "плач"],
-      "variants": ["плакать_2.webp", "плакать_3.webp", "плакать_4.webp"]
-    },
-    "прыгать": {
-      "word": "прыгать",
-      "filename": "прыгать.webp",
-      "category": "glagoli",
-      "emoji": "🤸",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["прыжок", "скакать"],
-      "variants": ["прыгать_2.webp"]
-    },
-    "сидеть": {
-      "word": "сидеть",
-      "filename": "сидеть.webp",
-      "category": "glagoli",
-      "emoji": "🪑",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["стул", "сидя"],
-      "variants": ["сидеть_2.webp", "сидеть_3.webp", "сидеть_4.webp"]
-    },
-    "смеяться": {
-      "word": "смеяться",
-      "filename": "смеяться.webp",
-      "category": "glagoli",
-      "emoji": "😂",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["смех", "хохотать"],
-      "variants": [
-        "смеяться_2.webp",
-        "смеяться_3.webp",
-        "смеяться_4.webp",
-        "смеяться_2.webp",
-        "смеяться_3.webp",
-        "смеяться_4.webp"
-      ]
-    },
-    "смотреть": {
-      "word": "смотреть",
-      "filename": "смотреть.webp",
-      "category": "glagoli",
-      "emoji": "👀",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["взгляд", "глаза"],
+    "ресница": {
+      "word": "ресница",
+      "filename": "ресница.webp",
+      "category": "lico",
+      "emoji": "👁️",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["глаз", "волосок"],
       "variants": []
     },
-    "стоять": {
-      "word": "стоять",
-      "filename": "стоять.webp",
-      "category": "glagoli",
-      "emoji": "🧍",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["стоя", "ноги"],
-      "variants": ["стоять_2.webp", "стоять_3.webp", "стоять_4.webp"]
-    },
-    "танцевать": {
-      "word": "танцевать",
-      "filename": "танцевать.webp",
-      "category": "glagoli",
-      "emoji": "💃",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["танец", "движения"],
-      "variants": ["танцевать_2.webp"]
-    },
-    "удивляться": {
-      "word": "удивляться",
-      "filename": "удивляться.webp",
-      "category": "glagoli",
-      "emoji": "😲",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["удивление", "вау"],
+    "рот": {
+      "word": "рот",
+      "filename": "рот.webp",
+      "category": "lico",
+      "emoji": "👄",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["губы", "говорить"],
       "variants": []
     },
-    "улыбаться": {
-      "word": "улыбаться",
-      "filename": "улыбаться.webp",
-      "category": "glagoli",
+    "улыбка": {
+      "word": "улыбка",
+      "filename": "улыбка.webp",
+      "category": "lico",
       "emoji": "😊",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["улыбка", "радость"],
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["улыбаться", "веселье", "радость"],
       "variants": []
     },
-    "барабан": {
-      "word": "барабан",
-      "filename": "барабан.webp",
-      "category": "igrushki",
-      "emoji": "🥁",
+    "усы": {
+      "word": "усы",
+      "filename": "усы.webp",
+      "category": "lico",
+      "emoji": "👨",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["лицо", "волосы"],
+      "variants": []
+    },
+    "ухо": {
+      "word": "ухо",
+      "filename": "ухо.webp",
+      "category": "lico",
+      "emoji": "👂",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["слушать", "уши"],
+      "variants": ["ухо_2.webp"]
+    },
+    "уши": {
+      "word": "уши",
+      "filename": "уши.webp",
+      "category": "lico",
+      "emoji": "👂",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["ушки", "слух", "слышать"],
+      "variants": ["уши_2.webp"]
+    },
+    "щека": {
+      "word": "щека",
+      "filename": "щека.webp",
+      "category": "lico",
+      "emoji": "😊",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["лицо", "щечка"],
+      "variants": ["щека_2.webp"]
+    },
+    "щеки": {
+      "word": "щеки",
+      "filename": "щеки.webp",
+      "category": "lico",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
+      "variants": []
+    },
+    "язык": {
+      "word": "язык",
+      "filename": "язык.webp",
+      "category": "lico",
+      "emoji": "👅",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["ударные"],
-      "variants": []
+      "synonyms": ["рот", "говорить"],
+      "variants": ["язык_2.webp"]
     },
-    "воздушный змей": {
-      "word": "воздушный змей",
-      "filename": "воздушный_змей.webp",
-      "category": "igrushki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "грузовик": {
-      "word": "грузовик",
-      "filename": "грузовик.webp",
-      "category": "igrushki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "конструктор": {
-      "word": "конструктор",
-      "filename": "конструктор.webp",
-      "category": "igrushki",
-      "emoji": "🧱",
+    "диван": {
+      "word": "диван",
+      "filename": "диван.webp",
+      "category": "mebel",
+      "emoji": "🛋️",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["игрушка", "строить"],
-      "variants": []
+      "synonyms": ["мебель", "сидеть"],
+      "variants": ["диван_2.webp"]
     },
-    "конь качалка": {
-      "word": "конь качалка",
-      "filename": "конь_качалка.webp",
-      "category": "igrushki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "кубики": {
-      "word": "кубики",
-      "filename": "кубики.webp",
-      "category": "igrushki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "кукла": {
-      "word": "кукла",
-      "filename": "кукла.webp",
-      "category": "igrushki",
-      "emoji": "🧸",
+    "зеркало": {
+      "word": "зеркало",
+      "filename": "зеркало.webp",
+      "category": "mebel",
+      "emoji": "🪞",
       "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["игрушка", "девочка"],
-      "variants": []
+      "gender": "n",
+      "synonyms": ["отражение", "смотреть"],
+      "variants": ["зеркало_2.webp"]
     },
-    "машинка": {
-      "word": "машинка",
-      "filename": "машинка.webp",
-      "category": "igrushki",
-      "emoji": "🚗",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["игрушка", "машина"],
-      "variants": []
-    },
-    "мыльные пузыри": {
-      "word": "мыльные пузыри",
-      "filename": "мыльные_пузыри.webp",
-      "category": "igrushki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "мяч": {
-      "word": "мяч",
-      "filename": "мяч.webp",
-      "category": "igrushki",
-      "emoji": "⚽",
+    "ковер": {
+      "word": "ковер",
+      "filename": "ковер.webp",
+      "category": "mebel",
+      "emoji": "🧶",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["игра", "круглый"],
-      "variants": []
+      "synonyms": ["пол", "мягкий"],
+      "variants": ["ковер_2.webp"]
     },
-    "пирамидка": {
-      "word": "пирамидка",
-      "filename": "пирамидка.webp",
-      "category": "igrushki",
-      "emoji": "🔺",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["игрушка", "кольца"],
-      "variants": []
-    },
-    "поезд": {
-      "word": "поезд",
-      "filename": "поезд.webp",
-      "category": "igrushki",
-      "emoji": "🚆",
+    "комод": {
+      "word": "комод",
+      "filename": "комод.webp",
+      "category": "mebel",
+      "emoji": "🗄️",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["транспорт", "рельсы"],
-      "variants": []
+      "synonyms": ["мебель", "ящики"],
+      "variants": ["комод_2.webp"]
     },
-    "самолетик": {
-      "word": "самолетик",
-      "filename": "самолетик.webp",
-      "category": "igrushki",
-      "emoji": "✈️",
+    "кресло": {
+      "word": "кресло",
+      "filename": "кресло.webp",
+      "category": "mebel",
+      "emoji": "🛋️",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["мебель", "сидеть"],
+      "variants": ["кресло_2.webp"]
+    },
+    "кровать": {
+      "word": "кровать",
+      "filename": "кровать.webp",
+      "category": "mebel",
+      "emoji": "🛏️",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["мебель", "спать"],
+      "variants": ["кровать_2.webp"]
+    },
+    "полка": {
+      "word": "полка",
+      "filename": "полка.webp",
+      "category": "mebel",
+      "emoji": "📚",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["мебель", "книги"],
+      "variants": ["полка_2.webp"]
+    },
+    "стол": {
+      "word": "стол",
+      "filename": "стол.webp",
+      "category": "mebel",
+      "emoji": "🪵",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["игрушка", "самолет"],
-      "variants": []
+      "synonyms": ["мебель", "столик"],
+      "variants": ["стол_2.webp"]
     },
-    "скакалка": {
-      "word": "скакалка",
-      "filename": "скакалка.webp",
-      "category": "igrushki",
-      "emoji": "🪢",
+    "стул": {
+      "word": "стул",
+      "filename": "стул.webp",
+      "category": "mebel",
+      "emoji": "🪑",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мебель", "сидеть"],
+      "variants": ["стул_2.webp"]
+    },
+    "табурет": {
+      "word": "табурет",
+      "filename": "табурет.webp",
+      "category": "mebel",
+      "emoji": "🪑",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["стул", "мебель"],
+      "variants": ["табурет_2.webp"]
+    },
+    "тумба": {
+      "word": "тумба",
+      "filename": "тумба.webp",
+      "category": "mebel",
+      "emoji": "🗄️",
       "wordType": "noun",
       "gender": "f",
-      "synonyms": ["прыгать", "спорт"],
+      "synonyms": ["мебель", "ящики"],
+      "variants": ["тумба_2.webp"]
+    },
+    "шкаф": {
+      "word": "шкаф",
+      "filename": "шкаф.webp",
+      "category": "mebel",
+      "emoji": "🚪",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мебель", "одежда"],
+      "variants": ["шкаф_2.webp"]
+    },
+    "йогурт": {
+      "word": "йогурт",
+      "filename": "йогурт.webp",
+      "category": "molochka_jico",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["еда", "молочное"],
       "variants": []
     },
-    "утка": {
-      "word": "утка",
-      "filename": "утка.webp",
-      "category": "igrushki",
-      "emoji": "🦆",
+    "кефир": {
+      "word": "кефир",
+      "filename": "кефир.webp",
+      "category": "molochka_jico",
+      "emoji": "🥛",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["напиток", "молочное"],
+      "variants": []
+    },
+    "маргарин": {
+      "word": "маргарин",
+      "filename": "маргарин.webp",
+      "category": "molochka_jico",
+      "emoji": "🧈",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["масло", "еда"],
+      "variants": []
+    },
+    "масло": {
+      "word": "масло",
+      "filename": "масло.webp",
+      "category": "molochka_jico",
+      "emoji": "🧈",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["еда", "жир"],
+      "variants": []
+    },
+    "молоко": {
+      "word": "молоко",
+      "filename": "молоко.webp",
+      "category": "molochka_jico",
+      "emoji": "🥛",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["напиток", "белое"],
+      "variants": []
+    },
+    "простокваша": {
+      "word": "простокваша",
+      "filename": "простокваша.webp",
+      "category": "molochka_jico",
+      "emoji": "🥛",
       "wordType": "noun",
       "gender": "f",
-      "synonyms": ["уточка", "птица"],
+      "synonyms": ["кефир", "напиток"],
       "variants": []
     },
-    "шарик": {
-      "word": "шарик",
-      "filename": "шарик.webp",
-      "category": "igrushki",
-      "emoji": "🖼️",
-      "wordType": null,
+    "ряженка": {
+      "word": "ряженка",
+      "filename": "ряженка.webp",
+      "category": "molochka_jico",
+      "emoji": "🥛",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["кефир", "напиток"],
+      "variants": []
+    },
+    "сливки": {
+      "word": "сливки",
+      "filename": "сливки.webp",
+      "category": "molochka_jico",
+      "emoji": "🥛",
+      "wordType": "noun",
       "gender": null,
-      "synonyms": [],
+      "synonyms": ["молоко", "еда"],
       "variants": []
     },
-    "щелкунчик": {
-      "word": "щелкунчик",
-      "filename": "щелкунчик.webp",
-      "category": "igrushki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "юла": {
-      "word": "юла",
-      "filename": "юла.webp",
-      "category": "igrushki",
-      "emoji": "🌀",
+    "сметана": {
+      "word": "сметана",
+      "filename": "сметана.webp",
+      "category": "molochka_jico",
+      "emoji": "🥣",
       "wordType": "noun",
       "gender": "f",
-      "synonyms": ["игрушка", "крутится"],
+      "synonyms": ["еда", "молочное"],
+      "variants": []
+    },
+    "сыр": {
+      "word": "сыр",
+      "filename": "сыр.webp",
+      "category": "molochka_jico",
+      "emoji": "🧀",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["еда", "молочное"],
+      "variants": []
+    },
+    "творог": {
+      "word": "творог",
+      "filename": "творог.webp",
+      "category": "molochka_jico",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["еда", "молочное"],
+      "variants": []
+    },
+    "яйцо": {
+      "word": "яйцо",
+      "filename": "яйцо.webp",
+      "category": "molochka_jico",
+      "emoji": "🥚",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["еда", "курица"],
       "variants": []
     },
     "вода": {
@@ -1605,16 +1838,16 @@
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["жидкость", "пить"],
-      "variants": ["вода_2.webp"]
+      "variants": ["вода_2.webp", "вода_3.webp"]
     },
-    "йогурт": {
-      "word": "йогурт",
-      "filename": "йогурт.webp",
+    "газировка": {
+      "word": "газировка",
+      "filename": "газировка.webp",
       "category": "napitki",
-      "emoji": "🥣",
+      "emoji": "🥤",
       "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["еда", "молочное"],
+      "gender": "f",
+      "synonyms": ["вода", "напиток"],
       "variants": []
     },
     "какао": {
@@ -1625,7 +1858,7 @@
       "wordType": "noun",
       "gender": "n",
       "synonyms": ["напиток", "шоколад"],
-      "variants": []
+      "variants": ["какао_2.webp"]
     },
     "капучино": {
       "word": "капучино",
@@ -1635,17 +1868,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["кофе", "напиток"],
-      "variants": []
-    },
-    "каркаде": {
-      "word": "каркаде",
-      "filename": "каркаде.webp",
-      "category": "napitki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
+      "variants": ["капучино_2.webp", "капучино_3.webp"]
     },
     "квас": {
       "word": "квас",
@@ -1655,16 +1878,16 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["напиток", "хлебный"],
-      "variants": []
+      "variants": ["квас_2.webp"]
     },
-    "кефир": {
-      "word": "кефир",
-      "filename": "кефир.webp",
+    "кисель": {
+      "word": "кисель",
+      "filename": "кисель.webp",
       "category": "napitki",
-      "emoji": "🥛",
+      "emoji": "🧃",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["напиток", "молочное"],
+      "synonyms": ["напиток", "сладкий"],
       "variants": []
     },
     "коктейль": {
@@ -1685,7 +1908,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["напиток", "фрукты"],
-      "variants": []
+      "variants": ["компот_2.webp"]
     },
     "кофе": {
       "word": "кофе",
@@ -1695,7 +1918,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["напиток", "горячий"],
-      "variants": ["кофе_2.webp", "кофе_3.webp"]
+      "variants": ["кофе_2.webp"]
     },
     "латте": {
       "word": "латте",
@@ -1705,7 +1928,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["кофе", "молоко"],
-      "variants": []
+      "variants": ["латте_2.webp", "латте_3.webp"]
     },
     "лимонад": {
       "word": "лимонад",
@@ -1715,27 +1938,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["напиток", "лимон"],
-      "variants": []
-    },
-    "матча": {
-      "word": "матча",
-      "filename": "матча.webp",
-      "category": "napitki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "молоко": {
-      "word": "молоко",
-      "filename": "молоко.webp",
-      "category": "napitki",
-      "emoji": "🥛",
-      "wordType": "noun",
-      "gender": "n",
-      "synonyms": ["напиток", "белое"],
-      "variants": ["молоко_2.webp"]
+      "variants": ["лимонад_2.webp"]
     },
     "морс": {
       "word": "морс",
@@ -1745,17 +1948,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["напиток", "ягоды"],
-      "variants": []
-    },
-    "ромашка": {
-      "word": "ромашка",
-      "filename": "ромашка.webp",
-      "category": "napitki",
-      "emoji": "🌼",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["цветок", "белый"],
-      "variants": []
+      "variants": ["морс_2.webp"]
     },
     "смузи": {
       "word": "смузи",
@@ -1774,42 +1967,12 @@
       "emoji": "🧃",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["сочок", "напиток"],
-      "variants": []
+      "synonyms": ["напиток", "фрукты"],
+      "variants": ["сок_2.webp"]
     },
     "тархун": {
       "word": "тархун",
       "filename": "тархун.webp",
-      "category": "napitki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "узвар": {
-      "word": "узвар",
-      "filename": "узвар.webp",
-      "category": "napitki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "фраппе": {
-      "word": "фраппе",
-      "filename": "фраппе.webp",
-      "category": "napitki",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "фреш": {
-      "word": "фреш",
-      "filename": "фреш.webp",
       "category": "napitki",
       "emoji": "🖼️",
       "wordType": null,
@@ -1825,37 +1988,157 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["напиток", "чайник"],
-      "variants": ["чай_2.webp", "чай_3.webp", "чай_4.webp"]
+      "variants": ["чай_2.webp"]
     },
-    "шиповник": {
-      "word": "шиповник",
-      "filename": "шиповник.webp",
+    "эспрессо": {
+      "word": "эспрессо",
+      "filename": "эспрессо.webp",
       "category": "napitki",
+      "emoji": "☕",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["кофе", "напиток"],
+      "variants": ["эспрессо_2.webp"]
+    },
+    "босоножки": {
+      "word": "босоножки",
+      "filename": "босоножки.webp",
+      "category": "obuv",
+      "emoji": "👡",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "лето"],
+      "variants": ["босоножки_2.webp"]
+    },
+    "ботинки": {
+      "word": "ботинки",
+      "filename": "ботинки.webp",
+      "category": "obuv",
+      "emoji": "👞",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "ноги"],
+      "variants": ["ботинки_2.webp"]
+    },
+    "валенки": {
+      "word": "валенки",
+      "filename": "валенки.webp",
+      "category": "obuv",
+      "emoji": "🥾",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "зима"],
+      "variants": ["валенки_2.webp", "валенки_3.webp"]
+    },
+    "дутики": {
+      "word": "дутики",
+      "filename": "дутики.webp",
+      "category": "obuv",
       "emoji": "🖼️",
       "wordType": null,
       "gender": null,
       "synonyms": [],
       "variants": []
     },
-    "шоколад": {
-      "word": "шоколад",
-      "filename": "шоколад.webp",
-      "category": "napitki",
-      "emoji": "🍫",
+    "кеды": {
+      "word": "кеды",
+      "filename": "кеды.webp",
+      "category": "obuv",
+      "emoji": "👟",
       "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["сладкое", "еда"],
+      "gender": null,
+      "synonyms": ["обувь", "кроссовки"],
+      "variants": ["кеды_2.webp", "кеды_3.webp", "кеды_4.webp"]
+    },
+    "кроссовки": {
+      "word": "кроссовки",
+      "filename": "кроссовки.webp",
+      "category": "obuv",
+      "emoji": "👟",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "спорт"],
+      "variants": ["кроссовки_2.webp"]
+    },
+    "ролики": {
+      "word": "ролики",
+      "filename": "ролики.webp",
+      "category": "obuv",
+      "emoji": "🛼",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "кататься"],
+      "variants": ["ролики_2.webp", "ролики_3.webp"]
+    },
+    "сандалии": {
+      "word": "сандалии",
+      "filename": "сандалии.webp",
+      "category": "obuv",
+      "emoji": "🩴",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "лето"],
+      "variants": ["сандалии_2.webp", "сандалии_3.webp", "сандалии_4.webp"]
+    },
+    "сапоги": {
+      "word": "сапоги",
+      "filename": "сапоги.webp",
+      "category": "obuv",
+      "emoji": "👢",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "зима"],
+      "variants": ["сапоги_2.webp", "сапоги_3.webp", "сапоги_4.webp"]
+    },
+    "тапки": {
+      "word": "тапки",
+      "filename": "тапки.webp",
+      "category": "obuv",
+      "emoji": "🥿",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "дом"],
+      "variants": ["тапки_2.webp", "тапки_3.webp"]
+    },
+    "туфли": {
+      "word": "туфли",
+      "filename": "туфли.webp",
+      "category": "obuv",
+      "emoji": "👠",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["обувь", "каблук"],
+      "variants": ["туфли_2.webp", "туфли_3.webp"]
+    },
+    "шлепанцы": {
+      "word": "шлепанцы",
+      "filename": "шлепанцы.webp",
+      "category": "obuv",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
       "variants": []
     },
-    "бомбер": {
-      "word": "бомбер",
-      "filename": "бомбер.webp",
-      "category": "odezhda",
+    "шнурки": {
+      "word": "шнурки",
+      "filename": "шнурки.webp",
+      "category": "obuv",
       "emoji": "🖼️",
       "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["бомбер_2.webp"]
+      "gender": null,
+      "synonyms": ["завязывать", "обувь", "ботинки"],
+      "variants": ["шнурки_2.webp"]
+    },
+    "блузка": {
+      "word": "блузка",
+      "filename": "блузка.webp",
+      "category": "odezhda",
+      "emoji": "👚",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["одежда", "рубашка"],
+      "variants": ["блузка_2.webp"]
     },
     "брюки": {
       "word": "брюки",
@@ -1865,24 +2148,24 @@
       "wordType": "noun",
       "gender": null,
       "synonyms": ["штаны", "одежда"],
-      "variants": ["брюки_2.webp", "брюки_3.webp", "брюки_4.webp"]
+      "variants": ["брюки_2.webp", "брюки_3.webp"]
     },
-    "брюки карго": {
-      "word": "брюки карго",
-      "filename": "брюки_карго.webp",
+    "варежки": {
+      "word": "варежки",
+      "filename": "варежки.webp",
       "category": "odezhda",
-      "emoji": "🖼️",
+      "emoji": "🧤",
       "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["брюки_карго_2.webp"]
+      "gender": null,
+      "synonyms": ["перчатки", "зима"],
+      "variants": ["варежки_2.webp"]
     },
     "ветровка": {
       "word": "ветровка",
       "filename": "ветровка.webp",
       "category": "odezhda",
       "emoji": "🖼️",
-      "wordType": "noun",
+      "wordType": null,
       "gender": null,
       "synonyms": [],
       "variants": []
@@ -1895,17 +2178,17 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["одежда", "шея"],
-      "variants": []
+      "variants": ["галстук_2.webp"]
     },
-    "джинсовая куртка": {
-      "word": "джинсовая куртка",
-      "filename": "джинсовая_куртка.webp",
+    "гольфы": {
+      "word": "гольфы",
+      "filename": "гольфы.webp",
       "category": "odezhda",
-      "emoji": "🖼️",
+      "emoji": "🧦",
       "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["джинсовая_куртка_2.webp", "джинсовая_куртка_3.webp"]
+      "gender": null,
+      "synonyms": ["носки", "одежда"],
+      "variants": ["гольфы_2.webp"]
     },
     "джинсы": {
       "word": "джинсы",
@@ -1917,16 +2200,6 @@
       "synonyms": ["брюки", "штаны"],
       "variants": ["джинсы_2.webp", "джинсы_3.webp", "джинсы_4.webp"]
     },
-    "дождевик": {
-      "word": "дождевик",
-      "filename": "дождевик.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["дождевик_2.webp", "дождевик_3.webp"]
-    },
     "жилет": {
       "word": "жилет",
       "filename": "жилет.webp",
@@ -1935,17 +2208,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["одежда"],
-      "variants": ["жилет_2.webp", "жилет_3.webp"]
-    },
-    "зимняя куртка": {
-      "word": "зимняя куртка",
-      "filename": "зимняя_куртка.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
+      "variants": ["жилет_2.webp"]
     },
     "кардиган": {
       "word": "кардиган",
@@ -1957,35 +2220,15 @@
       "synonyms": ["кофта", "одежда"],
       "variants": ["кардиган_2.webp", "кардиган_3.webp"]
     },
-    "кепка": {
-      "word": "кепка",
-      "filename": "кепка.webp",
+    "колготки": {
+      "word": "колготки",
+      "filename": "колготки.webp",
       "category": "odezhda",
-      "emoji": "🧢",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["шапка", "козырек"],
-      "variants": ["кепка_2.webp"]
-    },
-    "кимоно": {
-      "word": "кимоно",
-      "filename": "кимоно.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
+      "emoji": "🧦",
       "wordType": "noun",
       "gender": null,
-      "synonyms": [],
+      "synonyms": ["одежда", "ноги"],
       "variants": []
-    },
-    "кожаная куртка": {
-      "word": "кожаная куртка",
-      "filename": "кожаная_куртка.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["кожаная_куртка_2.webp"]
     },
     "комбинезон": {
       "word": "комбинезон",
@@ -1995,17 +2238,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["одежда", "цельный"],
-      "variants": ["комбинезон_2.webp", "комбинезон_3.webp"]
-    },
-    "костюм": {
-      "word": "костюм",
-      "filename": "костюм.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": null,
-      "gender": null,
-      "synonyms": [],
-      "variants": []
+      "variants": ["комбинезон_2.webp"]
     },
     "кофта": {
       "word": "кофта",
@@ -2017,15 +2250,15 @@
       "synonyms": ["одежда", "теплая"],
       "variants": []
     },
-    "кроссовки": {
-      "word": "кроссовки",
-      "filename": "кроссовки.webp",
+    "купальник": {
+      "word": "купальник",
+      "filename": "купальник.webp",
       "category": "odezhda",
-      "emoji": "👟",
+      "emoji": "👙",
       "wordType": "noun",
-      "gender": null,
-      "synonyms": ["обувь", "спорт"],
-      "variants": ["кроссовки_2.webp"]
+      "gender": "m",
+      "synonyms": ["одежда", "плавать"],
+      "variants": ["купальник_2.webp"]
     },
     "куртка": {
       "word": "куртка",
@@ -2035,17 +2268,7 @@
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["одежда", "верхняя"],
-      "variants": ["куртка_2.webp", "куртка_3.webp", "куртка_4.webp"]
-    },
-    "леггинсы": {
-      "word": "леггинсы",
-      "filename": "леггинсы.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
+      "variants": ["куртка_2.webp"]
     },
     "майка": {
       "word": "майка",
@@ -2055,17 +2278,17 @@
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["одежда", "футболка"],
-      "variants": ["майка_2.webp", "майка_3.webp"]
+      "variants": ["майка_2.webp"]
     },
-    "накидка": {
-      "word": "накидка",
-      "filename": "накидка.webp",
+    "нижнее белье": {
+      "word": "нижнее белье",
+      "filename": "нижнее_белье.webp",
       "category": "odezhda",
       "emoji": "🖼️",
-      "wordType": "noun",
+      "wordType": null,
       "gender": null,
       "synonyms": [],
-      "variants": []
+      "variants": ["нижнее_белье_2.webp"]
     },
     "носки": {
       "word": "носки",
@@ -2075,7 +2298,17 @@
       "wordType": "noun",
       "gender": null,
       "synonyms": ["обувь", "ноги"],
-      "variants": []
+      "variants": ["носки_2.webp"]
+    },
+    "одежда": {
+      "word": "одежда",
+      "filename": "одежда.webp",
+      "category": "odezhda",
+      "emoji": "👕",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["вещи", "наряд"],
+      "variants": ["одежда_2.webp", "одежда_3.webp", "одежда_4.webp"]
     },
     "пальто": {
       "word": "пальто",
@@ -2085,7 +2318,17 @@
       "wordType": "noun",
       "gender": "n",
       "synonyms": ["одежда", "верхняя"],
-      "variants": []
+      "variants": ["пальто_2.webp"]
+    },
+    "перчатки": {
+      "word": "перчатки",
+      "filename": "перчатки.webp",
+      "category": "odezhda",
+      "emoji": "🧤",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["руки", "тепло"],
+      "variants": ["перчатки_2.webp"]
     },
     "пиджак": {
       "word": "пиджак",
@@ -2095,7 +2338,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["одежда", "куртка"],
-      "variants": ["пиджак_2.webp", "пиджак_3.webp"]
+      "variants": ["пиджак_2.webp"]
     },
     "пижама": {
       "word": "пижама",
@@ -2105,6 +2348,26 @@
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["одежда", "спать"],
+      "variants": ["пижама_2.webp"]
+    },
+    "плавки": {
+      "word": "плавки",
+      "filename": "плавки.webp",
+      "category": "odezhda",
+      "emoji": "🩲",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["одежда", "плавать"],
+      "variants": ["плавки_2.webp"]
+    },
+    "платок": {
+      "word": "платок",
+      "filename": "платок.webp",
+      "category": "odezhda",
+      "emoji": "🧣",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["нос", "одежда"],
       "variants": []
     },
     "платье": {
@@ -2115,37 +2378,27 @@
       "wordType": "noun",
       "gender": "n",
       "synonyms": ["одежда", "девочка"],
-      "variants": ["платье_2.webp", "платье_3.webp", "платье_4.webp"]
+      "variants": ["платье_2.webp"]
     },
-    "плед": {
-      "word": "плед",
-      "filename": "плед.webp",
+    "плащ": {
+      "word": "плащ",
+      "filename": "плащ.webp",
       "category": "odezhda",
-      "emoji": "🛌",
+      "emoji": "🧥",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["одеяло", "тепло"],
-      "variants": []
+      "synonyms": ["одежда", "дождь"],
+      "variants": ["плащ_2.webp"]
     },
-    "поло": {
-      "word": "поло",
-      "filename": "поло.webp",
+    "пуховик": {
+      "word": "пуховик",
+      "filename": "пуховик.webp",
       "category": "odezhda",
-      "emoji": "🖼️",
+      "emoji": "🧥",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": [],
-      "variants": ["поло_2.webp", "поло_3.webp"]
-    },
-    "пончо": {
-      "word": "пончо",
-      "filename": "пончо.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
+      "synonyms": ["куртка", "тепло"],
+      "variants": ["пуховик_2.webp"]
     },
     "ремень": {
       "word": "ремень",
@@ -2155,7 +2408,7 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["брюки", "застежка"],
-      "variants": []
+      "variants": ["ремень_2.webp"]
     },
     "рубашка": {
       "word": "рубашка",
@@ -2165,7 +2418,17 @@
       "wordType": "noun",
       "gender": "f",
       "synonyms": ["одежда", "сорочка"],
-      "variants": ["рубашка_2.webp", "рубашка_3.webp"]
+      "variants": ["рубашка_2.webp", "рубашка_3.webp", "рубашка_4.webp"]
+    },
+    "сарафан": {
+      "word": "сарафан",
+      "filename": "сарафан.webp",
+      "category": "odezhda",
+      "emoji": "👗",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["платье", "одежда"],
+      "variants": ["сарафан_2.webp"]
     },
     "свитер": {
       "word": "свитер",
@@ -2175,37 +2438,17 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["одежда", "тепло"],
-      "variants": ["свитер_2.webp", "свитер_3.webp"]
+      "variants": ["свитер_2.webp", "свитер_3.webp", "свитер_4.webp"]
     },
-    "спортивные штаны": {
-      "word": "спортивные штаны",
-      "filename": "спортивные_штаны.webp",
+    "толстовка": {
+      "word": "толстовка",
+      "filename": "толстовка.webp",
       "category": "odezhda",
       "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["спортивные_штаны_2.webp"]
-    },
-    "спортивный костюм": {
-      "word": "спортивный костюм",
-      "filename": "спортивный_костюм.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
+      "wordType": null,
       "gender": null,
       "synonyms": [],
-      "variants": []
-    },
-    "топ": {
-      "word": "топ",
-      "filename": "топ.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["топ_2.webp"]
+      "variants": ["толстовка_2.webp", "толстовка_3.webp"]
     },
     "трусы": {
       "word": "трусы",
@@ -2215,17 +2458,7 @@
       "wordType": "noun",
       "gender": null,
       "synonyms": ["белье", "одежда"],
-      "variants": []
-    },
-    "туника": {
-      "word": "туника",
-      "filename": "туника.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
+      "variants": ["трусы_2.webp"]
     },
     "футболка": {
       "word": "футболка",
@@ -2233,8 +2466,8 @@
       "category": "odezhda",
       "emoji": "👕",
       "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["майка", "одежда"],
+      "gender": "f",
+      "synonyms": ["одежда", "майка"],
       "variants": ["футболка_2.webp", "футболка_3.webp", "футболка_4.webp"]
     },
     "халат": {
@@ -2247,55 +2480,35 @@
       "synonyms": ["одежда", "дом"],
       "variants": ["халат_2.webp"]
     },
-    "худи": {
-      "word": "худи",
-      "filename": "худи.webp",
-      "category": "odezhda",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": [],
-      "variants": ["худи_2.webp", "худи_3.webp"]
-    },
-    "шапка": {
-      "word": "шапка",
-      "filename": "шапка.webp",
-      "category": "odezhda",
-      "emoji": "🧢",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["одежда", "голова"],
-      "variants": []
-    },
-    "шарф": {
-      "word": "шарф",
-      "filename": "шарф.webp",
-      "category": "odezhda",
-      "emoji": "🧣",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["одежда", "шея"],
-      "variants": []
-    },
-    "шляпа": {
-      "word": "шляпа",
-      "filename": "шляпа.webp",
-      "category": "odezhda",
-      "emoji": "👒",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["шляпка", "головной убор"],
-      "variants": []
-    },
     "шорты": {
       "word": "шорты",
       "filename": "шорты.webp",
       "category": "odezhda",
       "emoji": "🩳",
       "wordType": "noun",
-      "gender": "m",
+      "gender": null,
       "synonyms": ["одежда", "короткие"],
       "variants": ["шорты_2.webp", "шорты_3.webp", "шорты_4.webp"]
+    },
+    "штаны": {
+      "word": "штаны",
+      "filename": "штаны.webp",
+      "category": "odezhda",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
+      "variants": []
+    },
+    "шуба": {
+      "word": "шуба",
+      "filename": "шуба.webp",
+      "category": "odezhda",
+      "emoji": "🧥",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["одежда", "тепло"],
+      "variants": ["шуба_2.webp"]
     },
     "юбка": {
       "word": "юбка",
@@ -2303,109 +2516,719 @@
       "category": "odezhda",
       "emoji": "👚",
       "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["юбочка", "одежда"],
-      "variants": ["юбка_2.webp", "юбка_3.webp", "юбка_4.webp"]
+      "gender": "f",
+      "synonyms": ["одежда", "девочка"],
+      "variants": ["юбка_2.webp"]
     },
-    "гулять": {
-      "word": "гулять",
-      "filename": "гулять.webp",
-      "category": "potrebnosti",
-      "emoji": "🚶",
-      "wordType": "verb",
+    "дрожжи": {
+      "word": "дрожжи",
+      "filename": "дрожжи.webp",
+      "category": "orehi_krupi",
+      "emoji": "🍞",
+      "wordType": "noun",
       "gender": null,
-      "synonyms": ["прогулка", "улица", "ходить"],
-      "variants": ["гулять_2.webp"]
+      "synonyms": ["тесто", "хлеб"],
+      "variants": []
     },
-    "дай": {
-      "word": "дай",
-      "filename": "дай.webp",
-      "category": "potrebnosti",
+    "желудь": {
+      "word": "желудь",
+      "filename": "желудь.webp",
+      "category": "orehi_krupi",
+      "emoji": "🌰",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["дуб", "орех"],
+      "variants": []
+    },
+    "зерно": {
+      "word": "зерно",
+      "filename": "зерно.webp",
+      "category": "orehi_krupi",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["семечко", "крупа", "пшеница"],
+      "variants": []
+    },
+    "кокос": {
+      "word": "кокос",
+      "filename": "кокос.webp",
+      "category": "orehi_krupi",
+      "emoji": "🥥",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["орех", "тропики"],
+      "variants": []
+    },
+    "крупа": {
+      "word": "крупа",
+      "filename": "крупа.webp",
+      "category": "orehi_krupi",
+      "emoji": "🌾",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["каша", "зерно"],
+      "variants": []
+    },
+    "мука": {
+      "word": "мука",
+      "filename": "мука.webp",
+      "category": "orehi_krupi",
+      "emoji": "🌾",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["тесто", "хлеб"],
+      "variants": []
+    },
+    "орех": {
+      "word": "орех",
+      "filename": "орех.webp",
+      "category": "orehi_krupi",
+      "emoji": "🖼️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["семечко", "плод", "скорлупа"],
+      "variants": []
+    },
+    "пшено": {
+      "word": "пшено",
+      "filename": "пшено.webp",
+      "category": "orehi_krupi",
+      "emoji": "🌾",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["крупа", "каша"],
+      "variants": []
+    },
+    "рис": {
+      "word": "рис",
+      "filename": "рис.webp",
+      "category": "orehi_krupi",
+      "emoji": "🍚",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["каша", "крупа"],
+      "variants": []
+    },
+    "баклажан": {
+      "word": "баклажан",
+      "filename": "баклажан.webp",
+      "category": "ovoshi",
+      "emoji": "🍆",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "синенький"],
+      "variants": []
+    },
+    "брокколи": {
+      "word": "брокколи",
+      "filename": "брокколи.webp",
+      "category": "ovoshi",
+      "emoji": "🥦",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["овощ", "капуста"],
+      "variants": ["брокколи_2.webp"]
+    },
+    "горох": {
+      "word": "горох",
+      "filename": "горох.webp",
+      "category": "ovoshi",
+      "emoji": "🫛",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "бобовые"],
+      "variants": ["горох_2.webp"]
+    },
+    "кабачок": {
+      "word": "кабачок",
+      "filename": "кабачок.webp",
+      "category": "ovoshi",
+      "emoji": "🥒",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "зеленый"],
+      "variants": []
+    },
+    "капуста": {
+      "word": "капуста",
+      "filename": "капуста.webp",
+      "category": "ovoshi",
+      "emoji": "🥬",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "зеленый"],
+      "variants": []
+    },
+    "картофель": {
+      "word": "картофель",
+      "filename": "картофель.webp",
+      "category": "ovoshi",
+      "emoji": "🥔",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["картошка", "овощ"],
+      "variants": []
+    },
+    "кукуруза": {
+      "word": "кукуруза",
+      "filename": "кукуруза.webp",
+      "category": "ovoshi",
+      "emoji": "🌽",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "желтая"],
+      "variants": ["кукуруза_2.webp"]
+    },
+    "лук": {
+      "word": "лук",
+      "filename": "лук.webp",
+      "category": "ovoshi",
+      "emoji": "🧅",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "стрелы"],
+      "variants": []
+    },
+    "морковь": {
+      "word": "морковь",
+      "filename": "морковь.webp",
+      "category": "ovoshi",
+      "emoji": "🥕",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "оранжевый"],
+      "variants": []
+    },
+    "овощи": {
+      "word": "овощи",
+      "filename": "овощи.webp",
+      "category": "ovoshi",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
+      "variants": ["овощи_2.webp"]
+    },
+    "огурец": {
+      "word": "огурец",
+      "filename": "огурец.webp",
+      "category": "ovoshi",
+      "emoji": "🥒",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "зеленый"],
+      "variants": []
+    },
+    "перец": {
+      "word": "перец",
+      "filename": "перец.webp",
+      "category": "ovoshi",
+      "emoji": "🌶️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "острый"],
+      "variants": []
+    },
+    "помидор": {
+      "word": "помидор",
+      "filename": "помидор.webp",
+      "category": "ovoshi",
+      "emoji": "🍅",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "красный"],
+      "variants": []
+    },
+    "редис": {
+      "word": "редис",
+      "filename": "редис.webp",
+      "category": "ovoshi",
+      "emoji": "🌶️",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "красный"],
+      "variants": ["редис_2.webp"]
+    },
+    "репа": {
+      "word": "репа",
+      "filename": "репа.webp",
+      "category": "ovoshi",
+      "emoji": "🥔",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "желтый"],
+      "variants": ["репа_2.webp"]
+    },
+    "свекла": {
+      "word": "свекла",
+      "filename": "свекла.webp",
+      "category": "ovoshi",
+      "emoji": "🍠",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "красный"],
+      "variants": []
+    },
+    "сельдерей": {
+      "word": "сельдерей",
+      "filename": "сельдерей.webp",
+      "category": "ovoshi",
+      "emoji": "🥬",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "зеленый"],
+      "variants": ["сельдерей_2.webp"]
+    },
+    "спаржа": {
+      "word": "спаржа",
+      "filename": "спаржа.webp",
+      "category": "ovoshi",
+      "emoji": "🌱",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "зеленый"],
+      "variants": ["спаржа_2.webp"]
+    },
+    "тыква": {
+      "word": "тыква",
+      "filename": "тыква.webp",
+      "category": "ovoshi",
+      "emoji": "🎃",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "оранжевый"],
+      "variants": []
+    },
+    "фасоль": {
+      "word": "фасоль",
+      "filename": "фасоль.webp",
+      "category": "ovoshi",
+      "emoji": "🫘",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["овощ", "бобовые"],
+      "variants": ["фасоль_2.webp"]
+    },
+    "чеснок": {
+      "word": "чеснок",
+      "filename": "чеснок.webp",
+      "category": "ovoshi",
+      "emoji": "🧄",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "острый"],
+      "variants": []
+    },
+    "шпинат": {
+      "word": "шпинат",
+      "filename": "шпинат.webp",
+      "category": "ovoshi",
+      "emoji": "🥬",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["овощ", "зеленый"],
+      "variants": ["шпинат_2.webp"]
+    },
+    "венчик": {
+      "word": "венчик",
+      "filename": "венчик.webp",
+      "category": "posuda",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["кухня", "взбивать"],
+      "variants": []
+    },
+    "вилка": {
+      "word": "вилка",
+      "filename": "вилка.webp",
+      "category": "posuda",
+      "emoji": "🍴",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["посуда", "есть"],
+      "variants": []
+    },
+    "кастрюля": {
+      "word": "кастрюля",
+      "filename": "кастрюля.webp",
+      "category": "posuda",
+      "emoji": "🍲",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["посуда", "суп"],
+      "variants": []
+    },
+    "кружка": {
+      "word": "кружка",
+      "filename": "кружка.webp",
+      "category": "posuda",
+      "emoji": "☕",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["посуда", "чай"],
+      "variants": []
+    },
+    "кувшин": {
+      "word": "кувшин",
+      "filename": "кувшин.webp",
+      "category": "posuda",
+      "emoji": "🏺",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["посуда", "вода"],
+      "variants": []
+    },
+    "ложка": {
+      "word": "ложка",
+      "filename": "ложка.webp",
+      "category": "posuda",
+      "emoji": "🥄",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["посуда", "есть"],
+      "variants": []
+    },
+    "миксер": {
+      "word": "миксер",
+      "filename": "миксер.webp",
+      "category": "posuda",
+      "emoji": "🥣",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["взбивать", "кухня"],
+      "variants": []
+    },
+    "нож": {
+      "word": "нож",
+      "filename": "нож.webp",
+      "category": "posuda",
+      "emoji": "🔪",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["резать", "посуда"],
+      "variants": []
+    },
+    "сковорода": {
+      "word": "сковорода",
+      "filename": "сковорода.webp",
+      "category": "posuda",
+      "emoji": "🍳",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["жарить", "кухня"],
+      "variants": []
+    },
+    "стакан": {
+      "word": "стакан",
+      "filename": "стакан.webp",
+      "category": "posuda",
+      "emoji": "🥃",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["посуда", "пить"],
+      "variants": []
+    },
+    "тарелка": {
+      "word": "тарелка",
+      "filename": "тарелка.webp",
+      "category": "posuda",
+      "emoji": "🍽️",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["посуда", "еда"],
+      "variants": []
+    },
+    "фужер": {
+      "word": "фужер",
+      "filename": "фужер.webp",
+      "category": "posuda",
       "emoji": "🖼️",
       "wordType": null,
       "gender": null,
       "synonyms": [],
       "variants": []
     },
-    "есть": {
-      "word": "есть",
-      "filename": "есть.webp",
-      "category": "potrebnosti",
-      "emoji": "🍽️",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["кушать", "еда"],
-      "variants": []
-    },
-    "играть": {
-      "word": "играть",
-      "filename": "играть.webp",
-      "category": "potrebnosti",
-      "emoji": "🎮",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["игра", "веселиться"],
-      "variants": ["играть_2.webp"]
-    },
-    "обнимать": {
-      "word": "обнимать",
-      "filename": "обнимать.webp",
-      "category": "potrebnosti",
-      "emoji": "🫂",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["руки", "обнимать"],
-      "variants": ["обнимать_2.webp"]
-    },
-    "пить": {
-      "word": "пить",
-      "filename": "пить.webp",
-      "category": "potrebnosti",
-      "emoji": "🥤",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["вода", "напиток"],
-      "variants": []
-    },
-    "помоги": {
-      "word": "помоги",
-      "filename": "помоги.webp",
-      "category": "potrebnosti",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": null,
-      "synonyms": [],
-      "variants": []
-    },
-    "спать": {
-      "word": "спать",
-      "filename": "спать.webp",
-      "category": "potrebnosti",
-      "emoji": "😴",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["сон", "кровать"],
-      "variants": ["спать_2.webp"]
-    },
-    "туалет": {
-      "word": "туалет",
-      "filename": "туалет.webp",
-      "category": "potrebnosti",
-      "emoji": "🚽",
+    "чайник": {
+      "word": "чайник",
+      "filename": "чайник.webp",
+      "category": "posuda",
+      "emoji": "🫖",
       "wordType": "noun",
       "gender": "m",
-      "synonyms": ["горшок", "уборная"],
+      "synonyms": ["чай", "посуда"],
       "variants": []
     },
-    "читать": {
-      "word": "читать",
-      "filename": "читать.webp",
-      "category": "potrebnosti",
-      "emoji": "📖",
-      "wordType": "verb",
-      "gender": null,
-      "synonyms": ["книга", "буквы"],
+    "чашка": {
+      "word": "чашка",
+      "filename": "чашка.webp",
+      "category": "posuda",
+      "emoji": "☕",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["посуда"],
       "variants": []
+    },
+    "шумовка": {
+      "word": "шумовка",
+      "filename": "шумовка.webp",
+      "category": "posuda",
+      "emoji": "🥄",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["кухня", "посуда"],
+      "variants": []
+    },
+    "мясник": {
+      "word": "мясник",
+      "filename": "мясник.webp",
+      "category": "profesii",
+      "emoji": "🥩",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мясо", "продавец"],
+      "variants": []
+    },
+    "бабушка": {
+      "word": "бабушка",
+      "filename": "бабушка.webp",
+      "category": "Semiy",
+      "emoji": "👵",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["бабуля", "семья"],
+      "variants": ["бабушка_2.webp"]
+    },
+    "брат": {
+      "word": "брат",
+      "filename": "брат.webp",
+      "category": "Semiy",
+      "emoji": "👦",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["братик", "семья"],
+      "variants": ["брат_2.webp", "брат_3.webp"]
+    },
+    "дедушка": {
+      "word": "дедушка",
+      "filename": "дедушка.webp",
+      "category": "Semiy",
+      "emoji": "👴",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["дед", "семья"],
+      "variants": ["дедушка_2.webp"]
+    },
+    "дочь": {
+      "word": "дочь",
+      "filename": "дочь.webp",
+      "category": "Semiy",
+      "emoji": "👧",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["девочка", "семья"],
+      "variants": ["дочь_2.webp"]
+    },
+    "дядя": {
+      "word": "дядя",
+      "filename": "дядя.webp",
+      "category": "Semiy",
+      "emoji": "👨",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мужчина", "семья"],
+      "variants": ["дядя_2.webp"]
+    },
+    "мама": {
+      "word": "мама",
+      "filename": "мама.webp",
+      "category": "Semiy",
+      "emoji": "👩",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["мать", "мамочка"],
+      "variants": ["мама_2.webp"]
+    },
+    "младенец": {
+      "word": "младенец",
+      "filename": "младенец.webp",
+      "category": "Semiy",
+      "emoji": "🖼️",
+      "wordType": null,
+      "gender": null,
+      "synonyms": [],
+      "variants": ["младенец_2.webp"]
+    },
+    "папа": {
+      "word": "папа",
+      "filename": "папа.webp",
+      "category": "Semiy",
+      "emoji": "👨",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["отец", "папочка"],
+      "variants": ["папа_2.webp"]
+    },
+    "ребенок": {
+      "word": "ребенок",
+      "filename": "ребенок.webp",
+      "category": "Semiy",
+      "emoji": "🧒",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["малыш", "дитя", "дети"],
+      "variants": ["ребенок_2.webp"]
+    },
+    "семья": {
+      "word": "семья",
+      "filename": "семья.webp",
+      "category": "Semiy",
+      "emoji": "👨‍👩‍👧‍👦",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["мама", "папа"],
+      "variants": ["семья_2.webp"]
+    },
+    "сестра": {
+      "word": "сестра",
+      "filename": "сестра.webp",
+      "category": "Semiy",
+      "emoji": "👧",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["сестренка", "семья"],
+      "variants": ["сестра_2.webp", "сестра_3.webp"]
+    },
+    "сын": {
+      "word": "сын",
+      "filename": "сын.webp",
+      "category": "Semiy",
+      "emoji": "👦",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["мальчик", "ребенок"],
+      "variants": ["сын_2.webp"]
+    },
+    "тетя": {
+      "word": "тетя",
+      "filename": "тетя.webp",
+      "category": "Semiy",
+      "emoji": "👩",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["женщина", "семья"],
+      "variants": ["тетя_2.webp"]
+    },
+    "вафли": {
+      "word": "вафли",
+      "filename": "вафли.webp",
+      "category": "sladosti",
+      "emoji": "🧇",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["еда", "сладкое"],
+      "variants": ["вафли_2.webp"]
+    },
+    "зефир": {
+      "word": "зефир",
+      "filename": "зефир.webp",
+      "category": "sladosti",
+      "emoji": "🍡",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["сладкое", "десерт"],
+      "variants": ["зефир_2.webp"]
+    },
+    "конфета": {
+      "word": "конфета",
+      "filename": "конфета.webp",
+      "category": "sladosti",
+      "emoji": "🍬",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["сладкое", "еда"],
+      "variants": ["конфета_2.webp"]
+    },
+    "мармелад": {
+      "word": "мармелад",
+      "filename": "мармелад.webp",
+      "category": "sladosti",
+      "emoji": "🍬",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["сладкое", "конфета"],
+      "variants": ["мармелад_2.webp"]
+    },
+    "мороженое": {
+      "word": "мороженое",
+      "filename": "мороженое.webp",
+      "category": "sladosti",
+      "emoji": "🍦",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["сладкое", "холодное"],
+      "variants": ["мороженое_2.webp"]
+    },
+    "пастила": {
+      "word": "пастила",
+      "filename": "пастила.webp",
+      "category": "sladosti",
+      "emoji": "🍡",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["сладкое", "десерт"],
+      "variants": ["пастила_2.webp"]
+    },
+    "печенье": {
+      "word": "печенье",
+      "filename": "печенье.webp",
+      "category": "sladosti",
+      "emoji": "🍪",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["сладкое", "еда"],
+      "variants": ["печенье_2.webp"]
+    },
+    "пирожное": {
+      "word": "пирожное",
+      "filename": "пирожное.webp",
+      "category": "sladosti",
+      "emoji": "🧁",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["сладкое", "десерт"],
+      "variants": ["пирожное_2.webp"]
+    },
+    "пряник": {
+      "word": "пряник",
+      "filename": "пряник.webp",
+      "category": "sladosti",
+      "emoji": "🍪",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["сладкое", "печенье"],
+      "variants": ["пряник_2.webp"]
+    },
+    "торт": {
+      "word": "торт",
+      "filename": "торт.webp",
+      "category": "sladosti",
+      "emoji": "🎂",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["сладкое", "десерт"],
+      "variants": ["торт_2.webp"]
+    },
+    "шоколад": {
+      "word": "шоколад",
+      "filename": "шоколад.webp",
+      "category": "sladosti",
+      "emoji": "🍫",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["сладкое", "еда"],
+      "variants": ["шоколад_2.webp"]
     },
     "базилик": {
       "word": "базилик",
@@ -2547,26 +3370,6 @@
       "synonyms": ["соус", "белый"],
       "variants": []
     },
-    "масло": {
-      "word": "масло",
-      "filename": "масло.webp",
-      "category": "sousi_pripravi",
-      "emoji": "🧈",
-      "wordType": "noun",
-      "gender": "n",
-      "synonyms": ["еда", "жир"],
-      "variants": []
-    },
-    "орех": {
-      "word": "орех",
-      "filename": "орех.webp",
-      "category": "sousi_pripravi",
-      "emoji": "🖼️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["семечко", "плод", "скорлупа"],
-      "variants": []
-    },
     "паприка": {
       "word": "паприка",
       "filename": "паприка.webp",
@@ -2575,26 +3378,6 @@
       "wordType": null,
       "gender": null,
       "synonyms": [],
-      "variants": []
-    },
-    "паста": {
-      "word": "паста",
-      "filename": "паста.webp",
-      "category": "sousi_pripravi",
-      "emoji": "🪥",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["макароны", "еда"],
-      "variants": []
-    },
-    "перец": {
-      "word": "перец",
-      "filename": "перец.webp",
-      "category": "sousi_pripravi",
-      "emoji": "🌶️",
-      "wordType": "noun",
-      "gender": "m",
-      "synonyms": ["овощ", "острый"],
       "variants": []
     },
     "песто": {
@@ -2625,16 +3408,6 @@
       "wordType": "noun",
       "gender": "m",
       "synonyms": ["сладкий", "еда"],
-      "variants": []
-    },
-    "сметана": {
-      "word": "сметана",
-      "filename": "сметана.webp",
-      "category": "sousi_pripravi",
-      "emoji": "🥣",
-      "wordType": "noun",
-      "gender": "f",
-      "synonyms": ["еда", "молочное"],
       "variants": []
     },
     "соль": {
@@ -2676,6 +3449,126 @@
       "gender": null,
       "synonyms": [],
       "variants": []
+    },
+    "браслет": {
+      "word": "браслет",
+      "filename": "браслет.webp",
+      "category": "ukrasheniy",
+      "emoji": "📿",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["украшение", "рука"],
+      "variants": ["браслет_2.webp"]
+    },
+    "брошь": {
+      "word": "брошь",
+      "filename": "брошь.webp",
+      "category": "ukrasheniy",
+      "emoji": "💎",
+      "wordType": "noun",
+      "gender": "f",
+      "synonyms": ["украшение", "одежда"],
+      "variants": ["брошь_2.webp"]
+    },
+    "золото": {
+      "word": "золото",
+      "filename": "золото.webp",
+      "category": "ukrasheniy",
+      "emoji": "🥇",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["металл", "деньги"],
+      "variants": ["золото_2.webp"]
+    },
+    "золотой": {
+      "word": "золотой",
+      "filename": "золотой.webp",
+      "category": "ukrasheniy",
+      "emoji": "🪙",
+      "wordType": "adjective",
+      "gender": null,
+      "synonyms": ["золото", "цвет"],
+      "variants": ["золотой_2.webp"]
+    },
+    "кольцо": {
+      "word": "кольцо",
+      "filename": "кольцо.webp",
+      "category": "ukrasheniy",
+      "emoji": "💍",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["палец", "украшение"],
+      "variants": []
+    },
+    "кулон": {
+      "word": "кулон",
+      "filename": "кулон.webp",
+      "category": "ukrasheniy",
+      "emoji": "📿",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["украшение", "шея"],
+      "variants": ["кулон_2.webp"]
+    },
+    "ожерелье": {
+      "word": "ожерелье",
+      "filename": "ожерелье.webp",
+      "category": "ukrasheniy",
+      "emoji": "📿",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["украшение", "шея"],
+      "variants": ["ожерелье_2.webp"]
+    },
+    "серебро": {
+      "word": "серебро",
+      "filename": "серебро.webp",
+      "category": "ukrasheniy",
+      "emoji": "🥈",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["металл", "блеск"],
+      "variants": ["серебро_2.webp"]
+    },
+    "серебряный": {
+      "word": "серебряный",
+      "filename": "серебряный.webp",
+      "category": "ukrasheniy",
+      "emoji": "🪙",
+      "wordType": "adjective",
+      "gender": null,
+      "synonyms": ["серебро", "цвет"],
+      "variants": ["серебряный_2.webp"]
+    },
+    "серьги": {
+      "word": "серьги",
+      "filename": "серьги.webp",
+      "category": "ukrasheniy",
+      "emoji": "💎",
+      "wordType": "noun",
+      "gender": null,
+      "synonyms": ["уши", "украшение"],
+      "variants": ["серьги_2.webp"]
+    },
+    "украшение": {
+      "word": "украшение",
+      "filename": "украшение.webp",
+      "category": "ukrasheniy",
+      "emoji": "💎",
+      "wordType": "noun",
+      "gender": "n",
+      "synonyms": ["бижутерия", "красиво", "блестит"],
+      "variants": ["украшение_2.webp"]
+    },
+    "ювелир": {
+      "word": "ювелир",
+      "filename": "ювелир.webp",
+      "category": "ukrasheniy",
+      "emoji": "💍",
+      "wordType": "noun",
+      "gender": "m",
+      "synonyms": ["украшения", "золото"],
+      "variants": ["ювелир_2.webp"]
     }
   }
 }

@@ -163,28 +163,77 @@ function onCategoryCreated(newCategoryId) {
 }
 
 function handleCategoryEdit(category) {
-  openCategoryEditor(category, (updatedCategory, done) => {
-    saveProfile(currentProfile);
-    const state = getState();
-    renderCategories(
-      categoriesContainer,
-      currentProfile,
-      state.currentCategoryId,
-      onCategorySelect,
-      handleCategoryEdit,
-      handleCategoryReorder,
-      onCategoryCreated
-    );
-    renderCards(
-      cardsContainer,
-      currentProfile,
-      state.currentCategoryId,
-      onCardClick,
-      handleCardReorder
-    );
-    toast('Категория обновлена');
-    done();
-  });
+  openCategoryEditor(
+    category,
+    // === ЛОГИКА СОХРАНЕНИЯ ===
+    (updatedCategory, done) => {
+      saveProfile(currentProfile);
+      const state = getState();
+      renderCategories(
+        categoriesContainer,
+        currentProfile,
+        state.currentCategoryId,
+        onCategorySelect,
+        handleCategoryEdit,
+        handleCategoryReorder,
+        onCategoryCreated
+      );
+      renderCards(
+        cardsContainer,
+        currentProfile,
+        state.currentCategoryId,
+        onCardClick,
+        handleCardReorder
+      );
+      toast('Категория обновлена');
+      done();
+    },
+    // === ЛОГИКА УДАЛЕНИЯ ===
+    (deletedCategory, done) => {
+      // 1. Удаляем категорию из списка
+      currentProfile.categories = currentProfile.categories.filter(
+        (c) => c.id !== deletedCategory.id
+      );
+
+      // 2. Удаляем все карточки, привязанные к этой категории
+      delete currentProfile.cards[deletedCategory.id];
+
+      // 3. Сохраняем профиль
+      saveProfile(currentProfile);
+
+      // 4. Проверяем, не удалили ли мы ту категорию, которая сейчас открыта
+      const state = getState();
+      let nextCategoryId = state.currentCategoryId;
+
+      if (state.currentCategoryId === deletedCategory.id) {
+        // Ищем первую доступную категорию (не скрытую)
+        const remainingCats = currentProfile.categories.filter((c) => !c.hidden);
+        nextCategoryId = remainingCats.length > 0 ? remainingCats[0].id : null;
+        setState({ currentCategoryId: nextCategoryId });
+      }
+
+      // 5. Перерисовываем интерфейс
+      renderCategories(
+        categoriesContainer,
+        currentProfile,
+        nextCategoryId,
+        onCategorySelect,
+        handleCategoryEdit,
+        handleCategoryReorder,
+        onCategoryCreated
+      );
+
+      if (nextCategoryId) {
+        renderCards(cardsContainer, currentProfile, nextCategoryId, onCardClick, handleCardReorder);
+      } else {
+        // Если удалили самую последнюю категорию (экран пуст)
+        cardsContainer.innerHTML = '';
+      }
+
+      toast('Категория удалена');
+      done();
+    }
+  );
 }
 
 function handleCategoryReorder(newOrder) {

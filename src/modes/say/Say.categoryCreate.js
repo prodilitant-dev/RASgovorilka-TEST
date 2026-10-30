@@ -10,11 +10,17 @@ import { uploadImage, getImageUrl, deleteImage } from '@services/image';
 import { findCardImage } from '@utils/cardBank';
 import { logger } from '@utils/logger';
 
+// Импортируем справочник и банк
+import { KNOWN_CATEGORIES } from '@config/defaultData/categories';
+import { CARD_BANK } from '@config/cardBank';
+import { autoDetectCard } from '@utils/inflect';
+import { confirm } from '@utils/dialog';
+
 export function openCategoryCreateModal(profile, onCreated) {
   let nameInput = null;
   let wordTypeSelect = null;
   let imageId = null;
-  let imagePath = null; // NEW: картинка из банка
+  let imagePath = null;
   let previewAvatar = null;
   let removeBtn = null;
 
@@ -69,7 +75,6 @@ export function openCategoryCreateModal(profile, onCreated) {
       return;
     }
 
-    // Фолбек: буква или камера-иконка
     previewAvatar.classList.add('cat-avatar--fallback');
     previewAvatar.textContent = name ? letter : '📷';
     if (removeBtn) removeBtn.style.display = 'none';
@@ -89,7 +94,7 @@ export function openCategoryCreateModal(profile, onCreated) {
       }
 
       imageId = await uploadImage(croppedBlob, { size: 256, showToast: false });
-      imagePath = null; // приоритет у загруженной
+      imagePath = null;
       await updatePreviewAvatar();
     } catch (err) {
       logger.error('categoryCreate: upload failed', err);
@@ -102,7 +107,6 @@ export function openCategoryCreateModal(profile, onCreated) {
     body: () => {
       const wrap = createElement('div', { className: 've-fields' });
 
-      // === Превью-аватарка с загрузкой ===
       const avatarRow = createElement('div', {
         className: 've-field',
         style: 'align-items: center;',
@@ -165,7 +169,6 @@ export function openCategoryCreateModal(profile, onCreated) {
       avatarRow.appendChild(avatarRowInner);
       wrap.appendChild(avatarRow);
 
-      // === Название ===
       const nameRow = createElement('div', { className: 've-field' });
       const nameLabel = createElement('label', { className: 've-field-label' }, 'Название');
       nameInput = createElement('input', {
@@ -186,7 +189,6 @@ export function openCategoryCreateModal(profile, onCreated) {
       nameRow.appendChild(nameInput);
       wrap.appendChild(nameRow);
 
-      // === Тип слова ===
       const typeRow = createElement('div', { className: 've-field' });
       const typeLabel = createElement('label', { className: 've-field-label' }, 'Тип слова');
       wordTypeSelect = createElement('select', {});
@@ -199,7 +201,6 @@ export function openCategoryCreateModal(profile, onCreated) {
       wrap.appendChild(typeRow);
 
       setTimeout(() => nameInput && nameInput.focus(), 100);
-
       on(nameInput, 'keydown', (e) => {
         if (e.key === 'Enter') {
           e.preventDefault();
@@ -260,14 +261,63 @@ export function openCategoryCreateModal(profile, onCreated) {
       imagePath: imagePath || null,
     };
 
+    // --- ПРОВЕРКА НА СТАНДАРТНЫЕ КАРТОЧКИ ---
+    let cardsAdded = false;
+
+    // Ищем совпадение в справочнике KNOWN_CATEGORIES
+    const matchedCategory = KNOWN_CATEGORIES.find(
+      (c) => c.name.toLowerCase() === name.toLowerCase()
+    );
+
+    if (matchedCategory) {
+      // Ищем карточки в банке (без учета регистра ID, чтобы Semiy и semiy совпали)
+      const stockCards = CARD_BANK.filter(
+        (item) => item.category.toLowerCase() === matchedCategory.id.toLowerCase()
+      );
+
+      if (stockCards.length > 0) {
+        const ok = await confirm(
+          `В приложении есть готовые карточки для категории «${matchedCategory.name}» (${stockCards.length} шт.). Добавить их?`,
+          'Стандартные карточки'
+        );
+
+        if (ok) {
+          profile.cards[newCategory.id] = stockCards.map((raw) => {
+            const card = {
+              id: uid(),
+              text: raw.word.charAt(0).toUpperCase() + raw.word.slice(1),
+              emoji: raw.emoji || '🖼️',
+              wordType: raw.wordType || newCategory.wordType,
+              gender: raw.gender || null,
+              animate: false,
+              imageId: null,
+              imagePath: `cards/${raw.category}/${raw.filename || raw.word + '.webp'}`,
+              forms: null,
+              variants: raw.variants || [],
+            };
+
+            if (['noun', 'pronoun', 'adjective'].includes(card.wordType)) {
+              autoDetectCard(card);
+            }
+            return card;
+          });
+          cardsAdded = true;
+        }
+      }
+    }
+
+    if (!cardsAdded) {
+      profile.cards[newCategory.id] = [];
+    }
+    // --- КОНЕЦ ПРОВЕРКИ ---
+
     profile.categories.push(newCategory);
-    profile.cards[newCategory.id] = [];
     saveProfile(profile);
     setState({ currentCategoryId: newCategory.id });
 
-    toast('Категория создана');
+    toast(cardsAdded ? 'Категория создана с карточками' : 'Категория создана');
 
-    imageId = null; // защищаем от удаления в onClose
+    imageId = null;
     modal.close();
     if (onCreated) onCreated(newCategory.id);
   }

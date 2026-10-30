@@ -117,13 +117,29 @@ export function openAboutModal() {
         createElement('summary', { className: 'about-details__summary' }, 'Особая благодарность')
       );
       const thanksBody = createElement('div', { className: 'about-details__body' });
-      thanksBody.appendChild(
-        createElement(
-          'p',
-          { className: 'about-placeholder' },
-          'Список будет дополнен. Здесь появятся люди, которые помогли проекту — советами, тестированием, поддержкой.'
-        )
-      );
+
+      const thanksList = [
+        { name: '@Angry_raccoon_pkb', text: 'Первый, кто сказал, что это стоящее дело.' },
+        { name: 'Наталья Григорьева', text: 'Человек, который вдохновил попробовать сделать.' },
+        {
+          name: 'Алексей Барсуков',
+          text: 'Давал ненужные советы, но именно он заинтересовал попробовать код с ИИ.',
+        },
+        { name: 'Настя Феникс', text: 'Дала последний «пинок», чтобы довести до конца.' },
+      ];
+
+      thanksList.forEach((person) => {
+        thanksBody.appendChild(
+          createElement(
+            'p',
+            { className: 'about-thanks-item' },
+            createElement('strong', {}, person.name),
+            ' — ',
+            person.text
+          )
+        );
+      });
+
       thanks.appendChild(thanksBody);
       wrap.appendChild(thanks);
 

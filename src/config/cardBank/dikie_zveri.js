@@ -8,7 +8,7 @@ export const DIKIE_ZVERI = [
     emoji: '🦡',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['барсучишка', 'зверь'],
+    synonyms: ['животное', 'зверь'],
     variants: [],
   },
   {
@@ -18,7 +18,7 @@ export const DIKIE_ZVERI = [
     emoji: '🐿️',
     wordType: 'noun',
     gender: 'f',
-    synonyms: ['белочка', 'грызун'],
+    synonyms: ['животное', 'грызун'],
     variants: [],
   },
   {
@@ -28,7 +28,7 @@ export const DIKIE_ZVERI = [
     emoji: '🦫',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['бобрик', 'грызун'],
+    synonyms: ['животное', 'грызун'],
     variants: [],
   },
   {
@@ -58,7 +58,7 @@ export const DIKIE_ZVERI = [
     emoji: '🦦',
     wordType: 'noun',
     gender: 'f',
-    synonyms: ['выдрочка', 'зверь'],
+    synonyms: ['животное', 'река'],
     variants: [],
   },
   {
@@ -108,7 +108,7 @@ export const DIKIE_ZVERI = [
     emoji: '🐇',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['зайка', 'зайчик', 'косой'],
+    synonyms: ['животное', 'зайка'],
     variants: [],
   },
   {
@@ -118,7 +118,17 @@ export const DIKIE_ZVERI = [
     emoji: '🐗',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['кабанчик', 'дикая свинья'],
+    synonyms: ['свинья', 'дикий'],
+    variants: [],
+  },
+  {
+    word: 'кот',
+    filename: 'кот.webp',
+    category: 'dikie_zveri',
+    emoji: '🖼️',
+    wordType: null,
+    gender: null,
+    synonyms: [],
     variants: [],
   },
   {
@@ -138,7 +148,7 @@ export const DIKIE_ZVERI = [
     emoji: '🐊',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['крокодильчик', 'рептилия'],
+    synonyms: ['животное', 'зубы'],
     variants: [],
   },
   {
@@ -148,7 +158,7 @@ export const DIKIE_ZVERI = [
     emoji: '🦁',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['львёнок', 'царь зверей'],
+    synonyms: ['животное', 'царь'],
     variants: [],
   },
   {
@@ -158,7 +168,7 @@ export const DIKIE_ZVERI = [
     emoji: '🐆',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['леопардик', 'хищник'],
+    synonyms: ['животное', 'пятна'],
     variants: [],
   },
   {
@@ -178,7 +188,7 @@ export const DIKIE_ZVERI = [
     emoji: '🫎',
     wordType: 'noun',
     gender: 'm',
-    synonyms: ['лосик', 'сохатый'],
+    synonyms: ['животное', 'рога'],
     variants: [],
   },
   {
@@ -238,7 +248,7 @@ export const DIKIE_ZVERI = [
     emoji: '🐼',
     wordType: 'noun',
     gender: 'f',
-    synonyms: ['пандочка', 'бамбуковый медведь'],
+    synonyms: ['животное', 'бамбук'],
     variants: ['панда_2.webp'],
   },
   {

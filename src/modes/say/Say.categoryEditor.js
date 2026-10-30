@@ -3,7 +3,7 @@ import { openVerticalEditor } from '@components/common/VerticalEditor';
 import { toast } from '@utils/toast';
 import { findCardImage } from '@utils/cardBank';
 
-export function openCategoryEditor(category, onSave) {
+export function openCategoryEditor(category, onSave, onDelete) {
   const entity = { ...category };
 
   openVerticalEditor({
@@ -20,6 +20,8 @@ export function openCategoryEditor(category, onSave) {
       Object.assign(category, updated);
       onSave(category, done);
     },
+    // Передаем обработчик удаления в редактор
+    onDelete: onDelete ? (deletedEntity, done) => onDelete(deletedEntity, done) : null,
     fields: [
       {
         id: 'name',
@@ -48,6 +50,12 @@ export function openCategoryEditor(category, onSave) {
         id: 'save',
         label: '💾 Сохранить',
         variant: 'primary',
+      },
+      // Добавляем кнопку удаления. VerticalEditor сам повесит на нее клик и стиль danger.
+      {
+        id: 'delete',
+        label: '🗑️ Удалить',
+        variant: 'danger',
       },
     ],
   });
