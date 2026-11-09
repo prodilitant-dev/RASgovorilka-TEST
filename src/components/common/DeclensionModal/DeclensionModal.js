@@ -88,12 +88,9 @@ export function openDeclensionModal(card, onSave) {
     body: bodyHtml,
     buttons: [
       {
-        label: 'Отмена',
-        action: () => modal.close(),
-      },
-      {
         label: 'Сбросить к автоматическим',
-        primary: false,
+        iconName: 'auto-inflect',
+        fallbackEmoji: '🪄',
         action: () => {
           card.forms = null;
           autoDetectCard(card);
@@ -103,6 +100,8 @@ export function openDeclensionModal(card, onSave) {
       },
       {
         label: 'Сохранить',
+        iconName: 'save',
+        fallbackEmoji: '💾',
         primary: true,
         action: () => {
           const newForms = {};
@@ -111,7 +110,8 @@ export function openDeclensionModal(card, onSave) {
             newForms.genitive = document.getElementById('declGenitive')?.value.trim() || '';
             newForms.dative = document.getElementById('declDative')?.value.trim() || '';
             newForms.accusative = document.getElementById('declAccusative')?.value.trim() || '';
-            newForms.instrumental = document.getElementById('declInstrumental')?.value.trim() || '';
+            newForms.instrumental =
+              document.getElementById('declInstrumental')?.value.trim() || '';
             newForms.prepositional =
               document.getElementById('declPrepositional')?.value.trim() || '';
           } else if (isAdjective) {

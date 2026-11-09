@@ -86,36 +86,32 @@ export function openVoiceSettings(voiceSettings, onSave) {
       volumeInput = volume.input;
       wrap.appendChild(volume.row);
 
-      // Кнопка Проверить — отдельной строкой
-      const testRow = createElement('div', { className: 'voice-test-row' });
-      const testBtn = createElement('button', {
-        type: 'button',
-        className: 'voice-test-btn',
-        'aria-label': 'Проверить',
-      });
-      testBtn.appendChild(
-        createIcon('say-small', { fallback: '🔊', className: 'voice-test-btn__icon' })
-      );
-      const testLabel = createElement('span', {}, 'Проверить');
-      testBtn.appendChild(testLabel);
-      testBtn.addEventListener('click', () => {
-        speak(
-          'Раз — два. Проверка связи.',
-          parseFloat(rateInput.value),
-          parseFloat(pitchInput.value),
-          parseFloat(volumeInput.value),
-          ''
-        );
-        logger.debug('Test speech played');
-      });
-      testRow.appendChild(testBtn);
-      wrap.appendChild(testRow);
+      volumeInput = volume.input;
+      wrap.appendChild(volume.row);
 
       return wrap;
     },
+
     buttons: [
       {
+        label: 'Проверить',
+        iconName: 'voice-test', // Используем нужную иконку
+        fallbackEmoji: '🔊',
+        action: () => {
+          speak(
+            'Раз — два. Проверка связи.',
+            parseFloat(rateInput.value),
+            parseFloat(pitchInput.value),
+            parseFloat(volumeInput.value),
+            ''
+          );
+          logger.debug('Test speech played');
+        },
+      },
+      {
         label: 'Сохранить',
+        iconName: 'save',
+        fallbackEmoji: '💾',
         primary: true,
         action: () => {
           onSave({

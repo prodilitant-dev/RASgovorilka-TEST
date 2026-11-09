@@ -136,8 +136,8 @@
 }
 
 .modal-close-btn__icon {
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   display: block;
   pointer-events: none;
@@ -162,7 +162,7 @@
   padding: var(--spacing-xs) var(--spacing-xs);
   border-top: 1px solid var(--border);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: var(--spacing-sm);
   flex-shrink: 0;
 }
