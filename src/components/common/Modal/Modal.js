@@ -109,7 +109,6 @@ export class Modal {
     }
     content.appendChild(bodyEl);
 
-    // === Футер ===
     if (this.buttons.length) {
       const footer = createElement('div', { className: 'modal-footer' });
       this.buttons.forEach((btn) => {
