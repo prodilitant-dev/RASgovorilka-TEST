@@ -8,7 +8,7 @@ export function openCategoryEditor(category, onSave, onDelete) {
   const entity = { ...category };
 
   openVerticalEditor({
-    title: 'Редактировать категорию',
+    title: 'Редактировать',
     entity,
     editorType: 'category',
     preview: true,

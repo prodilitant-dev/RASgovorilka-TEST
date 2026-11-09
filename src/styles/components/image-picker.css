@@ -10,7 +10,7 @@
 
 .image-picker-box {
   width: 100%;
-  max-width: 140px;
+  max-width: 250px;
   aspect-ratio: 1 / 1;
   background: var(--bg);
   border-radius: var(--radius);

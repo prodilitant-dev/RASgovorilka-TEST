@@ -72,7 +72,7 @@ export function renderCategories(
       const editBtn = createElement('button', {
         type: 'button',
         className: 'cat-action-btn',
-        'aria-label': 'Редактировать категорию',
+        'aria-label': 'Редактировать',
         title: 'Редактировать',
       });
       editBtn.appendChild(

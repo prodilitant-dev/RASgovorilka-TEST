@@ -52,8 +52,8 @@
 .ve-preview-img {
   pointer-events: none;
   -webkit-user-drag: none;
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 97%;
+  max-height: 97%;
   object-fit: contain;
 }
 
@@ -90,7 +90,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 5px;
   width: 100%;
   padding: 10px 0;
 }
@@ -269,8 +269,6 @@
   text-align: center;
   word-break: break-word;
 }
-
-/* Добавьте в конец src/styles/editor/vertical-editor/preview.css */
 
 .ve-preview-row {
   display: flex;

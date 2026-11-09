@@ -41,13 +41,13 @@
 
 /* Обновлённая шапка модалки: три колонки (left / center / right) */
 .modal-header {
-  padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-xs);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-md);
+  gap: var(--spacing-xs);
 }
 
 .modal-header-left {
@@ -147,7 +147,7 @@
 .modal-body {
   flex: 1;
   overflow-y: auto;
-  padding: var(--spacing-md) var(--spacing-xl); /* уменьшен вертикальный паддинг */
+  padding: 0 var(--spacing-xs);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,7 +159,7 @@
 }
 
 .modal-footer {
-  padding: var(--spacing-md) var(--spacing-xl);
+  padding: var(--spacing-xs) var(--spacing-xs);
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: flex-end;
