@@ -53,8 +53,8 @@
 }
 
 .ve-close-btn__icon {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   display: block;
   pointer-events: none;
@@ -93,29 +93,26 @@
 /* --- Футер (кнопки) --- */
 .ve-footer {
   display: flex;
-  justify-content: space-between;
-  gap: var(--spacing-sm);
+  justify-content: flex-end; /* Иконки теперь прижаты вправо */
+  align-items: center;
+  gap: var(--spacing-md); /* Отступ между иконками */
   padding-top: var(--spacing-md);
   border-top: 1px solid var(--border);
-  flex-wrap: wrap;
 }
 
-.ve-btn {
-  padding: 10px 24px;
-  border-radius: 24px;
-  border: 1px solid var(--border);
-  font-size: 16px;
-  font-weight: 600;
+/* Новые кнопки-иконки */
+.ve-action-btn {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: all 0.2s;
-  min-height: 44px;
-  flex: 1;
-  min-width: 80px;
-  text-align: center;
-}
-
-.ve-btn:active {
-  transform: scale(0.96);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.1s ease,
+    opacity 0.2s;
 }
 
 .ve-btn-primary {

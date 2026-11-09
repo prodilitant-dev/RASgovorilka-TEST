@@ -20,6 +20,7 @@
 @import './forms/forms.css';
 @import './forms/custom-select.css';
 @import './forms/toggle.css';
+@import './components/button.css';
 
 /* === Modals: модальные окна === */
 @import './modals/modal.css';

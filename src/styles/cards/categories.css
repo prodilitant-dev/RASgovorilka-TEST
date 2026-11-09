@@ -58,10 +58,27 @@
   transform: scale(0.96);
 }
 
-.category-add {
-  background: var(--primary-light);
-  border: 1px dashed var(--primary);
-  color: var(--text);
+.category.category-add {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  
+  /* Убираем подложки */
+  background: transparent; 
+  border: none;
+  box-shadow: none;
+}
+
+/* Иконка внутри кнопки (увеличиваем) */
+.category.category-add .cat-action-btn__icon {
+  width: 2rem;           /* 32px, чуть меньше самой кнопки, чтобы был воздух */
+  height: 2rem;
+  margin: 0;
 }
 
 .category-hidden {
@@ -135,7 +152,7 @@ body.editing-mode .category:not(.category-add) {
   gap: var(--spacing-xs);
 }
 
-.category-sort-placeholder {
+.sort-placeholder {
   border: 2px dashed var(--primary);
   border-radius: 20px;
   background: var(--primary-light);

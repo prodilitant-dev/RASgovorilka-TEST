@@ -1,0 +1,46 @@
+/* src/styles/components/button.css */
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition:
+    transform 0.1s ease,
+    opacity 0.2s;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.ui-btn:hover {
+  opacity: 0.75;
+}
+.ui-btn:active {
+  transform: scale(0.92);
+}
+
+/* Кнопка-иконка (без подложки) */
+.ui-btn--icon {
+  padding: 4px;
+  border-radius: 50%;
+}
+
+/* Текстовые кнопки-пилюли (на будущее) */
+.ui-btn:not(.ui-btn--icon) {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--bg-subtle);
+}
+
+.ui-btn--primary:not(.ui-btn--icon) {
+  background: var(--primary);
+  color: #fff;
+}
+
+.ui-btn--danger:not(.ui-btn--icon) {
+  background: var(--danger);
+  color: #fff;
+}

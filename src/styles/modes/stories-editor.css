@@ -104,8 +104,8 @@
   opacity: 1;
 }
 .story-slide-del-btn img {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
 }
 
 .story-slide-center-row {
@@ -121,40 +121,43 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  background: transparent; /* Убрали фон */
+  border: none;            /* Убрали рамку */
+  box-shadow: none;        /* Убрали тень */
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.1s ease, opacity 0.2s;
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.2s;
 }
 .story-nav-arrow:hover:not(:disabled) {
-  background: var(--bg);
+  opacity: 0.75;
+}
+.story-nav-arrow:active:not(:disabled) {
+  transform: scale(0.92);
 }
 .story-nav-arrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
 .story-nav-arrow img {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
 }
 
-/* Кнопка "Добавить слайд" (без заливки, просто плюс в кружке) */
 .story-nav-arrow.is-add {
   background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border: none; /* Убрали зеленую рамку */
 }
 .story-nav-arrow.is-add:hover {
-  background: var(--primary-light);
+  background: transparent;
+  opacity: 0.75;
 }
 .story-nav-arrow.is-add img {
-  width: 24px; /* Увеличили плюс */
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .story-slide-picker .image-picker-box {

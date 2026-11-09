@@ -1,38 +1,39 @@
 // src/components/common/VerticalEditor/VerticalEditor.footer.js
-import { createElement, on } from '@utils/dom';
+import { createElement } from '@utils/dom';
+import { createButton } from '../Button/Button';
 
-/** Убирает эмодзи-префикс из текста кнопки. */
-function stripEmoji(label) {
-  if (!label) return '';
-  // Срезаем пробел + эмодзи в начале (если есть)
-  return label.replace(/^[\p{Emoji_Presentation}\p{Extended_Pictographic}]+\s*/u, '').trim();
-}
+// Маппинг стандартных действий на иконки
+const ICON_MAP = {
+  save: { name: 'save', fallback: '💾' },
+  delete: { name: 'trash', fallback: '🗑' },
+  copy: { name: 'copy', fallback: '📋' },
+};
 
 export function renderFooter(entity, buttons, callbacks) {
   const footer = createElement('div', { className: 've-footer' });
 
   buttons.forEach((btn) => {
+    // Пропускаем кнопку отмены, так как есть крестик в шапке модалки
+    if (btn.id === 'cancel') return;
+
     const isVisible = typeof btn.visible === 'function' ? btn.visible(entity) : true;
     if (!isVisible) return;
 
-    const cleanLabel = stripEmoji(btn.label);
-    const el = createElement(
-      'div',
-      {
-        className: `category ${btn.variant === 'primary' ? 'active' : ''} ${btn.variant === 'danger' ? 'category-danger' : ''}`,
-      },
-      cleanLabel
-    );
+    const iconConfig = ICON_MAP[btn.id] || { name: 'settings', fallback: '⚙️' };
 
-    if (btn.id === 'save') {
-      on(el, 'click', callbacks.onSave);
-    } else if (btn.id === 'delete') {
-      on(el, 'click', callbacks.onDelete);
-    } else if (btn.action) {
-      on(el, 'click', () => btn.action(entity, callbacks.onClose));
-    }
+    let onClick = null;
+    if (btn.id === 'save') onClick = callbacks.onSave;
+    else if (btn.id === 'delete') onClick = callbacks.onDelete;
+    else if (btn.action) onClick = () => btn.action(entity, callbacks.onClose);
 
-    footer.appendChild(el);
+    const actionBtn = createButton({
+      label: btn.label,
+      iconName: iconConfig.name,
+      fallbackEmoji: iconConfig.fallback,
+      onClick,
+    });
+
+    footer.appendChild(actionBtn);
   });
 
   return footer;

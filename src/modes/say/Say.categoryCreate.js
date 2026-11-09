@@ -118,8 +118,13 @@ export function openCategoryCreateModal(profile, onCreated) {
       return wrap;
     },
     buttons: [
-      { label: 'Отмена', action: () => modal.close() },
-      { label: 'Создать', primary: true, action: () => handleCreate() },
+      {
+        label: 'Создать',
+        iconName: 'add',
+        fallbackEmoji: '➕',
+        primary: true,
+        action: () => handleCreate(),
+      },
     ],
     onClose: async () => {
       if (

@@ -2,6 +2,7 @@
 import { createElement } from '@utils/dom';
 import { createIcon } from '@utils/icon';
 import { logger } from '@utils/logger';
+import { createButton } from '../Button/Button';
 
 const openModals = new Set();
 
@@ -112,18 +113,16 @@ export class Modal {
     if (this.buttons.length) {
       const footer = createElement('div', { className: 'modal-footer' });
       this.buttons.forEach((btn) => {
-        const b = createElement(
-          'div',
-          {
-            className: `category ${btn.primary ? 'active' : ''} ${btn.danger ? 'category-danger' : ''}`,
-            'data-log': `modal-button:${btn.label}`,
-          },
-          btn.label
-        );
-        b.addEventListener('click', () => {
-          if (btn.action) btn.action();
+        // Используем наш новый универсальный компонент
+        const actionBtn = createButton({
+          label: btn.label,
+          iconName: btn.iconName,
+          fallbackEmoji: btn.fallbackEmoji,
+          variant: btn.primary ? 'primary' : btn.danger ? 'danger' : 'default',
+          onClick: btn.action,
+          className: 'modal-action-btn',
         });
-        footer.appendChild(b);
+        footer.appendChild(actionBtn);
       });
       content.appendChild(footer);
     }
